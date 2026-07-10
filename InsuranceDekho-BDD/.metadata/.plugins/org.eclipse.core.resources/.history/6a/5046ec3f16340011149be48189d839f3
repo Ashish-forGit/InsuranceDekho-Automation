@@ -1,0 +1,8 @@
+@NV_US02_TC02
+Feature: NV_US02_TC02 Verifying booking home visit advisors error message
+
+  Scenario: Verify error message for invalid inputs
+    Given I launch the browser and open InsuranceDekho application
+    When I enter invalid Name and Mobile
+    And I submit the request
+    Then I verify input validation error is displayed

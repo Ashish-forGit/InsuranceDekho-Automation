@@ -1,0 +1,342 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.InsuranceAdvisorsLocators;
+import utils.WebDriverHelper;
+
+/**
+ * Class Name: InsuranceAdvisorsActions
+ *
+ * Description: Page Action class responsible for handling all user
+ * interactions, validations, and workflows related to the Insurance Advisors
+ * module.
+ *
+ * This includes advisor listing validation, booking home visits, form
+ * submission, error handling, location-based filtering, and scheduling visit
+ * flows.
+ *
+ * The class follows the Page Action Model (PAM) pattern and provides
+ * business-readable, reusable methods with step-level logging integrated via
+ * Extent Reports.
+ *
+ * @Author: Ashish Kumar
+ */
+public class InsuranceAdvisorsActions {
+
+	WebDriver driver;
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	/**
+	 * Constructor: InsuranceAdvisorsActions
+	 *
+	 * Description: Initializes Insurance Advisors page actions using WebDriver and
+	 * ExtentTest instances for browser interaction and execution reporting.
+	 *
+	 * @param driver WebDriver instance for browser interaction
+	 * @param test   ExtentTest instance for logging and reporting
+	 */
+	public InsuranceAdvisorsActions(WebDriver driver, ExtentTest test) {
+		try {
+			this.driver = driver;
+			this.test = test;
+			helper = new WebDriverHelper(driver);
+			helper.addLogAndReportInfo("Insurance Advisors Page Actions initialized successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception while initializing InsuranceAdvisorsActions: " + e.getMessage(),
+					test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: verifyInsuranceAdvisorsFoundText
+	 *
+	 * Description: Verifies that the 'Insurance Advisors Found' text is displayed
+	 * correctly on the page.
+	 *
+	 * @param expectedValue Expected header text
+	 */
+	public void verifyInsuranceAdvisorsFoundText() {
+		try {
+			String expectedValue = "6 Insurance Advisors found";
+			helper.addLogAndReportInfo("Verifying Insurance Advisors found text.", test);
+
+			helper.hoverElement(InsuranceAdvisorsLocators.insuranceAdvisorsFoundText);
+
+			helper.verify(helper.getText(InsuranceAdvisorsLocators.insuranceAdvisorsFoundText), expectedValue);
+
+			helper.addLogAndReportPass("Insurance Advisors found text verified successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyInsuranceAdvisorsFoundText: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: clickBookHomeVisitForFirstAdvisor
+	 *
+	 * Description: Clicks on the 'Book Home Visit' button for the first available
+	 * insurance advisor.
+	 */
+	public void clickBookHomeVisitForFirstAdvisor() throws InterruptedException {
+		try {
+			helper.addLogAndReportInfo("Clicking 'Book Home Visit' for first advisor.", test);
+
+			helper.hoverElement(InsuranceAdvisorsLocators.firstAdvisorBookHomeVisitBtn);
+
+			helper.waits();
+
+			helper.clickElement(InsuranceAdvisorsLocators.firstAdvisorBookHomeVisitBtn);
+
+			helper.addLogAndReportInfo("Book Home Visit clicked for first advisor.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickBookHomeVisitForFirstAdvisor: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: enterNameAndMobile
+	 *
+	 * Description: Enters customer name and mobile number in the insurance advisor
+	 * booking form.
+	 *
+	 * @param name   Customer name
+	 * @param mobile Mobile number
+	 */
+	public void enterNameAndMobile() {
+		try {
+			String name ="John";
+			 String mobile="9876543210";
+			helper.addLogAndReportInfo("Entering customer name and mobile number.", test);
+
+			helper.sendText(InsuranceAdvisorsLocators.nameInput, name);
+
+			helper.sendText(InsuranceAdvisorsLocators.mobileInput, mobile);
+
+			helper.addLogAndReportInfo("Customer name and mobile entered successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in enterNameAndMobile: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+	/**
+	 * Method Name: enterErrorNameAndMobile
+	 *
+	 * Description: Enters customer name and mobile number in the insurance advisor
+	 * booking form.
+	 *
+	 * @param name   Customer name
+	 * @param mobile Mobile number
+	 */
+	public void enterErrorNameAndMobile() {
+		try {
+			String name ="John";
+			String mobile="98765";
+			helper.addLogAndReportInfo("Entering customer name and mobile number.", test);
+			
+			helper.sendText(InsuranceAdvisorsLocators.nameInput, name);
+			
+			helper.sendText(InsuranceAdvisorsLocators.mobileInput, mobile);
+			
+			helper.addLogAndReportInfo("Customer name and mobile entered successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in enterNameAndMobile: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: submitRequest
+	 *
+	 * Description: Submits the advisor booking request using the Submit button.
+	 */
+	public void submitRequest() throws InterruptedException {
+		try {
+			helper.addLogAndReportInfo("Submitting insurance advisor booking request.", test);
+
+			helper.waits();
+			helper.clickElement(InsuranceAdvisorsLocators.submitBtn);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in submitRequest: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: verifyThankYouText
+	 *
+	 * Description: Verifies that the Thank You confirmation message is displayed
+	 * after request submission.
+	 *
+	 * @param expectedValue Expected confirmation text
+	 */
+	public void verifyThankYouText() {
+		try {
+			String expectedValue="Thank you!";
+			helper.addLogAndReportInfo("Verifying Thank You confirmation message.", test);
+
+			helper.waits();
+			helper.verify(helper.getText(InsuranceAdvisorsLocators.thankYouText), expectedValue);
+
+			helper.addLogAndReportPass("Thank You message verified successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyThankYouText: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: verifyErrorInput
+	 *
+	 * Description: Verifies error message displayed for invalid form input.
+	 *
+	 * @param expectedValue Expected error text
+	 */
+	public void verifyErrorInput() {
+		try {
+			String expectedValue="The mobile must be at least 10 characters.";
+			helper.addLogAndReportInfo("Verifying input error message.", test);
+
+			helper.verify(helper.getText(InsuranceAdvisorsLocators.errorText), expectedValue);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyErrorInput: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: clickBookHomeVisit
+	 *
+	 * Description: Clicks the generic Book Home Visit button for advisor
+	 * scheduling.
+	 */
+	public void clickBookHomeVisit() throws InterruptedException {
+		try {
+			helper.hoverElement(InsuranceAdvisorsLocators.bookhomeVisitButton);
+			helper.waits();
+			helper.clickElement(InsuranceAdvisorsLocators.bookhomeVisitButton);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickBookHomeVisit: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	public void clickScheduleHomeVisit() throws InterruptedException {
+		try {
+			helper.hoverElement(InsuranceAdvisorsLocators.scheduleHomeVisitButton);
+			helper.waits();
+			helper.clickElement(InsuranceAdvisorsLocators.scheduleHomeVisitButton);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickScheduleHomeVisit: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	public void clickScheduleVisit() throws InterruptedException {
+		try {
+			helper.hoverElement(InsuranceAdvisorsLocators.scheduleVisitButton);
+			helper.waits();
+			helper.clickElement(InsuranceAdvisorsLocators.scheduleVisitButton);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickScheduleVisit: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	public void clickEnterLoactionManually() {
+		try {
+			helper.clickElement(InsuranceAdvisorsLocators.selectLocationManually);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickEnterLoactionManually: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	public void typePincode() {
+		try {
+			String pincode="110055";
+			helper.sendText(InsuranceAdvisorsLocators.pincodeInput, pincode);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in typePincode: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	public void typeHouseNo() {
+		try {
+			String houseNo="House1";
+			helper.sendText(InsuranceAdvisorsLocators.addressInput, houseNo);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in typeHouseNo: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	public void typeArea() {
+		try {
+			String area="Road1";
+			helper.sendText(InsuranceAdvisorsLocators.areaInput, area);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in typeArea: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	public void verifyYourLoactionDetails() {
+		try {
+			String expectedValue="Your location details";
+			helper.verify(helper.getText(InsuranceAdvisorsLocators.yourLocationDetailsText), expectedValue);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyYourLoactionDetails: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	public void clickLocationScheduleVisit() {
+		try {
+			helper.clickElement(InsuranceAdvisorsLocators.locationScheduleVist);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickLocationScheduleVisit: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	public void verifyAreaInputError() {
+		try {
+			String expectedValue="The road/area/sector field is required.";
+			helper.verify(helper.getText(InsuranceAdvisorsLocators.areaInputError), expectedValue);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyAreaInputErroe: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	public void selectCityFilter() {
+		try {
+			helper.scrollIntoView(InsuranceAdvisorsLocators.tempHover);
+			helper.clickElement(InsuranceAdvisorsLocators.filterLocation);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in selectCityFilter: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	public void verifyLocationHeaderAndNotFoundAdvaisor(String expected1, String expected2) {
+		try {
+			helper.addLogAndReportInfo("Verifying advisor location header and no advisor found message.", test);
+
+			helper.explicitWait(InsuranceAdvisorsLocators.advaisorInLocationHeading);
+
+			helper.verify(helper.getText(InsuranceAdvisorsLocators.advaisorInLocationHeading), expected1);
+
+			helper.verify(helper.getText(InsuranceAdvisorsLocators.noAdvaisorFoundHeading), expected2);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in verifyLocationHeaderAndNotFoundAdvaisor: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+}

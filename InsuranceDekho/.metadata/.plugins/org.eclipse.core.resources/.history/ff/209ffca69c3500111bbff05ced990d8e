@@ -1,0 +1,103 @@
+package utils;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.apache.log4j.FileAppender;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
+
+/**
+ * Class Name: LoggerHandler
+ *
+ * Description: Utility class responsible for centralized logging across the
+ * automation framework.
+ *
+ * This class ensures consistent log formatting, file-based persistence of
+ * execution logs, and easy access to logging methods from any framework
+ * component such as test runners, listeners, utilities, and page action
+ * classes.
+ *
+ * @author Ashish Kumar
+ */
+public class LoggerHandler {
+
+	private static Logger logger = Logger.getLogger(LoggerHandler.class);
+
+	static {
+		try {
+
+			String logDirPath = System.getProperty("user.dir") + "/logs/";
+
+			File logDir = new File(logDirPath);
+			if (!logDir.exists()) {
+				logDir.mkdirs();
+			}
+			String timestamp = new SimpleDateFormat("yyyy_MM_dd_HH-mm-ss").format(new Date());
+			String filename = logDirPath + timestamp + ".log";
+			FileAppender fileAppender = new FileAppender(new PatternLayout("%d{yyyy-MM-dd HH:mm:ss} %-5p %c - %m%n"),
+					filename, true);
+
+			logger.addAppender(fileAppender);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Description: Logs informational messages related to normal execution flow.
+	 *
+	 * @author Ashish Kumar
+	 */
+	public static void info(String message) {
+		logger.info(message);
+	}
+
+	/**
+	 * Description: Logs debug-level messages useful for troubleshooting.
+	 *
+	 * @author Ashish Kumar
+	 */
+
+	public static void debug(String message) {
+		logger.debug(message);
+	}
+
+	/**
+	 * Description: Logs error messages when an exception or failure occurs.
+	 *
+	 * @author Ashish Kumar
+	 */
+	public static void error(String message) {
+		logger.error(message);
+	}
+
+	/**
+	 * Description: Logs warning messages indicating potential issues.
+	 *
+	 * @author Ashish Kumar
+	 */
+	public static void warn(String message) {
+		logger.warn(message);
+	}
+
+	/**
+	 * Description: Logs fatal messages indicating critical framework failure.
+	 *
+	 * @author Ashish Kumar
+	 */
+	public static void fatal(String message) {
+		logger.fatal(message);
+	}
+
+	/**
+	 * Description: Logs trace-level messages for very detailed execution flow.
+	 *
+	 * @author Ashish Kumar
+	 */
+	public static void trace(String message) {
+		logger.trace(message);
+	}
+}

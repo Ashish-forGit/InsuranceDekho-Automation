@@ -1,0 +1,60 @@
+package utils;
+
+import java.io.FileInputStream;
+import java.time.Duration;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+/**
+ * Description: Initializes WebDriver, loads config from properties file,
+ * applies basic browser settings, and opens the application URL.
+ *
+ * @author Ashish Kumar
+ */
+public class Base {
+
+	public static WebDriver driver;
+	public static Properties prop;
+
+	/**
+	 * Description: Loads configuration values from ./config/browser.properties.
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void loadProperties() {
+		try {
+			FileInputStream file = new FileInputStream("./config/browser.properties");
+			prop = new Properties();
+			prop.load(file);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to load properties file", e);
+		}
+	}
+
+	/**
+	 * Description: Launches Chrome, applies timeouts/settings, and navigates to
+	 * appURL.
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void openBrowser() {
+		try {
+			loadProperties();
+
+			driver = new ChromeDriver();
+
+			driver.manage().window().maximize();
+			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			driver.manage().deleteAllCookies();
+
+			driver.get(prop.getProperty("appURL"));
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+}

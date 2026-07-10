@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="utils.Base"/>
+    <fullyQualifiedTypeName name="com.aventstack.extentreports.ExtentReports"/>
+    <fullyQualifiedTypeName name="com.aventstack.extentreports.ExtentTest"/>
+    <fullyQualifiedTypeName name="io.cucumber.java.BeforeAll"/>
+    <fullyQualifiedTypeName name="utils.Reporter"/>
+    <fullyQualifiedTypeName name="io.cucumber.java.AfterAll"/>
+    <fullyQualifiedTypeName name="io.cucumber.java.After"/>
+    <fullyQualifiedTypeName name="io.cucumber.java.Before"/>
+    <fullyQualifiedTypeName name="pages.CarInsurancePageActions"/>
+    <fullyQualifiedTypeName name="pages.AddOnCoverPageActions"/>
+    <fullyQualifiedTypeName name="pages.BikeClaimSettlementPageActions"/>
+    <fullyQualifiedTypeName name="pages.HumanLifeValuePageActions"/>
+    <fullyQualifiedTypeName name="pages.InvestmentPlansPageActions"/>
+    <fullyQualifiedTypeName name="pages.InsuranceAdvisorsActions"/>
+    <fullyQualifiedTypeName name="pages.CarInsuranceNewsPageActions"/>
+    <fullyQualifiedTypeName name="pages.HomePageActions"/>
+    <fullyQualifiedTypeName name="pages.HealthInsuranceArticlePageActions"/>
+    <fullyQualifiedTypeName name="pages.InvestmentInsuranceNewsPageActions"/>
+    <fullyQualifiedTypeName name="pages.BusinessInsuranceNewsPageActions"/>
+    <fullyQualifiedTypeName name="io.cucumber.messages.types.Hook"/>
+    <fullyQualifiedTypeName name="stepdefinitions.Hooks"/>
+</qualifiedTypeNameHistroy>

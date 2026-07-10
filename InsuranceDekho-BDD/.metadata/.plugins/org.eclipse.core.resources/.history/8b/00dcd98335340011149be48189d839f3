@@ -1,0 +1,68 @@
+package stepdefinitions;
+
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.HealthInsuranceArticlePageActions;
+import pages.HomePageActions;
+
+public class VerifyArticleNavigation {
+	
+	HomePageActions home = Hooks.homeAction;
+	HealthInsuranceArticlePageActions hiaAction = Hooks.hiaAction;
+
+	@When("I hover over Health Insurance News")
+	public void i_hover_over_health_insurance_news() {
+		home.hoverOverHealthInsuranceNews();
+
+	}
+	@When("I click on Health Insurance Article")
+	public void i_click_on_health_insurance_article() {
+		home.clickHealthInsuranceArticle();
+
+	}
+	@Then("I verify Health Insurance Article header is displayed")
+	public void i_verify_health_insurance_article_header_is_displayed() {
+		hiaAction.verifyHealthInsuranceArticleHeader();
+	}
+	@When("I open first health insurance article")
+	public void i_open_first_health_insurance_article() {
+		hiaAction.clickFirstArticlePresent();
+	}
+	@When("I navigate to Health Insurance Calculator")
+	public void i_navigate_to_health_insurance_calculator() {
+		hiaAction.goToHealthInsuranceCalculator();
+	}
+	@When("I enter Age")
+	public void i_enter_age() {
+		hiaAction.typeAge();
+
+	}
+	@When("I click Calculate Price")
+	public void i_click_calculate_price() {
+		hiaAction.clickCalculatePrice();
+
+	}
+	@When("I enter Name")
+	public void i_enter_name() {
+		hiaAction.typeName();
+
+	}
+	@When("I enter Mobile Number")
+	public void i_enter_mobile_number() {
+		hiaAction.typeMobileNumber();
+
+	}
+	@When("I click View Plans")
+	public void i_click_view_plans() {
+		hiaAction.clickViewPlans();
+
+	}
+	@Then("I verify number of plans found is displayed")
+	public void i_verify_number_of_plans_found_is_displayed() {
+		hiaAction.verifyNumberOfPlansFound();
+	}
+
+
+
+
+}

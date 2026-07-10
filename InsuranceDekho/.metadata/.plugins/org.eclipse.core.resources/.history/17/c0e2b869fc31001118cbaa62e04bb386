@@ -1,0 +1,51 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.BusinessInsuranceNewsLocators;
+import uistore.InvestmentInsuranceNewsPageLocators;
+import utils.WebDriverHelper;
+
+public class BusinessInsuranceNewsPageActions {
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	public BusinessInsuranceNewsPageActions(WebDriver driver, ExtentTest test) {
+		this.test = test;
+		helper = new WebDriverHelper(driver);
+		helper.addLogAndReportInfo("Home Page Actions initialized successfully.", test);
+	}
+	
+	public void verifyBusinessInsuranceNewsHeader(String expectedValue) {
+		helper.hoverElement(InvestmentInsuranceNewsPageLocators.investmentInsuranceNewsHeader);
+		helper.verify(helper.getText(InvestmentInsuranceNewsPageLocators.investmentInsuranceNewsHeader), expectedValue);
+	}
+	
+	public void typeName(String name) {
+		helper.sendText(BusinessInsuranceNewsLocators.nameInput, name);
+	}
+	public void typeBussinessName(String value) {
+		helper.sendText(BusinessInsuranceNewsLocators.businessNameInput, value);
+	}
+	public void typeMobile(String value) {
+		helper.sendText(BusinessInsuranceNewsLocators.mobileInput, value);
+	}
+
+	public void typeEmail(String email) {
+		helper.sendText(BusinessInsuranceNewsLocators.emailInputField, email);
+	}
+	
+	public void selectProductType() {
+		helper.clickElement(BusinessInsuranceNewsLocators.productTypeDropdown);
+		helper.clickElement(BusinessInsuranceNewsLocators.firstProduct);
+		helper.waits();
+	}
+	
+	public void clickGetQuoteButton() {
+		helper.scrollIntoView(BusinessInsuranceNewsLocators.tempScroell);
+		helper.clickElement(BusinessInsuranceNewsLocators.getAQuoteButton);
+	}
+	
+}

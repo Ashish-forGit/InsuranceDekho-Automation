@@ -1,0 +1,71 @@
+2026-04-07 12:37:31 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:37:33 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-07 12:37:53 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:37:57 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-07 12:38:01 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:38:13 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:38:18 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:38:22 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:38:28 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:38:30 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:38:41 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:38:44 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:38:50 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:38:53 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:39:03 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:39:04 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:39:13 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:39:13 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-07 12:39:13 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-07 12:39:13 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-07 12:39:13 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-07 12:39:14 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-07 12:39:14 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-07 12:39:15 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-07 12:39:15 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-07 12:39:16 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-07 12:39:16 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-07 12:39:17 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-07 12:39:17 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-07 12:39:20 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:39:20 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-07 12:39:21 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-07 12:39:21 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-07 12:39:21 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-07 12:39:21 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-07 12:39:21 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-07 12:39:21 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-07 12:39:21 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-07 12:39:25 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:39:25 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-07 12:39:26 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-07 12:39:26 INFO  utils.LoggerHandler - Hovering over 'Life Insurance' under Insurance menu.
+2026-04-07 12:39:26 INFO  utils.LoggerHandler - 'Life Insurance' menu hovered successfully.
+2026-04-07 12:39:26 INFO  utils.LoggerHandler - Clicking on 'Human Life Value Calculator' option.
+2026-04-07 12:39:27 INFO  utils.LoggerHandler - 'Human Life Value Calculator' clicked successfully.
+2026-04-07 12:39:27 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-07 12:39:27 INFO  utils.LoggerHandler - Entering name: John
+2026-04-07 12:39:30 INFO  utils.LoggerHandler - Name entered successfully.
+2026-04-07 12:39:30 INFO  utils.LoggerHandler - Entering birthday: 01012001
+2026-04-07 12:39:30 INFO  utils.LoggerHandler - Birthday entered successfully.
+2026-04-07 12:39:30 INFO  utils.LoggerHandler - Entering mobile number: 9876543210
+2026-04-07 12:39:30 INFO  utils.LoggerHandler - Mobile number entered successfully.
+2026-04-07 12:39:31 INFO  utils.LoggerHandler - Clicking on 'View Plans for Free' button.
+2026-04-07 12:39:31 INFO  utils.LoggerHandler - 'View Plans for Free' clicked successfully.
+2026-04-07 12:39:55 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:39:55 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-07 12:39:56 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-07 12:39:56 INFO  utils.LoggerHandler - Hovering over 'Life Insurance' under Insurance menu.
+2026-04-07 12:39:56 INFO  utils.LoggerHandler - 'Life Insurance' menu hovered successfully.
+2026-04-07 12:39:56 INFO  utils.LoggerHandler - Clicking on 'Human Life Value Calculator' option.
+2026-04-07 12:40:00 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:40:00 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-07 12:40:01 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-07 12:40:01 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-07 12:40:01 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-07 12:40:08 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:40:10 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-07 12:40:24 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:40:26 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-07 12:40:37 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 12:40:39 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.

@@ -1,0 +1,43 @@
+2026-04-07 03:33:04 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 03:33:09 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 03:33:09 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-07 03:33:10 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-07 03:33:10 INFO  utils.LoggerHandler - Hovering over 'Car Insurance' under Insurance menu.
+2026-04-07 03:33:10 INFO  utils.LoggerHandler - 'Car Insurance' menu hovered successfully.
+2026-04-07 03:33:10 INFO  utils.LoggerHandler - Clicking on 'Add on Cover' option.
+2026-04-07 03:33:11 INFO  utils.LoggerHandler - 'Add on Cover' page navigation triggered successfully.
+2026-04-07 03:33:11 INFO  utils.LoggerHandler - Add-On Cover Page Actions initialized successfully.
+2026-04-07 03:33:11 INFO  utils.LoggerHandler - Scrolling to 'Calculate your Car IDV' section.
+2026-04-07 03:33:11 INFO  utils.LoggerHandler - 'Calculate your Car IDV' section is visible now.
+2026-04-07 03:33:12 INFO  utils.LoggerHandler - Clicking on 'Calculate' button to generate IDV amount.
+2026-04-07 03:33:12 INFO  utils.LoggerHandler - 'Calculate' button clicked successfully.
+2026-04-07 03:33:14 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 03:33:14 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-07 03:33:17 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-07 03:33:17 INFO  utils.LoggerHandler - Hovering over 'Bike Insurance' under Insurance menu.
+2026-04-07 03:33:17 INFO  utils.LoggerHandler - 'Bike Insurance' menu hovered successfully.
+2026-04-07 03:33:17 INFO  utils.LoggerHandler - Clicking on 'Claim Settlement' under Bike Insurance menu.
+2026-04-07 03:33:18 INFO  utils.LoggerHandler - 'Claim Settlement' clicked successfully.
+2026-04-07 03:33:18 INFO  utils.LoggerHandler - Bike Claim Settlement Page Actions initialized successfully.
+2026-04-07 03:33:32 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 03:33:32 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-07 03:33:33 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-07 03:33:33 INFO  utils.LoggerHandler - Hovering over 'Life Insurance' under Insurance menu.
+2026-04-07 03:33:33 INFO  utils.LoggerHandler - 'Life Insurance' menu hovered successfully.
+2026-04-07 03:33:33 INFO  utils.LoggerHandler - Clicking on 'Human Life Value Calculator' option.
+2026-04-07 03:33:37 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 03:33:37 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-07 03:33:38 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-07 03:33:38 INFO  utils.LoggerHandler - Hovering over 'Life Insurance' under Insurance menu.
+2026-04-07 03:33:38 INFO  utils.LoggerHandler - 'Life Insurance' menu hovered successfully.
+2026-04-07 03:33:38 INFO  utils.LoggerHandler - Clicking on 'Human Life Value Calculator' option.
+2026-04-07 03:33:39 INFO  utils.LoggerHandler - 'Human Life Value Calculator' clicked successfully.
+2026-04-07 03:33:39 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-07 03:33:39 INFO  utils.LoggerHandler - Entering name: john@gh
+2026-04-07 03:33:39 INFO  utils.LoggerHandler - Name entered successfully.
+2026-04-07 03:33:39 INFO  utils.LoggerHandler - Entering birthday: 01012001
+2026-04-07 03:33:39 INFO  utils.LoggerHandler - Birthday entered successfully.
+2026-04-07 03:33:40 INFO  utils.LoggerHandler - Entering mobile number: 98765
+2026-04-07 03:33:40 INFO  utils.LoggerHandler - Mobile number entered successfully.
+2026-04-07 03:33:40 INFO  utils.LoggerHandler - Clicking on 'View Plans for Free' button.
+2026-04-07 03:33:40 INFO  utils.LoggerHandler - 'View Plans for Free' clicked successfully.

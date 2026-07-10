@@ -1,0 +1,55 @@
+package stepdefinitions;
+
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.HomePageActions;
+
+public class VerifyNavBehaviour {
+	HomePageActions home = Hooks.homeAction;
+	
+	@When("we verify navigation bar is displayed1")
+	public void we_verify_navigation_bar_is_displayed1() {
+		home.verifyNavigationBarIsDisplayed();
+	  
+	}
+	@Then("we scroll page to bottom")
+	public void we_scroll_page_to_bottom() {
+		home.pageScrollsToTheBottom();
+	  
+	  
+	}
+	@Then("we verify navigation bar is displayed")
+	public void we_verify_navigation_bar_is_displayed() {
+		home.verifyNavigationBarIsDisplayed();
+	  
+	  
+	}
+	@When("we scroll page to top")
+	public void we_scroll_page_to_top() {
+		home.pageScrollsToTheTop();
+	   
+	   
+	}
+	@Then("we verify navigation bar is displayed2")
+	public void we_verify_navigation_bar_is_displayed2() {
+		home.verifyNavigationBarIsDisplayed();
+	  
+	  
+	}
+	@When("we refresh the page")
+	public void we_refresh_the_page() {
+		home.refreshPage();
+	   
+	   
+	}
+	@Then("we verify navigation bar is displayed3")
+	public void we_verify_navigation_bar_is_displayed3() {
+		home.verifyNavigationBarIsDisplayed();
+	  
+	  
+	}
+
+
+
+
+}

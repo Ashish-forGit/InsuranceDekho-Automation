@@ -1,0 +1,213 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.HomePageLocators;
+import utils.WebDriverHelper;
+
+public class HomePageActions {
+
+	WebDriver driver;
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	/**
+	 * Description: Initializes Home Page actions using WebDriver and ExtentTest
+	 * instances for UI interaction and reporting.
+	 *
+	 * @Test_Case NV_US01_TC01 - verifyHomePageLogoVisibility, NV_US02_TC01 -
+	 *            verifyCarInsuranceNavigation
+	 * @author Ashish Kumar
+	 */
+	public HomePageActions(WebDriver driver, ExtentTest test) {
+		try {
+			this.driver = driver;
+			this.test = test;
+			helper = new WebDriverHelper(driver);
+			helper.addLogAndReportInfo("Home Page Actions initialized successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in HomePageActions constructor: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies that InsuranceDekho logo is visible on Home page.
+	 *
+	 * @Test_Case NV_US01_TC01 - verifyHomePageLogoVisibility
+	 * @author Ashish Kumar
+	 */
+	public void verifyInsuranceDekhoIsVisible() {
+		try {
+			if (helper.isElementDisplayed(HomePageLocators.insuranceDekhoLogo)) {
+				helper.verifyElementIsDisplayed(HomePageLocators.insuranceDekhoLogo, "InsuranceDekho Logo", test);
+			} else {
+				helper.verifyElementIsDisplayed(HomePageLocators.insuranceDekhoLogoFallback,
+						"InsuranceDekho Logo (Fallback)", test);
+			}
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in verifyInsuranceDekhoIsVisible: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Hovers over the Insurance menu in the navigation bar.
+	 *
+	 * @Test_Case NV_US02_TC01 - verifyCarInsuranceNavigation, NV_US03_TC01 -
+	 *            verifyBikeClaimSettlementFlow, NV_US04_TC01 -
+	 *            verifyHumanLifeValueCalculatorNavigation
+	 * @author Ashish Kumar
+	 */
+	public void hoverOnInsuranceMenu() {
+		try {
+			helper.addLogAndReportInfo("Hovering over 'Insurance' menu in navigation bar.", test);
+			helper.hoverElement(HomePageLocators.insuranceNav);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in hoverOnInsuranceMenu: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on Car Insurance option under Insurance menu.
+	 *
+	 * @Test_Case NV_US02_TC01 - verifyCarInsuranceNavigation
+	 * @author Ashish Kumar
+	 */
+	public void clickOnCarInsurance() {
+		try {
+			helper.addLogAndReportInfo("Clicking on Car Insurance.", test);
+			helper.clickElement(HomePageLocators.carInsuranceLink);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickOnCarInsurance: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Navigates to Add‑On Cover page under Car Insurance.
+	 *
+	 * @Test_Case NV_US02_TC02 - verifyAddOnCoverCarIdvCalculation
+	 * @author Ashish Kumar
+	 */
+	public void clickOnAddOnCover() {
+		try {
+			helper.addLogAndReportInfo("Clicking Add‑On Cover option.", test);
+			helper.clickElement(HomePageLocators.addOnCoverLink);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickOnAddOnCover: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Navigates to Bike Insurance → Claim Settlement.
+	 *
+	 * @Test_Case NV_US03_TC01 - verifyBikeClaimSettlementFlow
+	 * @author Ashish Kumar
+	 */
+	public void hoverOnBikeInsuranceMenu() {
+		try {
+			helper.addLogAndReportInfo("Hovering Bike Insurance.", test);
+			helper.hoverElement(HomePageLocators.bikeInsuranceNav);
+			helper.waits();
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in hoverOnBikeInsuranceMenu: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on Claim Settlement under Bike Insurance.
+	 *
+	 * @Test_Case NV_US03_TC01 - verifyBikeClaimSettlementFlow
+	 * @author Ashish Kumar
+	 */
+	public void clickOnClaimSettlement() {
+		try {
+			helper.addLogAndReportInfo("Clicking Claim Settlement.", test);
+			helper.clickElement(HomePageLocators.claimSettlementLink);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickOnClaimSettlement: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Navigates to Human Life Value calculator under Life Insurance.
+	 *
+	 * @Test_Case NV_US04_TC01 - verifyHumanLifeValueCalculatorNavigation
+	 * @author Ashish Kumar
+	 */
+	public void clickOnHumanLifeValueCalculator() {
+		try {
+			helper.addLogAndReportInfo("Opening Human Life Value Calculator.", test);
+			helper.clickElement(HomePageLocators.humanLifeValueCalculatorLink);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickOnHumanLifeValueCalculator: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Submits valid mobile number for Renew Policy flow.
+	 *
+	 * @Test_Case NV_US12_TC01 - verifyRenewPolicyOtpValidation
+	 * @author Ashish Kumar
+	 */
+	public void typeMobile() {
+		try {
+			helper.sendText(HomePageLocators.mobileNumberInput, "9876543210");
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in typeMobile: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies OTP sent confirmation message.
+	 *
+	 * @Test_Case NV_US12_TC01 - verifyRenewPolicyOtpValidation
+	 * @author Ashish Kumar
+	 */
+	public void verifyOtpSentToSms() {
+		try {
+			helper.verifyPartialText(helper.getText(HomePageLocators.otpSentToSms), "OTP sent by SMS");
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyOtpSentToSms: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Validates error message for invalid mobile number input.
+	 *
+	 * @Test_Case NV_US13_TC01 - verifyInvalidMobileNumberValidation
+	 * @author Ashish Kumar
+	 */
+	public void verifyWrongMobileInput() {
+		try {
+			helper.verify(helper.getText(HomePageLocators.mobileValidationMessage), "Invalid mobile number.");
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in verifyWrongMobileInput: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies navigation bar is displayed on Home page.
+	 *
+	 * @Test_Case NV_US18_TC01 - verifyNavigationBarVisibility
+	 * @author Ashish Kumar
+	 */
+	public void verifyNavigationBarIsDisplayed() {
+		try {
+			helper.verifyElementIsDisplayed(HomePageLocators.nevigationTag, "Navigation Bar", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in verifyNavigationBarIsDisplayed: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+}

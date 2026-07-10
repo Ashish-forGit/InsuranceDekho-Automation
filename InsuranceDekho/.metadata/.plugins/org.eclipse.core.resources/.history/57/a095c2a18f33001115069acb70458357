@@ -1,0 +1,8 @@
+2026-04-08 00:08:03 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 00:08:03 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 00:08:04 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 00:08:04 INFO  utils.LoggerHandler - Hovering over 'Bike Insurance' under Insurance menu.
+2026-04-08 00:08:04 INFO  utils.LoggerHandler - 'Bike Insurance' menu hovered successfully.
+2026-04-08 00:08:04 INFO  utils.LoggerHandler - Clicking on 'Claim Settlement' under Bike Insurance menu.
+2026-04-08 00:08:05 INFO  utils.LoggerHandler - 'Claim Settlement' clicked successfully.
+2026-04-08 00:08:05 INFO  utils.LoggerHandler - Bike Claim Settlement Page Actions initialized successfully.

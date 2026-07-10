@@ -1,0 +1,76 @@
+package utils;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.io.FileHandler;
+
+/**
+ * Class Name: Screenshots
+ *
+ * Description: Utility class responsible for capturing screenshots during
+ * automation execution. It supports saving screenshots as PNG files for Extent
+ * reporting and provides byte[] screenshots for Allure attachments.
+ *
+ * @author Ashish Kumar
+ */
+public class Screenshots extends Base {
+	static Properties prop;
+
+	/**
+	 * Description: Captures a screenshot and saves it under ./screenshots directory
+	 * with the given filename and returns the absolute path of the saved image.
+	 * This is primarily used for attaching screenshots in Extent Reports.
+	 *
+	 * @param filename Screenshot file name (without extension)
+	 * @return Absolute path of the saved screenshot, or empty string if capture
+	 *         fails
+	 *
+	 * @author Ashish Kumar
+	 *
+	 */
+	public static String captureScreenshot(String filename) {
+	    loadProperties();
+	    try {
+	        TakesScreenshot ts = (TakesScreenshot) driver;
+	        File src = ts.getScreenshotAs(OutputType.FILE);
+
+	        String screenshotDir = Base.prop.getProperty("screenshotPath");
+
+	        File folder = new File(screenshotDir);
+	        if (!folder.exists()) {
+	            folder.mkdirs();
+	        }
+	        
+	        String timestamp = java.time.LocalDateTime.now()
+	                .toString()
+	                .replace(":", "-");
+
+	        File dest = new File(
+	                screenshotDir + File.separator + filename + "_" + timestamp + ".png"
+	        );
+
+	        FileHandler.copy(src, dest);
+
+	        return dest.getAbsolutePath();
+
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	        return "";
+	    }
+	}
+
+	/**
+	 * Captures screenshot and returns it as byte array Used for Allure attachments
+	 *
+	 * @return byte[] screenshot
+	 * @author Ashish Kumar
+	 */
+	public static byte[] captureScreenshotAsBytes() {
+		return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+	}
+
+}

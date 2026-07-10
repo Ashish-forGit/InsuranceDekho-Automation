@@ -1,0 +1,25 @@
+2026-04-09 00:24:09 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 00:24:09 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-09 00:24:09 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-09 00:24:10 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-09 00:24:10 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-09 00:24:10 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 00:24:10 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-09 00:24:10 INFO  utils.LoggerHandler - Step: Clicking on 'Term Insurance' link from navigation menu.
+2026-04-09 00:24:11 INFO  utils.LoggerHandler - Step Passed: 'Term Insurance' link clicked successfully.
+2026-04-09 00:24:11 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-09 00:24:11 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-09 00:24:11 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-09 00:24:11 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-09 00:24:12 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-09 00:24:12 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-09 00:24:12 ERROR utils.LoggerHandler - Step Failed: Navigation bar is not displayed. Error: stale element reference: stale element not found in the current frame
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ccac24c0e37ec0c6157c81b6f01ad41b, isElementDisplayed {id=f.E855CA0B56D36ED25FF1FE1263E8D0C7.d.C7379133489FEC297F9DD1FE37D6D4F9.e.354}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\10853349\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53346}, goog:processID: 1868, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53346/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ccac24c0e37ec0c6157c81b6f01ad41b)] -> xpath: //header]
+Session ID: ccac24c0e37ec0c6157c81b6f01ad41b

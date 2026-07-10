@@ -1,0 +1,12 @@
+2026-04-09 18:32:07 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 18:32:07 INFO  utils.LoggerHandler - Step Passed: Insurance Advisors Page Actions initialized successfully.
+2026-04-09 18:32:09 INFO  utils.LoggerHandler - Step: Hovering on 'Insurance Advisors Found' text.
+2026-04-09 18:32:09 ERROR utils.LoggerHandler - Step Failed: Unable to verify Insurance Advisors found text. Error: stale element reference: stale element not found in the current frame
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [990908a3c2f2c80828576808f0bdd733, actions {actions=[org.openqa.selenium.interactions.Sequence@34448e6c]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\10853349\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59442}, goog:processID: 12268, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59442/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 990908a3c2f2c80828576808f0bdd733

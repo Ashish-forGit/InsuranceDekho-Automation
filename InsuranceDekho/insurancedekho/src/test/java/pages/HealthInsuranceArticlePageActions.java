@@ -1,0 +1,287 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.HealthInsuranceArticlePageLocators;
+import utils.Base;
+import utils.WebDriverHelper;
+
+/**
+ * Class Name: HealthInsuranceArticlePageActions
+ *
+ * Description: Page Action class responsible for handling all user
+ * interactions, validations, and calculator-related actions on the Health
+ * Insurance Article page. This includes article validation, author
+ * verification, health insurance calculator interaction, and plans result
+ * validation.
+ *
+ * This class follows the Page Action Model (PAM) pattern and provides
+ * business-readable, reusable methods with step-level logging integrated using
+ * Extent Reports.
+ *
+ * @Author: Ashish Kumar
+ */
+public class HealthInsuranceArticlePageActions {
+
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	/**
+	 * Description: Initializes Health Insurance Article Page actions using
+	 * WebDriver and ExtentTest instances for browser interaction and reporting.
+	 *
+	 * @Test_Case NV_US04_TC02
+	 * @param driver WebDriver instance for browser interaction
+	 * @param test   ExtentTest instance for logging and reporting
+	 * @author Ashish Kumar
+	 */
+	public HealthInsuranceArticlePageActions(WebDriver driver, ExtentTest test) {
+		try {
+			this.test = test;
+			helper = new WebDriverHelper(driver);
+			helper.addLogAndReportInfo("Health Insurance Article Page Actions initialized successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo(
+					"Exception while initializing HealthInsuranceArticlePageActions: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies that the Health Insurance article header is displayed
+	 * correctly as per the expected value.
+	 *
+	 * @Test_Case NV_US04_TC02
+	 * @author Ashish Kumar
+	 */
+	public void verifyHealthInsuranceArticleHeader() {
+		try {
+			String expectedValue = "Health Insurance Articles";
+			helper.addLogAndReportInfo("Verifying Health Insurance article header.", test);
+
+			String actualHeader = helper.getText(HealthInsuranceArticlePageLocators.healthInsuranceArticleHeading);
+
+			helper.verify(actualHeader, expectedValue);
+
+			helper.addLogAndReportPass("Health Insurance article header verified successfully. Expected: '"
+					+ expectedValue + "' | Actual: '" + actualHeader + "'", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to verify Health InsuranceA rticle Header", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on the first available Health Insurance article displayed
+	 * on the page to navigate to its detailed view.
+	 *
+	 * @Test_Case NV_US04_TC02
+	 * @author Ashish Kumar
+	 */
+	public void clickFirstArticlePresent() {
+		try {
+			helper.addLogAndReportInfo("Clicking on the first Health Insurance article.", test);
+
+			helper.clickElement(HealthInsuranceArticlePageLocators.firstNewsPresent);
+
+			helper.addLogAndReportInfo("First Health Insurance article clicked successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickFirstArticlePresent", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies that the Health Insurance article displays the expected
+	 * author information.
+	 *
+	 * @Test_Case NV_US04_TC02
+	 * @author Ashish Kumar
+	 */
+	public void verifyNewsWrittenByAuthor() {
+		try {
+			String expectedValue = "Written by Kritika Singh";
+			helper.addLogAndReportInfo("Verifying author information for Health Insurance article.", test);
+
+//			helper.hoverElement(HealthInsuranceArticlePageLocators.writtenByAuthorText);
+
+			String actualAuthor = helper.getText(HealthInsuranceArticlePageLocators.writtenByAuthorText);
+
+			helper.verify(actualAuthor, expectedValue);
+
+			helper.addLogAndReportPass(
+					"Author verified successfully. Expected: '" + expectedValue + "' | Actual: '" + actualAuthor + "'",
+					test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to verify 'Author Name'", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Scrolls the page to bring the Health Insurance premium
+	 * calculator section into view for user input and plan calculation.
+	 *
+	 * @Test_Case NV_US04_TC02
+	 * @author Ashish Kumar
+	 */
+	public void goToHealthInsuranceCalculator() {
+		try {
+			helper.addLogAndReportInfo("Scrolling to Health Insurance calculator section.", test);
+
+			helper.scrollIntoView(HealthInsuranceArticlePageLocators.healthInsuranceCalculatorSection);
+
+			helper.addLogAndReportInfo("Health Insurance calculator section is visible now.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in goToHealthInsuranceCalculator", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters the user's age into the Age input field in the Health
+	 * Insurance calculator.
+	 *
+	 * @Test_Case NV_US04_TC02
+	 * @author Ashish Kumar
+	 */
+	public void typeAge() {
+		try {
+			String age = "25";
+			helper.addLogAndReportInfo("Entering age value: " + age, test);
+
+			helper.sendText(HealthInsuranceArticlePageLocators.ageInput, age);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in typeAge: ", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters the user's pincode into the Pincode input field of the
+	 * Health Insurance calculator.
+	 *
+	 * @Test_Case NV_US04_TC02
+	 * @author Ashish Kumar
+	 */
+	public void typePincode() {
+		try {
+			String pincode = "110055";
+			helper.addLogAndReportInfo("Entering pincode value: " + pincode, test);
+
+			helper.sendText(HealthInsuranceArticlePageLocators.pincodeInput, pincode);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in typePincode: ", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on the Calculate Price button to generate Health
+	 * Insurance plan details based on input values.
+	 *
+	 * @Test_Case NV_US04_TC02
+	 * @author Ashish Kumar
+	 */
+	public void clickCalculatePrice() {
+		try {
+			helper.addLogAndReportInfo("Clicking on 'Calculate Price' button.", test);
+
+			helper.hoverElement(HealthInsuranceArticlePageLocators.calculatePriceButton);
+
+			helper.clickElement(HealthInsuranceArticlePageLocators.calculatePriceButton);
+
+			helper.addLogAndReportInfo("'Calculate Price' button clicked successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickCalculatePrice", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters the user's name into the Name input field for Health
+	 * Insurance plan enquiry.
+	 *
+	 * @Test_Case NV_US04_TC02
+	 * @author Ashish Kumar
+	 */
+	public void typeName() {
+		try {
+			String value = "John";
+			helper.addLogAndReportInfo("Entering customer name: " + value, test);
+
+			helper.sendText(HealthInsuranceArticlePageLocators.nameInputField, value);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in typeName", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters the user's mobile number into the Mobile Number input
+	 * field.
+	 *
+	 * @Test_Case NV_US04_TC02
+	 * @author Ashish Kumar
+	 */
+	public void typeMobileNumber() {
+		try {
+
+			String mobile = Base.prop.getProperty("mobile");
+			helper.addLogAndReportInfo("Entering mobile number: " + mobile, test);
+
+			helper.sendText(HealthInsuranceArticlePageLocators.mobileInputField, mobile);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in typeMobileNumber", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on the View Plans button to navigate to available Health
+	 * Insurance plans.
+	 *
+	 * @Test_Case NV_US04_TC02
+	 * @author Ashish Kumar
+	 */
+	public void clickViewPlans() {
+		try {
+			helper.addLogAndReportInfo("Clicking on 'View Plans' button.", test);
+
+			helper.hoverElement(HealthInsuranceArticlePageLocators.viewPlansButton);
+
+			helper.clickElement(HealthInsuranceArticlePageLocators.viewPlansButton);
+
+			helper.addLogAndReportInfo("'View Plans' button clicked successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickViewPlans", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies that the number of Health Insurance plans found is
+	 * displayed correctly as expected.
+	 *
+	 * @Test_Case NV_US04_TC02
+	 * @author Ashish Kumar
+	 */
+	public void verifyNumberOfPlansFound() {
+		try {
+			String expectedValue = "0 Plans found";
+			helper.addLogAndReportInfo("Verifying number of Health Insurance plans found.", test);
+
+			String actualValue = helper.getText(HealthInsuranceArticlePageLocators.plansFoundHeader);
+
+			helper.verify(actualValue, expectedValue);
+
+			helper.addLogAndReportPass("Plans count verified successfully. Expected: '" + expectedValue
+					+ "' | Actual: '" + actualValue + "'", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyNumberOfPlansFound", test);
+			throw e;
+		}
+	}
+}

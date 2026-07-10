@@ -1,0 +1,12 @@
+@NV_US05_TC02 @smoke
+Feature: NV_US05_TC02 Verify navigation bar behavior on page scroll and page reload
+
+  Scenario: Verify nav bar remains visible on scroll and refresh
+
+    When we verify navigation bar is displayed
+    Then we scroll page to bottom
+    Then we verify navigation bar is displayed1
+    When we scroll page to top
+    Then we verify navigation bar is displayed2
+    When we refresh the page
+    Then we verify navigation bar is displayed3

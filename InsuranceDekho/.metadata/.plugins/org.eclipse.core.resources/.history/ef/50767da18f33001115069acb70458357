@@ -1,0 +1,32 @@
+2026-04-09 00:25:52 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 00:25:52 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-09 00:25:52 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-09 00:25:53 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-09 00:25:53 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-09 00:25:53 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 00:25:53 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-09 00:25:53 INFO  utils.LoggerHandler - Step: Clicking on 'Term Insurance' link from navigation menu.
+2026-04-09 00:25:54 INFO  utils.LoggerHandler - Step Passed: 'Term Insurance' link clicked successfully.
+2026-04-09 00:25:54 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-09 00:25:54 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-09 00:25:54 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-09 00:25:54 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-09 00:25:55 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-09 00:25:55 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-09 00:25:55 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-09 00:25:55 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-09 00:25:55 INFO  utils.LoggerHandler - Step: Hovering over 'News' menu in the navigation bar.
+2026-04-09 00:25:56 INFO  utils.LoggerHandler - Step Passed: Hovered over 'News' menu successfully.
+2026-04-09 00:25:56 INFO  utils.LoggerHandler - Step: Clicking on 'Travel Insurance' link from navigation menu.
+2026-04-09 00:25:56 INFO  utils.LoggerHandler - Step Passed: 'Travel Insurance' link clicked successfully.
+2026-04-09 00:25:56 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-09 00:25:56 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-09 00:25:56 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-09 00:25:56 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-09 00:25:56 INFO  utils.LoggerHandler - Step: Hovering over the first Travel Insurance article.
+2026-04-09 00:25:57 INFO  utils.LoggerHandler - Step: Clicking on the first Travel Insurance article.
+2026-04-09 00:26:01 INFO  utils.LoggerHandler - Step Passed: First Travel Insurance article opened successfully.
+2026-04-09 00:26:01 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-09 00:26:01 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-09 00:26:01 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-09 00:26:01 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.

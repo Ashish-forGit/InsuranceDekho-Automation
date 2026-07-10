@@ -1,0 +1,53 @@
+-------------------------------------------------------------------------------
+Test set: runner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 53.95 s <<< FAILURE! -- in runner.TestRunner
+NV_US01_TC03 Two-Wheeler IDV via Bike Claim Settlement and verify amount.Calculate Bike IDV and validate amount is displayed -- Time elapsed: 23.73 s <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='gs_ta_results']/ul/li[1]"}
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6911001c3f441cb0b8d3ee72d79f05e1, findElement {using=xpath, value=//div[@class='gs_ta_results']/ul/li[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\10853349\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52319}, goog:processID: 22580, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52319/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6911001c3f441cb0b8d3ee72d79f05e1
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+	at utils.WebDriverHelper.clickElement(WebDriverHelper.java:47)
+	at pages.BikeClaimSettlementPageActions.selectModelFirstOption(BikeClaimSettlementPageActions.java:137)
+	at stepdefinitions.VerifyAndCalculateBikeIdv.i_select_first_bike_model(VerifyAndCalculateBikeIdv.java:41)
+	at ✽.I select first bike model(file:///C:/Users/10853349/InsuranceDekho-BDD/insuranceDekhoBDD/features/NV_US01_TC03_Calculate_Bike_IDV.feature:12)
+
+NV_US01_TC04 Verify Human Life Value Calculator is navigated through Life Insurance.Verify HLV calculator page title is displayed -- Time elapsed: 6.761 s <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'I hover on Life Insurance menu' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("I hover on Life Insurance menu")
+public void i_hover_on_life_insurance_menu() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("I click on Human Life Value Calculator")
+public void i_click_on_human_life_value_calculator() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("I verify HLV calculator page title is displayed")
+public void i_verify_hlv_calculator_page_title_is_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+

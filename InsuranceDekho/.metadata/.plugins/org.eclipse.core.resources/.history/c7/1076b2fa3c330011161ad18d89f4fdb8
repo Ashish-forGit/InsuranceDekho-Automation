@@ -1,0 +1,263 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.BikeClaimSettlementPageLocators;
+import utils.WebDriverHelper;
+
+/**
+ * Class Name: BikeClaimSettlementPageActions
+ *
+ * Description:
+ * Page Action class responsible for handling all user interactions,
+ * validations, and navigations related to the Bike Claim Settlement
+ * page in the InsuranceDekho application.
+ *
+ * This class follows the Page Action Model (PAM) design pattern and
+ * provides reusable, business-readable methods for automation flows
+ * related to Bike Insurance IDV calculation and claim settlement.
+ *
+ * @Author: Ashish Kumar
+ */
+public class BikeClaimSettlementPageActions {
+
+    WebDriver driver;
+    WebDriverHelper helper;
+    ExtentTest test;
+
+    /**
+     * Constructor: BikeClaimSettlementPageActions
+     *
+     * Description:
+     * Initializes Bike Claim Settlement Page Actions with WebDriver
+     * and ExtentTest instances for browser interaction and reporting.
+     *
+     * @param driver WebDriver instance for browser interaction
+     * @param test   ExtentTest instance for logging and reporting
+     */
+    public BikeClaimSettlementPageActions(WebDriver driver, ExtentTest test) {
+        try {
+            this.driver = driver;
+            this.test = test;
+            helper = new WebDriverHelper(driver);
+            helper.addLogAndReportInfo(
+                "Bike Claim Settlement Page Actions initialized successfully.", test
+            );
+        } catch (Exception e) {
+            helper.addLogAndReportInfo(
+                "Exception while initializing BikeClaimSettlementPageActions: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Method Name: verifyBikeInsuranceClaimHeadingIsPresent
+     *
+     * Description:
+     * Verifies that the Bike Insurance Claim Settlement page heading
+     * is displayed correctly as per the expected business requirement.
+     *
+     */
+    public void verifyBikeInsuranceClaimHeadingIsPresent() {
+        try {
+        	String expectedValue="Bike Insurance Claim";
+            helper.addLogAndReportPass(
+                "Verifying Bike Insurance Claim Settlement page heading.", test
+            );
+
+            String actualText = helper.getText(
+                BikeClaimSettlementPageLocators.bikeInsuranceClaimHeading
+            );
+
+            helper.verify(actualText, expectedValue);
+
+            helper.addLogAndReportInfo(
+                "Bike Insurance Claim heading verified successfully. Expected: '"
+                + expectedValue + "' | Actual: '" + actualText + "'", test
+            );
+        } catch (Exception e) {
+            helper.addLogAndReportFail(
+                "Exception in verifyBikeInsuranceClaimHeadingIsPresent: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Method Name: scrollToCalculateTwoWheelerIdvSection
+     *
+     * Description:
+     * Scrolls the page to bring the 'Calculate your Two Wheeler IDV'
+     * section into the visible viewport for further interaction.
+     */
+    public void scrollToCalculateTwoWheelerIdvSection() {
+        try {
+            helper.addLogAndReportInfo(
+                "Scrolling to 'Calculate Two Wheeler IDV' section.", test
+            );
+
+            helper.scrollIntoView(
+                BikeClaimSettlementPageLocators.calculateTwoWheelerIdvSection
+            );
+
+            helper.addLogAndReportInfo(
+                "'Calculate Two Wheeler IDV' section is now visible.", test
+            );
+        } catch (Exception e) {
+            helper.addLogAndReportInfo(
+                "Exception in scrollToCalculateTwoWheelerIdvSection: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Method Name: selectBrandFirstOptions
+     *
+     * Description:
+     * Selects the first available brand from the brand dropdown
+     * in the Two Wheeler IDV calculation section.
+     */
+    public void selectBrandFirstOptions() {
+        try {
+            helper.addLogAndReportInfo(
+                "Selecting first brand option from Brand dropdown.", test
+            );
+
+            helper.clickElement(
+                BikeClaimSettlementPageLocators.selectBrandDropdown
+            );
+
+            helper.clickElement(
+                BikeClaimSettlementPageLocators.firstBrand
+            );
+
+            helper.addLogAndReportInfo(
+                "First brand selected successfully.", test
+            );
+        } catch (Exception e) {
+            helper.addLogAndReportInfo(
+                "Exception in selectBrandFirstOptions: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Method Name: selectModelFirstOption
+     *
+     * Description:
+     * Selects the first available bike model by entering model
+     * name and confirming selection from the dropdown.
+     */
+    public void selectModelFirstOption() {
+        try {
+            helper.addLogAndReportInfo(
+                "Selecting first bike model option.", test
+            );
+
+            helper.clickElement(
+                BikeClaimSettlementPageLocators.selectModelDropdown
+            );
+
+            helper.addLogAndReportInfo(
+                "Entering model name 'Splendor Plus'.", test
+            );
+
+            helper.sendText(
+                BikeClaimSettlementPageLocators.selectModelDropdown,
+                "Splendor Plus"
+            );
+
+            helper.clickEnter(
+                BikeClaimSettlementPageLocators.selectModelDropdown
+            );
+
+            helper.clickElement(
+                BikeClaimSettlementPageLocators.firstModel
+            );
+
+            helper.addLogAndReportInfo(
+                "Bike model selected successfully.", test
+            );
+        } catch (Exception e) {
+            helper.addLogAndReportInfo(
+                "Exception in selectModelFirstOption: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Method Name: selectYearFirstOption
+     *
+     * Description:
+     * Selects the first available manufacturing year for the
+     * selected two wheeler.
+     */
+    public void selectYearFirstOption() {
+        try {
+            helper.addLogAndReportInfo(
+                "Selecting manufacturing year from Year dropdown.", test
+            );
+
+            helper.clickElement(
+                BikeClaimSettlementPageLocators.selectYearDropdown
+            );
+
+            helper.clickElement(
+                BikeClaimSettlementPageLocators.firstYear
+            );
+
+            helper.addLogAndReportInfo(
+                "Manufacturing year selected successfully.", test
+            );
+        } catch (Exception e) {
+            helper.addLogAndReportInfo(
+                "Exception in selectYearFirstOption: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Method Name: clickCalculateAndVerifyIdvAmount
+     *
+     * Description:
+     * Clicks on the Calculate button to generate the Two Wheeler IDV
+     * amount and verifies that the displayed amount matches the
+     * expected value.
+     *
+     * @Author Ashish Kumar
+     */
+    public void clickCalculateAndVerifyIdvAmount() {
+        try {
+        	String expectedValue="Rs. 64,323";
+            helper.addLogAndReportInfo(
+                "Clicking on Calculate button to generate IDV amount.", test
+            );
+
+            helper.clickElement(
+                BikeClaimSettlementPageLocators.calculateButton
+            );
+
+            String actualAmount = helper.getText(
+                BikeClaimSettlementPageLocators.idvAmountText
+            );
+
+            helper.verify(actualAmount, expectedValue);
+
+            helper.addLogAndReportPass(
+                "IDV amount verified successfully. Expected: '"
+                + expectedValue + "' | Actual: '" + actualAmount + "'", test
+            );
+        } catch (Exception e) {
+            helper.addLogAndReportFail(
+                "Exception in clickCalculateAndVerifyIdvAmount: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+}

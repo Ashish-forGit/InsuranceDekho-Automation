@@ -1,0 +1,28 @@
+2026-04-07 13:49:48 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 13:49:48 INFO  utils.LoggerHandler - Verifying element is displayed: InsuranceDekho Logo
+2026-04-07 13:49:48 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> InsuranceDekho Logo
+2026-04-07 13:49:48 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-07 13:49:48 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-07 13:49:48 INFO  utils.LoggerHandler - Clicking on 'Car Insurance' option from Insurance dropdown.
+2026-04-07 13:49:49 INFO  utils.LoggerHandler - 'Car Insurance' option clicked successfully.
+2026-04-07 13:49:49 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 13:49:53 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 13:49:53 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-07 13:49:54 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-07 13:49:54 INFO  utils.LoggerHandler - Hovering over 'Car Insurance' under Insurance menu.
+2026-04-07 13:49:54 INFO  utils.LoggerHandler - 'Car Insurance' menu hovered successfully.
+2026-04-07 13:49:54 INFO  utils.LoggerHandler - Clicking on 'Add on Cover' option.
+2026-04-07 13:49:55 INFO  utils.LoggerHandler - 'Add on Cover' page navigation triggered successfully.
+2026-04-07 13:49:55 INFO  utils.LoggerHandler - Add-On Cover Page Actions initialized successfully.
+2026-04-07 13:49:55 INFO  utils.LoggerHandler - Scrolling to 'Calculate your Car IDV' section.
+2026-04-07 13:49:55 INFO  utils.LoggerHandler - 'Calculate your Car IDV' section is visible now.
+2026-04-07 13:49:59 INFO  utils.LoggerHandler - Clicking on 'Calculate' button to generate IDV amount.
+2026-04-07 13:49:59 INFO  utils.LoggerHandler - 'Calculate' button clicked successfully.
+2026-04-07 13:50:02 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 13:50:02 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-07 13:50:03 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-07 13:50:03 INFO  utils.LoggerHandler - Hovering over 'Bike Insurance' under Insurance menu.
+2026-04-07 13:50:03 INFO  utils.LoggerHandler - 'Bike Insurance' menu hovered successfully.
+2026-04-07 13:50:03 INFO  utils.LoggerHandler - Clicking on 'Claim Settlement' under Bike Insurance menu.
+2026-04-07 13:50:04 INFO  utils.LoggerHandler - 'Claim Settlement' clicked successfully.
+2026-04-07 13:50:04 INFO  utils.LoggerHandler - Bike Claim Settlement Page Actions initialized successfully.

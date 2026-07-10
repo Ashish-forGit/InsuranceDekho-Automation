@@ -1,0 +1,58 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.AddOnCoverPageLocators;
+import utils.WebDriverHelper;
+
+public class AddOnCoverPageActions {
+
+    WebDriver driver;
+    WebDriverHelper helper;
+    ExtentTest test;
+
+    public AddOnCoverPageActions(WebDriver driver, ExtentTest test) {
+        this.driver = driver;
+        this.test = test;
+        helper = new WebDriverHelper(driver);
+        helper.addLogAndReportInfo("Add-On Cover Page Actions initialized successfully.", test);
+    }
+
+    public void scrollToCalculateCarIdvSection() {
+        helper.addLogAndReportInfo("Scrolling to 'Calculate your Car IDV' section.", test);
+        helper.scrollIntoView(AddOnCoverPageLocators.calculateCarIdvSection);
+        helper.addLogAndReportInfo("'Calculate your Car IDV' section is visible now.", test);
+    }
+
+    public void selectBrandFirstOption() {
+    	helper.clickElement(AddOnCoverPageLocators.selectBrandDropdown);
+    	helper.waits();
+    	helper.clickElement(AddOnCoverPageLocators.firstBrand);
+
+    }
+
+    public void selectModelFirstOption() {
+    	helper.jsClick(AddOnCoverPageLocators.selectModelDropdown);
+    	helper.clickElement(AddOnCoverPageLocators.firstModel);
+
+    }
+
+    public void selectYearFirstOption() {
+    	helper.jsClick(AddOnCoverPageLocators.selectYearDropdown);
+    	helper.jsClick(AddOnCoverPageLocators.firstYear);
+
+    }
+
+    public void clickCalculateAmount() {
+        helper.addLogAndReportInfo("Clicking on 'Calculate' button to generate IDV amount.", test);
+        helper.clickElement(AddOnCoverPageLocators.calculateButton);
+        helper.addLogAndReportInfo("'Calculate' button clicked successfully.", test);
+
+
+    }
+    
+    public void verifyAmountPresent(String expectedValue) {
+    	helper.verify(helper.getText(AddOnCoverPageLocators.idvAmountText), expectedValue);
+    }
+}

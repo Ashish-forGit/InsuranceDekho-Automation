@@ -1,0 +1,238 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.BusinessInsuranceNewsLocators;
+import uistore.InvestmentInsuranceNewsPageLocators;
+import utils.WebDriverHelper;
+
+/**
+ * Class Name: BusinessInsuranceNewsPageActions
+ *
+ * Description: Page Action class responsible for handling all user
+ * interactions, validations, and form submissions on the Business Insurance
+ * News page. This class supports header validation, lead form data entry,
+ * product selection, submission, and success/error message verification.
+ *
+ * This class provides reusable business-readable actions and integrates Extent
+ * reporting for step-level execution tracking.
+ *
+ * @Author: Ashish Kumar
+ */
+public class BusinessInsuranceNewsPageActions {
+
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	/**
+	 * Constructor: BusinessInsuranceNewsPageActions
+	 *
+	 * Description: Initializes Business Insurance News Page actions using WebDriver
+	 * and ExtentTest instances for UI interaction and reporting.
+	 *
+	 * @param driver WebDriver instance for browser interaction
+	 * @param test   ExtentTest instance for logging and reporting
+	 */
+	public BusinessInsuranceNewsPageActions(WebDriver driver, ExtentTest test) {
+		try {
+			this.test = test;
+			helper = new WebDriverHelper(driver);
+			helper.addLogAndReportInfo("Business Insurance News Page Actions initialized successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo(
+					"Exception while initializing BusinessInsuranceNewsPageActions: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: verifyBusinessInsuranceNewsHeader
+	 *
+	 * Description: Verifies that the Business Insurance News page header is
+	 * displayed correctly as per the expected value.
+	 *
+	 * @param expectedValue Expected header text
+	 */
+	public void verifyBusinessInsuranceNewsHeader() {
+		try {
+			String expectedValue="Business Insurance News";
+			helper.addLogAndReportInfo("Verifying Business Insurance News page header.", test);
+
+			helper.hoverElement(InvestmentInsuranceNewsPageLocators.investmentInsuranceNewsHeader);
+
+			String actualText = helper.getText(InvestmentInsuranceNewsPageLocators.investmentInsuranceNewsHeader);
+
+			helper.verify(actualText, expectedValue);
+
+			helper.addLogAndReportPass("Business Insurance News header verified successfully. Expected: '"
+					+ expectedValue + "' | Actual: '" + actualText + "'", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyBusinessInsuranceNewsHeader: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: typeName
+	 *
+	 * Description: Enters the customer name into the Name input field on the
+	 * Business Insurance lead form.
+	 *
+	 * @param name Customer name to be entered
+	 */
+	public void typeName() {
+		try {
+			String name="John";
+			helper.addLogAndReportInfo("Entering customer name: " + name, test);
+
+			helper.sendText(BusinessInsuranceNewsLocators.nameInput, name);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to enter customer name", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: typeBussinessName
+	 *
+	 * Description: Enters the business name into the Business Name input field.
+	 *
+	 * @param value Business name to be entered
+	 */
+	public void typeBussinessName() {
+		try {
+			String value="xyz";
+			helper.addLogAndReportInfo("Entering business name: " + value, test);
+
+			helper.sendText(BusinessInsuranceNewsLocators.businessNameInput, value);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to enter business name", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: typeMobile
+	 *
+	 * Description: Enters the mobile number into the Mobile input field on the
+	 * Business Insurance lead form.
+	 *
+	 * @param value Mobile number to be entered
+	 */
+	public void typeMobile(String value) {
+		try {
+			helper.addLogAndReportInfo("Entering mobile number: " + value, test);
+
+			helper.sendText(BusinessInsuranceNewsLocators.mobileInput, value);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in typeMobile: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: typeEmail
+	 *
+	 * Description: Enters the email address into the Email input field on the
+	 * Business Insurance lead form.
+	 *
+	 * @param email Email address to be entered
+	 */
+	public void typeEmail(String email) {
+		try {
+			helper.addLogAndReportInfo("Entering email address: " + email, test);
+
+			helper.sendText(BusinessInsuranceNewsLocators.emailInputField, email);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in typeEmail: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: selectProductType
+	 *
+	 * Description: Selects the first available product type from the Product Type
+	 * dropdown in the lead form.
+	 */
+	public void selectProductType() {
+		try {
+			helper.addLogAndReportInfo("Selecting product type from Product Type dropdown.", test);
+
+			helper.clickElement(BusinessInsuranceNewsLocators.productTypeDropdown);
+
+			helper.clickElement(BusinessInsuranceNewsLocators.firstProduct);
+
+			helper.waits();
+
+			helper.addLogAndReportInfo("Product type selected successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in selectProductType: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: clickGetQuoteButton
+	 *
+	 * Description: Scrolls to and clicks on the 'Get a Quote' button to submit the
+	 * Business Insurance lead form.
+	 */
+	public void clickGetQuoteButton() {
+		try {
+			helper.addLogAndReportInfo("Scrolling to 'Get a Quote' button.", test);
+
+			helper.scrollIntoView(BusinessInsuranceNewsLocators.tempScroell);
+
+			helper.addLogAndReportInfo("Clicking on 'Get a Quote' button.", test);
+
+			helper.clickElement(BusinessInsuranceNewsLocators.getAQuoteButton);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickGetQuoteButton: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: verifyThankYouText
+	 *
+	 * Description: Verifies that the Thank You confirmation message is displayed
+	 * after successful form submission.
+	 *
+	 * @param expectedValue Expected confirmation text
+	 */
+	public void verifyThankYouText(String expectedValue) {
+		try {
+			helper.addLogAndReportInfo("Verifying Thank You confirmation message.", test);
+
+			helper.verify(helper.getText(BusinessInsuranceNewsLocators.thankYouText), expectedValue);
+
+			helper.addLogAndReportInfo("Thank You message verified successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in verifyThankYouText: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Method Name: verifyErrorMessage
+	 *
+	 * Description: Verifies the error message displayed for invalid mobile number
+	 * input in the lead form.
+	 *
+	 * @param expectedValue Expected error message text
+	 */
+	public void verifyErrorMessage(String expectedValue) {
+		try {
+			helper.addLogAndReportInfo("Verifying invalid mobile number error message.", test);
+
+			helper.verify(helper.getText(BusinessInsuranceNewsLocators.invalidMobileNumberText), expectedValue);
+
+			helper.addLogAndReportInfo("Error message verified successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in verifyErrorMessage: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+}

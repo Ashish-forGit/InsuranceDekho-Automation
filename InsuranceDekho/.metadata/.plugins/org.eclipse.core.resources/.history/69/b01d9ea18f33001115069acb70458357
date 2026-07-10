@@ -1,0 +1,16 @@
+2026-04-09 00:23:38 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 00:23:38 INFO  utils.LoggerHandler - Step: Hovering over 'News' menu in the navigation bar.
+2026-04-09 00:23:39 INFO  utils.LoggerHandler - Step Passed: Hovered over 'News' menu successfully.
+2026-04-09 00:23:39 INFO  utils.LoggerHandler - Step: Clicking on 'Business News' under News menu.
+2026-04-09 00:23:40 INFO  utils.LoggerHandler - Step Passed: Clicked on 'Business News' successfully.
+2026-04-09 00:23:40 INFO  utils.LoggerHandler - Business Insurance News Page Actions initialized successfully.
+2026-04-09 00:23:40 INFO  utils.LoggerHandler - Verifying Business Insurance News page header.
+2026-04-09 00:23:40 INFO  utils.LoggerHandler - Business Insurance News header verified successfully. Expected: 'Business Insurance News' | Actual: 'Business Insurance News'
+2026-04-09 00:23:40 INFO  utils.LoggerHandler - Entering customer name: John
+2026-04-09 00:23:41 INFO  utils.LoggerHandler - Entering business name: xyz
+2026-04-09 00:23:41 INFO  utils.LoggerHandler - Entering mobile number: 987654
+2026-04-09 00:23:41 INFO  utils.LoggerHandler - Selecting product type from Product Type dropdown.
+2026-04-09 00:23:44 INFO  utils.LoggerHandler - Product type selected successfully.
+2026-04-09 00:23:44 INFO  utils.LoggerHandler - Entering email address: test@email.com
+2026-04-09 00:23:45 INFO  utils.LoggerHandler - Verifying invalid mobile number error message.
+2026-04-09 00:23:45 INFO  utils.LoggerHandler - Error message verified successfully.

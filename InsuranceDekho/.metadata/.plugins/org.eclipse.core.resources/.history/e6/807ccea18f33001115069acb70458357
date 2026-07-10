@@ -1,0 +1,23 @@
+2026-04-09 00:31:19 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 00:31:19 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-09 00:31:20 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-09 00:31:20 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-09 00:31:20 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-09 00:31:20 INFO  utils.LoggerHandler - Step: Scrolling page to the bottom.
+2026-04-09 00:31:20 INFO  utils.LoggerHandler - Step Passed: Page scrolled to the bottom successfully.
+2026-04-09 00:31:20 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-09 00:31:20 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-09 00:31:20 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-09 00:31:20 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-09 00:31:20 INFO  utils.LoggerHandler - Step: Scrolling page to the top.
+2026-04-09 00:31:20 INFO  utils.LoggerHandler - Step Passed: Page scrolled to the top successfully.
+2026-04-09 00:31:20 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-09 00:31:21 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-09 00:31:21 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-09 00:31:21 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-09 00:31:21 INFO  utils.LoggerHandler - Step: Refreshing the current page.
+2026-04-09 00:31:21 INFO  utils.LoggerHandler - Step Passed: Page refreshed successfully.
+2026-04-09 00:31:21 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-09 00:31:21 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-09 00:31:21 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-09 00:31:21 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.

@@ -1,0 +1,36 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+
+import com.aventstack.extentreports.ExtentTest;
+
+
+import uistore.InvestmentInsuranceNewsPageLocators;
+import utils.WebDriverHelper;
+
+public class InvestmentInsuranceNewsPageActions {
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	public InvestmentInsuranceNewsPageActions(WebDriver driver, ExtentTest test) {
+		this.test = test;
+		helper = new WebDriverHelper(driver);
+		helper.addLogAndReportInfo("Home Page Actions initialized successfully.", test);
+	}
+	
+	public void verifyInvestmentInsuranceNewsHeader(String expectedValue) {
+		helper.verify(helper.getText(InvestmentInsuranceNewsPageLocators.investmentInsuranceNewsHeader), expectedValue);
+	}
+	
+	public void goToInvestmentAdvisorsinYourCity() {
+		helper.scrollIntoView(InvestmentInsuranceNewsPageLocators.bestInvestmentAdvisorsinYourCitySection);
+	}
+	
+	public void clickGurgaonAdvisors() {
+		helper.clickElement(InvestmentInsuranceNewsPageLocators.insuranceAdvaisorinGurgaonButton);
+	}
+	public void verifyInsuranceAdvaisorsInGurgaonHeader(String expected) {
+		helper.verify(helper.getText(InvestmentInsuranceNewsPageLocators.insuranceAdvaisorinGurgaonHeader), expected);
+	}
+
+}

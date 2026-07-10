@@ -1,0 +1,225 @@
+package stepdefinitions;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
+import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
+import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
+import pages.AddOnCoverPageActions;
+import pages.BikeClaimSettlementPageActions;
+import pages.BusinessInsuranceNewsPageActions;
+import pages.CarInsuranceNewsPageActions;
+import pages.CarInsurancePageActions;
+import pages.HealthInsuranceArticlePageActions;
+import pages.HomePageActions;
+import pages.HumanLifeValuePageActions;
+import pages.InsuranceAdvisorsActions;
+import pages.InvestmentInsuranceNewsPageActions;
+import pages.InvestmentPlansPageActions;
+import utils.Base;
+import utils.Reporter;
+
+public class Hooks extends Base {
+	public static ExtentReports report;
+	public static ExtentTest test;
+	public static HomePageActions homeAction;
+	public static CarInsurancePageActions carAction;
+	public static AddOnCoverPageActions addOnCoverAction;
+	public static BikeClaimSettlementPageActions bikeClaimAction;
+	public static HumanLifeValuePageActions hlvAction;
+	public static InvestmentPlansPageActions investmentPlansActions;
+	public static InsuranceAdvisorsActions advAction;
+	public static CarInsuranceNewsPageActions cinAction;
+	public static HealthInsuranceArticlePageActions hiaAction;
+	public static InvestmentInsuranceNewsPageActions iinAction;
+	public static BusinessInsuranceNewsPageActions binAction;
+
+	@BeforeAll
+	public static void createReport() {
+		report = Reporter.generateReport("InsuranceDekho_Bdd_Report");
+	}
+
+	@Before
+	public void setup() {
+		openBrowser();
+	}
+
+	@Before("@NV_US01_TC01")
+	public void verifyCarInsuranceHeading() {
+		test = report.createTest("NV_US01_TC01: Navigate to Car Insurance page and verify heading");
+		homeAction = new HomePageActions(driver, test);
+		carAction = new CarInsurancePageActions(driver, test);
+	}
+
+	@Before("@NV_US01_TC02")
+	public void verifyAndCalculateCarIdv() {
+		test = report.createTest("NV_US01_TC02: Calculate Car IDV via Add-on Cover and verify amount displayed");
+		homeAction = new HomePageActions(driver, test);
+		addOnCoverAction = new AddOnCoverPageActions(driver, test);
+
+	}
+
+	@Before("@NV_US01_TC03")
+	public void verifyAndCalculateBikeIdv() {
+		test = report.createTest("NV_US01_TC03: Two-Wheeler IDV via Bike Claim Settlement and verify amount");
+		homeAction = new HomePageActions(driver, test);
+		bikeClaimAction = new BikeClaimSettlementPageActions(driver, test);
+
+	}
+
+	@Before("@NV_US01_TC04")
+	public void verifyHumaLifeCalculator() {
+		test = report
+				.createTest("NV_US01_TC04: Verify Human Life Value Calculator is navigated through Life Insurance");
+		homeAction = new HomePageActions(driver, test);
+		hlvAction = new HumanLifeValuePageActions(driver, test);
+	}
+
+	@Before("@NV_US01_TC05")
+	public void verifyErrorMsgInHlvc() {
+		test = report.createTest("NV_US01_TC05: Human Life Value Calculator and verify error message in HLVC");
+
+		homeAction = new HomePageActions(driver, test);
+		hlvAction = new HumanLifeValuePageActions(driver, test);
+	}
+
+	@Before("@NV_US01_TC06")
+	public void verifySavingPlans() {
+		test = report.createTest("NV_US01_TC06: Navigating Investment Plans and verifying saving plan");
+		homeAction = new HomePageActions(driver, test);
+		investmentPlansActions = new InvestmentPlansPageActions(driver, test);
+
+	}
+
+	@Before("@NV_US02_TC01")
+	public void verifyBookHomeVisitAdvaisors() throws InterruptedException {
+		test = report.createTest("NV_US02_TC01: Verifying booking home visit advaisors");
+		homeAction = new HomePageActions(driver, test);
+		advAction = new InsuranceAdvisorsActions(driver, test);
+
+	}
+
+	@Before("@NV_US02_TC02")
+	public void verifyErrorInHomeVisitAdvaisor() throws InterruptedException {
+		test = report.createTest("NV_US02_TC02: Verifying booking home visit advaisors error message");
+		homeAction = new HomePageActions(driver, test);
+		advAction = new InsuranceAdvisorsActions(driver, test);
+
+	}
+
+	@Before("@NV_US02_TC03")
+	public void verifyBookHomeVisitNavigation() throws InterruptedException {
+		test = report.createTest("NV_US02_TC03: Verify Book Home Visit flow for Insurance Advisors");
+		homeAction = new HomePageActions(driver, test);
+		advAction = new InsuranceAdvisorsActions(driver, test);
+	}
+
+	@Before("@NV_US02_TC04")
+	public void verifyErrorMsgBookHomeVisit() throws InterruptedException {
+		test = report.createTest(
+				"NV_US02_TC04: Verify error message when incomplete manual location details are provided while booking 'Home Visit'");
+		homeAction = new HomePageActions(driver, test);
+		advAction = new InsuranceAdvisorsActions(driver, test);
+
+	}
+
+	@Before("@NV_US02_TC05")
+	public void verifyNoAdvaisorFound() {
+		test = report.createTest(
+				"NV_US02_TC05: Verify ‘No Advisors Found’ message when filtering Insurance Advisors by city");
+		homeAction = new HomePageActions(driver, test);
+		advAction = new InsuranceAdvisorsActions(driver, test);
+	}
+
+	@Before("@NV_US03_TC01")
+	public void verifyOtpConfirmation() {
+		test = report.createTest("NV_US03_TC01: Verify Renew Policy navigation and OTP confirmation from Support menu");
+		homeAction = new HomePageActions(driver, test);
+
+	}
+
+	@Before("@NV_US03_TC02")
+	public void verifyInvalidMobileInSupport() {
+		test = report.createTest("NV_US03_TC02: Verify invalid mobile number validation message from Support menu");
+		homeAction = new HomePageActions(driver, test);
+
+	}
+
+	@Before("@NV_US04_TC01")
+	public void verifyArticleAuthor() {
+		test = report.createTest(
+				" NV_US04_TC01: Verify navigation to Car Insurance news and display of article author information");
+
+		homeAction = new HomePageActions(driver, test);
+		cinAction = new CarInsuranceNewsPageActions(driver, test);
+
+	}
+
+	@Before("@NV_US04_TC02")
+	public void verifyArticleNavigation() {
+		test = report.createTest(
+				"NV_US04_TC02: Verify Health Insurance articles navigation and insurance plan search results");
+
+		homeAction = new HomePageActions(driver, test);
+		hiaAction = new HealthInsuranceArticlePageActions(driver, test);
+
+	}
+
+	@Before("@NV_US04_TC03")
+	public void verifyCitySpecificListing() {
+		test = report.createTest(
+				"NV_US04_TC03: Verify navigation from Investment News to city specific Investment Advisors listing");
+		homeAction = new HomePageActions(driver, test);
+		iinAction = new InvestmentInsuranceNewsPageActions(driver, test);
+	}
+
+	@Before("@NV_US04_TC04")
+	public void verifyQuoteSubmission() {
+		test = report.createTest("NV_US04_TC04: Verify successful quote submission from Business News section");
+
+		homeAction = new HomePageActions(driver, test);
+		binAction = new BusinessInsuranceNewsPageActions(driver, test);
+
+	}
+
+	@Before("@NV_US04_TC05")
+	public void verifyValidationInQuote() {
+		test = report.createTest(
+				"NV_US04_TC05: Verify validation error messages and disabled 'Get a Quote' submission for invalid inputs from Business News");
+
+		homeAction = new HomePageActions(driver, test);
+		binAction = new BusinessInsuranceNewsPageActions(driver, test);
+
+	}
+
+	@Before("@NV_US05_TC01")
+	public void verifyNavigationBarPresence() {
+		test = report.createTest(
+				"NV_US05_TC01: Verify navigation bar visibility across all pages");
+		homeAction = new HomePageActions(driver, test);
+
+	}
+	
+	@Before("@NV_US05_TC02")
+	public void verifyNavBehaviour() {
+		test = report.createTest("NV_US05_TC02: Verify navigation bar behaviour on page scroll and page reload");
+		homeAction = new HomePageActions(driver, test);
+
+
+	}
+
+	@After
+	public void teardown() {
+		if (driver != null) {
+			driver.quit();
+		}
+	}
+
+	@AfterAll
+	public static void flushReport() {
+		report.flush();
+	}
+
+}

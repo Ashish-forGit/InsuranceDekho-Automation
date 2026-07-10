@@ -1,0 +1,261 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.BusinessInsuranceNewsLocators;
+import uistore.InvestmentInsuranceNewsPageLocators;
+import utils.WebDriverHelper;
+
+/**
+ * Class Name: BusinessInsuranceNewsPageActions
+ *
+ * Description: Page Action class responsible for handling all user
+ * interactions, validations, and form submissions on the Business Insurance
+ * News page. This class supports header validation, lead form data entry,
+ * product selection, submission, and success/error message verification.
+ *
+ * This class provides reusable business-readable actions and integrates Extent
+ * reporting for step-level execution tracking.
+ *
+ * @Author: Ashish Kumar
+ */
+public class BusinessInsuranceNewsPageActions {
+
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	/**
+	 * Description: Initializes Business Insurance News Page actions using WebDriver
+	 * and ExtentTest instances for UI interaction and reporting.
+	 *
+	 * @Test_Case NV_US17_TC01 - verifyBusinessInsuranceNewsLeadFormSubmission,
+	 *            NV_US18_TC01 - verifyBusinessInsuranceNewsInvalidMobileValidation
+	 * @param driver WebDriver instance for browser interaction
+	 * @param test   ExtentTest instance for logging and reporting
+	 * @author Ashish Kumar
+	 */
+	public BusinessInsuranceNewsPageActions(WebDriver driver, ExtentTest test) {
+		try {
+			this.test = test;
+			helper = new WebDriverHelper(driver);
+			helper.addLogAndReportInfo("Business Insurance News Page Actions initialized successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail(
+					"Exception while initializing BusinessInsuranceNewsPageActions: ", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies that the Business Insurance News page header is
+	 * displayed correctly as per the expected value.
+	 *
+	 * @Test_Case NV_US17_TC01 - verifyBusinessInsuranceNewsLeadFormSubmission,
+	 *            NV_US18_TC01 - verifyBusinessInsuranceNewsInvalidMobileValidation
+	 * @author Ashish Kumar
+	 */
+	public void verifyBusinessInsuranceNewsHeader() {
+		try {
+			String expectedValue = "Business Insurance News";
+			helper.addLogAndReportInfo("Verifying Business Insurance News page header.", test);
+
+			helper.hoverElement(InvestmentInsuranceNewsPageLocators.investmentInsuranceNewsHeader);
+
+			String actualText = helper.getText(InvestmentInsuranceNewsPageLocators.investmentInsuranceNewsHeader);
+
+			helper.verify(actualText, expectedValue);
+
+			helper.addLogAndReportPass("Business Insurance News header verified successfully. Expected: '"
+					+ expectedValue + "' | Actual: '" + actualText + "'", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Faild to verify Business Insurance News header", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters the customer name into the Name input field on the
+	 * Business Insurance lead form.
+	 *
+	 * @Test_Case NV_US17_TC01 - verifyBusinessInsuranceNewsLeadFormSubmission,
+	 *            NV_US18_TC01 - verifyBusinessInsuranceNewsInvalidMobileValidation
+	 * @author Ashish Kumar
+	 */
+	public void typeName() {
+		try {
+			String name = "John";
+			helper.addLogAndReportInfo("Entering customer name: " + name, test);
+
+			helper.sendText(BusinessInsuranceNewsLocators.nameInput, name);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to enter customer name", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters the business name into the Business Name input field.
+	 *
+	 * @Test_Case NV_US17_TC01 - verifyBusinessInsuranceNewsLeadFormSubmission,
+	 *            NV_US18_TC01 - verifyBusinessInsuranceNewsInvalidMobileValidation
+	 * @author Ashish Kumar
+	 */
+	public void typeBussinessName() {
+		try {
+			String value = "xyz";
+			helper.addLogAndReportInfo("Entering business name: " + value, test);
+
+			helper.sendText(BusinessInsuranceNewsLocators.businessNameInput, value);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to enter business name", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters a valid mobile number into the Mobile input field on the
+	 * Business Insurance lead form.
+	 *
+	 * @Test_Case NV_US17_TC01 - verifyBusinessInsuranceNewsLeadFormSubmission
+	 * @author Ashish Kumar
+	 */
+	public void typeMobile() {
+		try {
+			String value = "9876543210";
+			helper.addLogAndReportInfo("Entering mobile number: " + value, test);
+
+			helper.sendText(BusinessInsuranceNewsLocators.mobileInput, value);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to enter mobile number", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters an invalid mobile number into the Mobile input field on
+	 * the Business Insurance lead form to trigger validation.
+	 *
+	 * @Test_Case NV_US18_TC01 - verifyBusinessInsuranceNewsInvalidMobileValidation
+	 * @author Ashish Kumar
+	 */
+	public void typeWrongMobile() {
+		try {
+			String value = "987654";
+			helper.addLogAndReportInfo("Entering mobile number: " + value, test);
+
+			helper.sendText(BusinessInsuranceNewsLocators.mobileInput, value);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to enter wrong mobile number", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters the email address into the Email input field on the
+	 * Business Insurance lead form.
+	 *
+	 * @Test_Case NV_US17_TC01 - verifyBusinessInsuranceNewsLeadFormSubmission,
+	 *            NV_US18_TC01 - verifyBusinessInsuranceNewsInvalidMobileValidation
+	 * @author Ashish Kumar
+	 */
+	public void typeEmail() {
+		try {
+			String email = "test@email.com";
+			helper.addLogAndReportInfo("Entering email address: " + email, test);
+
+			helper.sendText(BusinessInsuranceNewsLocators.emailInputField, email);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to enter email", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Selects the first available product type from the Product Type
+	 * dropdown in the lead form.
+	 *
+	 * @Test_Case NV_US17_TC01 - verifyBusinessInsuranceNewsLeadFormSubmission,
+	 *            NV_US18_TC01 - verifyBusinessInsuranceNewsInvalidMobileValidation
+	 * @author Ashish Kumar
+	 */
+	public void selectProductType() {
+		try {
+			helper.addLogAndReportInfo("Selecting product type from Product Type dropdown.", test);
+
+			helper.clickElement(BusinessInsuranceNewsLocators.productTypeDropdown);
+			helper.clickElement(BusinessInsuranceNewsLocators.firstProduct);
+			helper.waits();
+
+			helper.addLogAndReportInfo("Product type selected successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in selectProductType", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Scrolls to and clicks on the 'Get a Quote' button to submit the
+	 * Business Insurance lead form.
+	 *
+	 * @Test_Case NV_US17_TC01 - verifyBusinessInsuranceNewsLeadFormSubmission,
+	 *            NV_US18_TC01 - verifyBusinessInsuranceNewsInvalidMobileValidation
+	 * @author Ashish Kumar
+	 */
+	public void clickGetQuoteButton() {
+		try {
+			helper.addLogAndReportInfo("Scrolling to 'Get a Quote' button.", test);
+
+			helper.scrollIntoView(BusinessInsuranceNewsLocators.tempScroell);
+
+			helper.addLogAndReportInfo("Clicking on 'Get a Quote' button.", test);
+
+			helper.clickElement(BusinessInsuranceNewsLocators.getAQuoteButton);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickGetQuoteButton", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies that the Thank You confirmation message is displayed
+	 * after successful form submission.
+	 *
+	 * @Test_Case NV_US17_TC01 - verifyBusinessInsuranceNewsLeadFormSubmission
+	 * @author Ashish Kumar
+	 */
+	public void verifyThankYouText() {
+		try {
+			String expectedValue = "Importance of Fire Insurance for a Small Shop Owner";
+			helper.addLogAndReportInfo("Verifying Thank You confirmation message.", test);
+
+			helper.verify(helper.getText(BusinessInsuranceNewsLocators.thankYouText), expectedValue);
+
+			helper.addLogAndReportPass("Thank You message verified successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to verify thank you text", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies the error message displayed for invalid mobile number
+	 * input in the lead form.
+	 *
+	 * @Test_Case NV_US18_TC01 - verifyBusinessInsuranceNewsInvalidMobileValidation
+	 * @author Ashish Kumar
+	 */
+	public void verifyErrorMessage() {
+		try {
+			String expectedValue = "Please enter valid contact number";
+			helper.addLogAndReportInfo("Verifying invalid mobile number error message.", test);
+
+			helper.verify(helper.getText(BusinessInsuranceNewsLocators.invalidMobileNumberText), expectedValue);
+
+			helper.addLogAndReportPass("Error message verified successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to verify error message", test);
+			throw e;
+		}
+	}
+}

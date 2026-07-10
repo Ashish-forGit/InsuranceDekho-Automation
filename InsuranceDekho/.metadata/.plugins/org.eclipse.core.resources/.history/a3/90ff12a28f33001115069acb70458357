@@ -1,0 +1,14 @@
+2026-04-09 00:19:07 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 00:19:07 INFO  utils.LoggerHandler - Step: Hovering over 'News' menu in the navigation bar.
+2026-04-09 00:19:08 INFO  utils.LoggerHandler - Step Passed: Hovered over 'News' menu successfully.
+2026-04-09 00:19:08 INFO  utils.LoggerHandler - Step: Hovering over 'Health Insurance News' option under News menu.
+2026-04-09 00:19:08 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Health Insurance News' successfully.
+2026-04-09 00:19:08 INFO  utils.LoggerHandler - Step: Clicking on the Health Insurance article under News section.
+2026-04-09 00:19:09 INFO  utils.LoggerHandler - Step Passed: Health Insurance article clicked successfully.
+2026-04-09 00:19:09 INFO  utils.LoggerHandler - Health Insurance Article Page Actions initialized successfully.
+2026-04-09 00:19:09 INFO  utils.LoggerHandler - Verifying Health Insurance article header.
+2026-04-09 00:19:09 INFO  utils.LoggerHandler - Health Insurance article header verified successfully. Expected: 'Health Insurance Articles' | Actual: 'Health Insurance Articles'
+2026-04-09 00:19:09 INFO  utils.LoggerHandler - Clicking on the first Health Insurance article.
+2026-04-09 00:19:10 INFO  utils.LoggerHandler - First Health Insurance article clicked successfully.
+2026-04-09 00:19:10 INFO  utils.LoggerHandler - Verifying author information for Health Insurance article.
+2026-04-09 00:19:10 ERROR utils.LoggerHandler - Failed to verify 'Author Name'

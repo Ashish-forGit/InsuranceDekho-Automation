@@ -1,0 +1,33 @@
+package stepdefinitions;
+
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.HomePageActions;
+import pages.HumanLifeValuePageActions;
+
+public class VerifyHumaLifeCalculator {
+	HomePageActions home = Hooks.homeAction;
+	HumanLifeValuePageActions hlvAction = Hooks.hlvAction;
+	
+
+
+	@When("I hover on Life Insurance menu")
+	public void i_hover_on_life_insurance_menu() {
+		home.hoverOnInsuranceMenu();
+		home.hoverOnLifeInsuranceMenu();
+
+	}
+	@When("I click on Human Life Value Calculator")
+	public void i_click_on_human_life_value_calculator() {
+		home.clickOnHumanLifeValueCalculator();
+
+	}
+	@Then("I verify HLV calculator page title is displayed")
+	public void i_verify_hlv_calculator_page_title_is_displayed() {
+		hlvAction.verifyHlvCalculatorPageTitle();
+	}
+
+
+
+
+}

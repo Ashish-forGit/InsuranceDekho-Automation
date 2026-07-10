@@ -1,0 +1,106 @@
+2026-04-09 18:20:57 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 18:20:57 INFO  utils.LoggerHandler - Car Insurance Page Actions initialized successfully.
+2026-04-09 18:21:05 INFO  utils.LoggerHandler - Exception in verifyInsuranceDekhoIsVisible
+2026-04-09 18:21:05 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 18:21:05 ERROR utils.LoggerHandler - Failed to hover 'Insurance'
+2026-04-09 18:21:05 INFO  utils.LoggerHandler - Clicking on 'Car Insurance' option from Insurance dropdown.
+2026-04-09 18:21:05 INFO  utils.LoggerHandler - Exception in clickOnCarInsurance
+2026-04-09 18:21:05 INFO  utils.LoggerHandler - Verifying Car Insurance page heading.
+2026-04-09 18:21:05 ERROR utils.LoggerHandler - Failed to verify Car Insurance Heading is present
+2026-04-09 18:21:06 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 18:21:06 INFO  utils.LoggerHandler - Add-On Cover Page Actions initialized successfully.
+2026-04-09 18:21:11 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 18:21:11 ERROR utils.LoggerHandler - Failed to hover 'Insurance'
+2026-04-09 18:21:12 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 18:21:12 ERROR utils.LoggerHandler - Failed to hover 'Insurance'
+2026-04-09 18:21:12 INFO  utils.LoggerHandler - Hovering over 'Car Insurance' under Insurance menu.
+2026-04-09 18:21:12 INFO  utils.LoggerHandler - Exception in hoverOnCarInsuranceMenu
+2026-04-09 18:21:12 INFO  utils.LoggerHandler - Clicking on 'Add on Cover' option.
+2026-04-09 18:21:12 INFO  utils.LoggerHandler - Exception in clickOnAddOnCover
+2026-04-09 18:21:12 INFO  utils.LoggerHandler - Attempting to scroll to 'Calculate your Car IDV' section.
+2026-04-09 18:21:12 ERROR utils.LoggerHandler - Failed to scroll To Calculate Car Idv Section: 
+2026-04-09 18:21:13 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 18:21:13 INFO  utils.LoggerHandler - Bike Claim Settlement Page Actions initialized successfully.
+2026-04-09 18:21:18 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 18:21:18 ERROR utils.LoggerHandler - Failed to hover 'Insurance'
+2026-04-09 18:21:19 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 18:21:19 ERROR utils.LoggerHandler - Failed to hover 'Insurance'
+2026-04-09 18:21:19 INFO  utils.LoggerHandler - Hovering over 'Bike Insurance' under Insurance menu.
+2026-04-09 18:21:19 ERROR utils.LoggerHandler - Failed to hover bike insurance
+2026-04-09 18:21:19 INFO  utils.LoggerHandler - Clicking on 'Claim Settlement' under Bike Insurance menu.
+2026-04-09 18:21:19 INFO  utils.LoggerHandler - Exception in clickOnClaimSettlement
+2026-04-09 18:21:19 INFO  utils.LoggerHandler - Verifying Bike Insurance Claim Settlement page heading.
+2026-04-09 18:21:19 ERROR utils.LoggerHandler - Failed to verify Bike Insurance Claim heading Is present
+2026-04-09 18:21:20 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 18:21:20 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-09 18:21:26 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 18:21:26 ERROR utils.LoggerHandler - Failed to hover 'Insurance'
+2026-04-09 18:21:26 INFO  utils.LoggerHandler - Hovering over 'Life Insurance' under Insurance menu.
+2026-04-09 18:21:26 INFO  utils.LoggerHandler - Exception in hoverOnLifeInsuranceMenu
+2026-04-09 18:21:26 INFO  utils.LoggerHandler - Clicking on 'Human Life Value Calculator' option.
+2026-04-09 18:21:26 INFO  utils.LoggerHandler - Exception in clickOnHumanLifeValueCalculator: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, findElement {value=Human Life Value Calculator, using=link text}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\10853349\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49736}, goog:processID: 19696, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49736/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+2026-04-09 18:21:26 INFO  utils.LoggerHandler - Verifying HLV Calculator page title.
+2026-04-09 18:21:26 ERROR utils.LoggerHandler - Exception in verifyHlvCalculatorPageTitle
+2026-04-09 18:21:27 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 18:21:27 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-09 18:21:32 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 18:21:32 ERROR utils.LoggerHandler - Failed to hover 'Insurance'
+2026-04-09 18:21:33 INFO  utils.LoggerHandler - Hovering over 'Life Insurance' under Insurance menu.
+2026-04-09 18:21:33 INFO  utils.LoggerHandler - Exception in hoverOnLifeInsuranceMenu
+2026-04-09 18:21:33 INFO  utils.LoggerHandler - Clicking on 'Human Life Value Calculator' option.
+2026-04-09 18:21:33 INFO  utils.LoggerHandler - Exception in clickOnHumanLifeValueCalculator: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, findElement {value=Human Life Value Calculator, using=link text}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\10853349\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52183}, goog:processID: 8116, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52183/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+2026-04-09 18:21:33 INFO  utils.LoggerHandler - Verifying HLV Calculator page title.
+2026-04-09 18:21:33 ERROR utils.LoggerHandler - Exception in verifyHlvCalculatorPageTitle
+2026-04-09 18:21:33 INFO  utils.LoggerHandler - Entering name: john@gh
+2026-04-09 18:21:33 ERROR utils.LoggerHandler - Exception in enterName
+2026-04-09 18:21:34 INFO  utils.LoggerHandler - Entering birthday: 01012001
+2026-04-09 18:21:34 ERROR utils.LoggerHandler - Exception in enterBirthday
+2026-04-09 18:21:34 INFO  utils.LoggerHandler - Selecting annual income range 3–5 Lakhs.
+2026-04-09 18:21:34 INFO  utils.LoggerHandler - Exception in selectAnnualIncome
+2026-04-09 18:21:34 INFO  utils.LoggerHandler - Entering mobile number: 98765
+2026-04-09 18:21:34 ERROR utils.LoggerHandler - Exception in enterMobileNumber
+2026-04-09 18:21:34 INFO  utils.LoggerHandler - Verifying error message displayed on HLV calculator.
+2026-04-09 18:21:34 ERROR utils.LoggerHandler - Failed to verify error message displayed
+2026-04-09 18:21:35 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 18:21:35 INFO  utils.LoggerHandler - Investment Plans Page Actions initialized successfully.
+2026-04-09 18:21:40 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 18:21:40 ERROR utils.LoggerHandler - Failed to hover 'Insurance'
+2026-04-09 18:21:41 INFO  utils.LoggerHandler - Failed to hover over Investment Menu: 
+2026-04-09 18:21:41 INFO  utils.LoggerHandler - Exception in clickOnInvestmentPlans
+2026-04-09 18:21:41 INFO  utils.LoggerHandler - Verifying 'Best Investment Plans in India' page heading.
+2026-04-09 18:21:41 ERROR utils.LoggerHandler - Exception in verifyBestInvestmentPlansHeading: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, findElement {value=//h1[@content='Best Investment Plans in India 2026'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\10853349\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57500}, goog:processID: 22188, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57500/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+2026-04-09 18:21:42 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 18:21:42 INFO  utils.LoggerHandler - Step Passed: Insurance Advisors Page Actions initialized successfully.
+2026-04-09 18:21:47 INFO  utils.LoggerHandler - Exception in hoverOverInsuranceAdvisors
+2026-04-09 18:21:47 INFO  utils.LoggerHandler - Exception in clickInsuranceAdvisorsInNewDelhi
+2026-04-09 18:21:47 INFO  utils.LoggerHandler - Step: Hovering on 'Insurance Advisors Found' text.
+2026-04-09 18:21:47 ERROR utils.LoggerHandler - Step Failed: Unable to verify Insurance Advisors found text. Error: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, findElement {value=//div[@class='agentFound']/p, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\10853349\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55952}, goog:processID: 4724, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55952/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+2026-04-09 18:21:52 INFO  utils.LoggerHandler - Exception in hoverOverInsuranceAdvisors
+2026-04-09 18:21:52 INFO  utils.LoggerHandler - Exception in clickInsuranceAdvisorsInNewDelhi
+2026-04-09 18:21:52 INFO  utils.LoggerHandler - Step: Hovering on 'Insurance Advisors Found' text.
+2026-04-09 18:21:52 ERROR utils.LoggerHandler - Step Failed: Unable to verify Insurance Advisors found text. Error: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, findElement {value=//div[@class='agentFound']/p, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\10853349\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55952}, goog:processID: 4724, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55952/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}

@@ -1,0 +1,21 @@
+2026-04-08 18:03:02 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 18:03:02 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 18:03:02 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 18:03:02 INFO  utils.LoggerHandler - Hovering over 'Bike Insurance' under Insurance menu.
+2026-04-08 18:03:05 INFO  utils.LoggerHandler - 'Bike Insurance' menu hovered successfully.
+2026-04-08 18:03:05 INFO  utils.LoggerHandler - Clicking on 'Claim Settlement' under Bike Insurance menu.
+2026-04-08 18:03:07 INFO  utils.LoggerHandler - 'Claim Settlement' clicked successfully.
+2026-04-08 18:03:07 INFO  utils.LoggerHandler - Bike Claim Settlement Page Actions initialized successfully.
+2026-04-08 18:03:07 INFO  utils.LoggerHandler - Verifying Bike Insurance Claim Settlement page heading.
+2026-04-08 18:03:07 INFO  utils.LoggerHandler - Bike Insurance Claim heading verified successfully. Expected: 'Bike Insurance Claim' | Actual: 'Bike Insurance Claim'
+2026-04-08 18:03:07 INFO  utils.LoggerHandler - Scrolling to 'Calculate Two Wheeler IDV' section.
+2026-04-08 18:03:07 INFO  utils.LoggerHandler - 'Calculate Two Wheeler IDV' section is now visible.
+2026-04-08 18:03:07 INFO  utils.LoggerHandler - Selecting first brand option from Brand dropdown.
+2026-04-08 18:03:08 INFO  utils.LoggerHandler - First brand selected successfully.
+2026-04-08 18:03:08 INFO  utils.LoggerHandler - Selecting first bike model option.
+2026-04-08 18:03:08 INFO  utils.LoggerHandler - Entering model name 'Splendor Plus'.
+2026-04-08 18:03:08 INFO  utils.LoggerHandler - Bike model selected successfully.
+2026-04-08 18:03:08 INFO  utils.LoggerHandler - Selecting manufacturing year from Year dropdown.
+2026-04-08 18:03:09 INFO  utils.LoggerHandler - Manufacturing year selected successfully.
+2026-04-08 18:03:09 INFO  utils.LoggerHandler - Clicking on Calculate button to generate IDV amount.
+2026-04-08 18:03:09 INFO  utils.LoggerHandler - IDV amount verified successfully. Expected: 'Rs. 64,323' | Actual: 'Rs. 64,323'

@@ -1,0 +1,60 @@
+package stepdefinitions;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
+import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
+import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
+import pages.AddOnCoverPageActions;
+import pages.CarInsurancePageActions;
+import pages.HomePageActions;
+import utils.Base;
+import utils.Reporter;
+
+public class Hooks extends Base {
+	public static ExtentReports report;
+	public static ExtentTest test;
+	public static HomePageActions homeAction;
+	public static CarInsurancePageActions carAction;
+	public static AddOnCoverPageActions addOnCoverAction;
+
+	@BeforeAll
+	public static void createReport() {
+		report = Reporter.generateReport("InsuranceDekho_Bdd_Report");
+	}
+
+	@Before
+	public void setup() {
+		openBrowser();
+	}
+
+	@Before("@NV_US01_TC01")
+	public void verifyCarInsuranceHeading() {
+		test = report.createTest("NV_US01_TC01: Navigate to Car Insurance page and verify heading");
+		homeAction = new HomePageActions(driver, test);
+		carAction = new CarInsurancePageActions(driver, test);
+	}
+	
+	@Before("@NV_US01_TC02")
+	public void verifyAndCalculateCarIdv() {
+		test = report.createTest("NV_US01_TC02: Calculate Car IDV via Add-on Cover and verify amount displayed");
+		homeAction = new HomePageActions(driver, test);
+		addOnCoverAction = new AddOnCoverPageActions(driver, test);		
+
+	}
+
+	@After
+	public void teardown() {
+		if (driver != null) {
+			driver.quit();
+		}
+	}
+
+	@AfterAll
+	public static void flushReport() {
+		report.flush();
+	}
+
+}

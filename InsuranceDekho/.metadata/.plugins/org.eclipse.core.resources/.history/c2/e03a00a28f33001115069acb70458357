@@ -1,0 +1,16 @@
+2026-04-09 00:25:05 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 00:25:05 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-09 00:25:05 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-09 00:25:05 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-09 00:25:05 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-09 00:25:05 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 00:25:05 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-09 00:25:05 INFO  utils.LoggerHandler - Step: Clicking on 'Term Insurance' link from navigation menu.
+2026-04-09 00:25:06 INFO  utils.LoggerHandler - Step Passed: 'Term Insurance' link clicked successfully.
+2026-04-09 00:25:06 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-09 00:25:06 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-09 00:25:06 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-09 00:25:06 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-09 00:25:07 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-09 00:25:07 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-09 00:25:08 ERROR utils.LoggerHandler - Step Failed: Navigation bar is not displayed.

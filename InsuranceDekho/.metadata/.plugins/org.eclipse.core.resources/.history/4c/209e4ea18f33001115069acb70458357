@@ -1,0 +1,13 @@
+2026-04-08 01:12:49 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:12:49 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 01:12:50 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 01:12:50 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 01:12:50 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 01:12:51 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 01:12:51 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 01:12:52 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 01:12:52 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 01:12:53 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 01:12:53 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 01:12:54 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 01:12:54 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar

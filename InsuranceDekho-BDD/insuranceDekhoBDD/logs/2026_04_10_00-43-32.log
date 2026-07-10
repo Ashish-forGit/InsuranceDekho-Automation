@@ -1,0 +1,23 @@
+2026-04-10 00:43:32 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 00:43:39 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 00:43:39 ERROR utils.LoggerHandler - Step Failed: Navigation bar is not displayed.
+2026-04-10 00:43:39 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-10 00:43:39 ERROR utils.LoggerHandler - Failed to hover 'Insurance'
+2026-04-10 00:43:40 INFO  utils.LoggerHandler - Step: Clicking on 'Term Insurance' link from navigation menu.
+2026-04-10 00:43:40 ERROR utils.LoggerHandler - Step Failed: Unable to click 'Term Insurance' link.
+2026-04-10 00:43:40 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 00:43:40 ERROR utils.LoggerHandler - Step Failed: Navigation bar is not displayed.
+2026-04-10 00:43:40 INFO  utils.LoggerHandler - Exception in hoverOverInsuranceAdvisors
+2026-04-10 00:43:40 INFO  utils.LoggerHandler - Exception in clickInsuranceAdvisorsInNewDelhi
+2026-04-10 00:43:40 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 00:43:40 ERROR utils.LoggerHandler - Step Failed: Navigation bar is not displayed.
+2026-04-10 00:43:41 INFO  utils.LoggerHandler - Step: Hovering over 'News' menu in the navigation bar.
+2026-04-10 00:43:41 ERROR utils.LoggerHandler - Step Failed: Unable to hover over 'News' menu.
+2026-04-10 00:43:41 INFO  utils.LoggerHandler - Step: Clicking on 'Travel Insurance' link from navigation menu.
+2026-04-10 00:43:41 ERROR utils.LoggerHandler - Step Failed: Unable to click 'Travel Insurance' link.
+2026-04-10 00:43:41 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 00:43:41 ERROR utils.LoggerHandler - Step Failed: Navigation bar is not displayed.
+2026-04-10 00:43:42 INFO  utils.LoggerHandler - Step: Hovering over the first Travel Insurance article.
+2026-04-10 00:43:42 ERROR utils.LoggerHandler - Step Failed: Unable to open first Travel Insurance article.
+2026-04-10 00:43:42 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 00:43:42 ERROR utils.LoggerHandler - Step Failed: Navigation bar is not displayed.

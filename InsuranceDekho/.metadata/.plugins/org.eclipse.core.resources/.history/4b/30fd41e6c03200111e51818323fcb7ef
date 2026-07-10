@@ -1,0 +1,38 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.InvestmentPlansPageLocators;
+import utils.WebDriverHelper;
+
+public class InvestmentPlansPageActions {
+    WebDriverHelper helper;
+    ExtentTest test;
+
+    public InvestmentPlansPageActions(WebDriver driver, ExtentTest test) {
+        this.test = test;
+        helper = new WebDriverHelper(driver);
+        helper.addLogAndReportInfo("Add-On Cover Page Actions initialized successfully.", test);
+    }
+    
+    public void verifyBestInvestmentPlansHeading() {
+    	String expectedValue = "Best Investment Plans in India 2026";
+    	helper.verify(helper.getText(InvestmentPlansPageLocators.bestInvestmentPlansHeading), expectedValue);
+    }
+    
+    public void goToMarkedLinked() {
+    	helper.scrollIntoView(InvestmentPlansPageLocators.markedLinkedLink);
+    }
+    
+    public void clickOnMarketLinked() {
+    	helper.clickElement(InvestmentPlansPageLocators.markedLinkedLink);
+    }
+    
+    public void verifySavingPlan() {
+    	String expectedValue = "Online Savings Plan";
+    	helper.verify(helper.getText(InvestmentPlansPageLocators.savingPlanText), expectedValue);
+    }
+
+}

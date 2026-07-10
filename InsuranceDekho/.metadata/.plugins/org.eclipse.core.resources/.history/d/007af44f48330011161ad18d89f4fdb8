@@ -1,0 +1,426 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.InsuranceAdvisorsLocators;
+import utils.WebDriverHelper;
+
+/**
+ * Class Name: InsuranceAdvisorsActions
+ *
+ * Description: Page Action class responsible for handling all user
+ * interactions, validations, and workflows related to the Insurance Advisors
+ * module.
+ *
+ * This includes advisor listing validation, booking home visits, form
+ * submission, error handling, location-based filtering, and scheduling visit
+ * flows.
+ *
+ * The class follows the Page Action Model (PAM) pattern and provides
+ * business-readable, reusable methods with step-level logging integrated via
+ * Extent Reports.
+ *
+ * @Author: Ashish Kumar
+ */
+public class InsuranceAdvisorsActions {
+
+	WebDriver driver;
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	/**
+	 * Description: Initializes Insurance Advisors page actions using WebDriver and
+	 * ExtentTest instances for browser interaction and execution reporting.
+	 *
+	 * @Test_Case NV_US07_TC01 - verifyInsuranceAdvisorsBookingHomeVisitSuccess,
+	 *            NV_US08_TC01 - verifyInsuranceAdvisorsInvalidMobileValidation,
+	 *            NV_US09_TC01 - verifyScheduleHomeVisitWithManualLocationDetails,
+	 *            NV_US10_TC01 - verifyAreaFieldRequiredValidationOnScheduleVisit,
+	 *            NV_US11_TC01 - verifyAdvisorFilterShowsNoAdvisorsFoundMessage
+	 * @param driver WebDriver instance for browser interaction
+	 * @param test   ExtentTest instance for logging and reporting
+	 * @author Ashish Kumar
+	 */
+	public InsuranceAdvisorsActions(WebDriver driver, ExtentTest test) {
+		try {
+			this.driver = driver;
+			this.test = test;
+			helper = new WebDriverHelper(driver);
+			helper.addLogAndReportInfo("Insurance Advisors Page Actions initialized successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception while initializing InsuranceAdvisorsActions: " + e.getMessage(),
+					test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies that the 'Insurance Advisors Found' text is displayed
+	 * correctly on the page.
+	 *
+	 * @Test_Case NV_US07_TC01 - verifyInsuranceAdvisorsBookingHomeVisitSuccess,
+	 *            NV_US08_TC01 - verifyInsuranceAdvisorsInvalidMobileValidation
+	 * @author Ashish Kumar
+	 */
+	public void verifyInsuranceAdvisorsFoundText() {
+		try {
+			String expectedValue = "6 Insurance Advisors found";
+			helper.addLogAndReportInfo("Verifying Insurance Advisors found text.", test);
+
+			helper.hoverElement(InsuranceAdvisorsLocators.insuranceAdvisorsFoundText);
+
+			helper.verify(helper.getText(InsuranceAdvisorsLocators.insuranceAdvisorsFoundText), expectedValue);
+
+			helper.addLogAndReportPass("Insurance Advisors found text verified successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyInsuranceAdvisorsFoundText: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on the 'Book Home Visit' button for the first available
+	 * insurance advisor.
+	 *
+	 * @Test_Case NV_US07_TC01 - verifyInsuranceAdvisorsBookingHomeVisitSuccess,
+	 *            NV_US08_TC01 - verifyInsuranceAdvisorsInvalidMobileValidation
+	 * @author Ashish Kumar
+	 */
+	public void clickBookHomeVisitForFirstAdvisor() throws InterruptedException {
+		try {
+			helper.addLogAndReportInfo("Clicking 'Book Home Visit' for first advisor.", test);
+
+			helper.hoverElement(InsuranceAdvisorsLocators.firstAdvisorBookHomeVisitBtn);
+
+			helper.waits();
+
+			helper.clickElement(InsuranceAdvisorsLocators.firstAdvisorBookHomeVisitBtn);
+
+			helper.addLogAndReportInfo("Book Home Visit clicked for first advisor.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickBookHomeVisitForFirstAdvisor: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters valid customer name and mobile number in the insurance
+	 * advisor booking form.
+	 *
+	 * @Test_Case NV_US07_TC01 - verifyInsuranceAdvisorsBookingHomeVisitSuccess
+	 * @author Ashish Kumar
+	 */
+	public void enterNameAndMobile() {
+		try {
+			String name = "John";
+			String mobile = "9876543210";
+			helper.addLogAndReportInfo("Entering customer name and mobile number.", test);
+
+			helper.sendText(InsuranceAdvisorsLocators.nameInput, name);
+
+			helper.sendText(InsuranceAdvisorsLocators.mobileInput, mobile);
+
+			helper.addLogAndReportInfo("Customer name and mobile entered successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in enterNameAndMobile: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters customer name and invalid mobile number in the insurance
+	 * advisor booking form to trigger validation.
+	 *
+	 * @Test_Case NV_US08_TC01 - verifyInsuranceAdvisorsInvalidMobileValidation
+	 * @author Ashish Kumar
+	 */
+	public void enterErrorNameAndMobile() {
+		try {
+			String name = "John";
+			String mobile = "98765";
+			helper.addLogAndReportInfo("Entering customer name and mobile number.", test);
+
+			helper.sendText(InsuranceAdvisorsLocators.nameInput, name);
+
+			helper.sendText(InsuranceAdvisorsLocators.mobileInput, mobile);
+
+			helper.addLogAndReportInfo("Customer name and mobile entered successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in enterNameAndMobile: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Submits the advisor booking request using the Submit button.
+	 *
+	 * @Test_Case NV_US07_TC01 - verifyInsuranceAdvisorsBookingHomeVisitSuccess,
+	 *            NV_US08_TC01 - verifyInsuranceAdvisorsInvalidMobileValidation
+	 * @author Ashish Kumar
+	 */
+	public void submitRequest() throws InterruptedException {
+		try {
+			helper.addLogAndReportInfo("Submitting insurance advisor booking request.", test);
+
+			helper.waits();
+			helper.clickElement(InsuranceAdvisorsLocators.submitBtn);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in submitRequest: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies that the Thank You confirmation message is displayed
+	 * after successful request submission.
+	 *
+	 * @Test_Case NV_US07_TC01 - verifyInsuranceAdvisorsBookingHomeVisitSuccess
+	 * @author Ashish Kumar
+	 */
+	public void verifyThankYouText() {
+		try {
+			String expectedValue = "Thank you!";
+			helper.addLogAndReportInfo("Verifying Thank You confirmation message.", test);
+
+			helper.waits();
+			helper.verify(helper.getText(InsuranceAdvisorsLocators.thankYouText), expectedValue);
+
+			helper.addLogAndReportPass("Thank You message verified successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyThankYouText: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies error message displayed for invalid form input.
+	 *
+	 * @Test_Case NV_US08_TC01 - verifyInsuranceAdvisorsInvalidMobileValidation
+	 * @author Ashish Kumar
+	 */
+	public void verifyErrorInput() {
+		try {
+			String expectedValue = "The mobile must be at least 10 characters.";
+			helper.addLogAndReportInfo("Verifying input error message.", test);
+
+			helper.verify(helper.getText(InsuranceAdvisorsLocators.errorText), expectedValue);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyErrorInput: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks the Book Home Visit button for the generic booking flow
+	 * used in scheduling visit use-cases.
+	 *
+	 * @Test_Case NV_US09_TC01 - verifyScheduleHomeVisitWithManualLocationDetails,
+	 *            NV_US10_TC01 - verifyAreaFieldRequiredValidationOnScheduleVisit
+	 * @author Ashish Kumar
+	 */
+	public void clickBookHomeVisit() throws InterruptedException {
+		try {
+			helper.hoverElement(InsuranceAdvisorsLocators.bookhomeVisitButton);
+			helper.waits();
+			helper.clickElement(InsuranceAdvisorsLocators.bookhomeVisitButton);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickBookHomeVisit: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks the Schedule Home Visit button to proceed with scheduling
+	 * flow.
+	 *
+	 * @Test_Case NV_US09_TC01 - verifyScheduleHomeVisitWithManualLocationDetails,
+	 *            NV_US10_TC01 - verifyAreaFieldRequiredValidationOnScheduleVisit
+	 * @author Ashish Kumar
+	 */
+	public void clickScheduleHomeVisit() throws InterruptedException {
+		try {
+			helper.hoverElement(InsuranceAdvisorsLocators.scheduleHomeVisitButton);
+			helper.waits();
+			helper.clickElement(InsuranceAdvisorsLocators.scheduleHomeVisitButton);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickScheduleHomeVisit: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks the Schedule Visit button to confirm the schedule action.
+	 *
+	 * @Test_Case NV_US09_TC01 - verifyScheduleHomeVisitWithManualLocationDetails,
+	 *            NV_US10_TC01 - verifyAreaFieldRequiredValidationOnScheduleVisit
+	 * @author Ashish Kumar
+	 */
+	public void clickScheduleVisit() throws InterruptedException {
+		try {
+			helper.hoverElement(InsuranceAdvisorsLocators.scheduleVisitButton);
+			helper.waits();
+			helper.clickElement(InsuranceAdvisorsLocators.scheduleVisitButton);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickScheduleVisit: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Selects the option to enter location details manually.
+	 *
+	 * @Test_Case NV_US09_TC01 - verifyScheduleHomeVisitWithManualLocationDetails,
+	 *            NV_US10_TC01 - verifyAreaFieldRequiredValidationOnScheduleVisit
+	 * @author Ashish Kumar
+	 */
+	public void clickEnterLoactionManually() {
+		try {
+			helper.clickElement(InsuranceAdvisorsLocators.selectLocationManually);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickEnterLoactionManually: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters pincode in the manual location form.
+	 *
+	 * @Test_Case NV_US09_TC01 - verifyScheduleHomeVisitWithManualLocationDetails,
+	 *            NV_US10_TC01 - verifyAreaFieldRequiredValidationOnScheduleVisit
+	 * @author Ashish Kumar
+	 */
+	public void typePincode() {
+		try {
+			String pincode = "110055";
+			helper.sendText(InsuranceAdvisorsLocators.pincodeInput, pincode);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in typePincode: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters house number/address in the manual location form.
+	 *
+	 * @Test_Case NV_US09_TC01 - verifyScheduleHomeVisitWithManualLocationDetails,
+	 *            NV_US10_TC01 - verifyAreaFieldRequiredValidationOnScheduleVisit
+	 * @author Ashish Kumar
+	 */
+	public void typeHouseNo() {
+		try {
+			String houseNo = "House1";
+			helper.sendText(InsuranceAdvisorsLocators.addressInput, houseNo);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in typeHouseNo: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters area/road/sector information in the manual location form.
+	 *
+	 * @Test_Case NV_US09_TC01 - verifyScheduleHomeVisitWithManualLocationDetails
+	 * @author Ashish Kumar
+	 */
+	public void typeArea() {
+		try {
+			String area = "Road1";
+			helper.sendText(InsuranceAdvisorsLocators.areaInput, area);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in typeArea: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies that the "Your location details" section is displayed
+	 * after entering manual location information.
+	 *
+	 * @Test_Case NV_US09_TC01 - verifyScheduleHomeVisitWithManualLocationDetails
+	 * @author Ashish Kumar
+	 */
+	public void verifyYourLoactionDetails() {
+		try {
+			String expectedValue = "Your location details";
+			helper.verify(helper.getText(InsuranceAdvisorsLocators.yourLocationDetailsText), expectedValue);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyYourLoactionDetails: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks Schedule Visit CTA from location details section.
+	 *
+	 * @Test_Case NV_US09_TC01 - verifyScheduleHomeVisitWithManualLocationDetails,
+	 *            NV_US10_TC01 - verifyAreaFieldRequiredValidationOnScheduleVisit
+	 * @author Ashish Kumar
+	 */
+	public void clickLocationScheduleVisit() {
+		try {
+			helper.clickElement(InsuranceAdvisorsLocators.locationScheduleVist);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickLocationScheduleVisit: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies the validation message for Area/Road/Sector field when
+	 * it is left empty.
+	 *
+	 * @Test_Case NV_US10_TC01 - verifyAreaFieldRequiredValidationOnScheduleVisit
+	 * @author Ashish Kumar
+	 */
+	public void verifyAreaInputError() {
+		try {
+			String expectedValue = "The road/area/sector field is required.";
+			helper.verify(helper.getText(InsuranceAdvisorsLocators.areaInputError), expectedValue);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyAreaInputErroe: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Applies city filter on Insurance Advisors listing.
+	 *
+	 * @Test_Case NV_US11_TC01 - verifyAdvisorFilterShowsNoAdvisorsFoundMessage
+	 * @author Ashish Kumar
+	 */
+	public void selectCityFilter() {
+		try {
+			helper.scrollIntoView(InsuranceAdvisorsLocators.tempHover);
+			helper.clickElement(InsuranceAdvisorsLocators.filterLocation);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in selectCityFilter: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies the location header and "No Advisors Found" message
+	 * after applying filters.
+	 *
+	 * @Test_Case NV_US11_TC01 - verifyAdvisorFilterShowsNoAdvisorsFoundMessage
+	 * @author Ashish Kumar
+	 */
+	public void verifyLocationHeaderAndNotFoundAdvaisor() {
+		try {
+			String expected1 = "Insurance Advisors in Bangalore";
+			String expected2 = "No Advisors Found for selected filters, Please try with other filter options!";
+
+			helper.addLogAndReportInfo("Verifying advisor location header and no advisor found message.", test);
+
+			helper.explicitWait(InsuranceAdvisorsLocators.advaisorInLocationHeading);
+
+			helper.verify(helper.getText(InsuranceAdvisorsLocators.advaisorInLocationHeading), expected1);
+
+			helper.verify(helper.getText(InsuranceAdvisorsLocators.noAdvaisorFoundHeading), expected2);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyLocationHeaderAndNotFoundAdvaisor: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+}

@@ -1,0 +1,38 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.CarInsuranceNewsPageLocators;
+import uistore.HealthInsuranceArticlePageLocators;
+import utils.WebDriverHelper;
+
+public class HealthInsuranceArticlePageActions {
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	public HealthInsuranceArticlePageActions(WebDriver driver, ExtentTest test) {
+		this.test = test;
+		helper = new WebDriverHelper(driver);
+		helper.addLogAndReportInfo("Home Page Actions initialized successfully.", test);
+	}
+	
+	public void verifyHealthInsuranceArticleHeader(String expectedValue) {
+		helper.verify(helper.getText(HealthInsuranceArticlePageLocators.healthInsuranceArticleHeading), expectedValue);
+	}
+	
+	public void clickFirstNewsPresent() {
+		helper.clickElement(HealthInsuranceArticlePageLocators.firstNewsPresent);
+	}
+	
+	public void verifyNewsWrittenByAuthor(String expectedValue) {
+		helper.verify(helper.getText(HealthInsuranceArticlePageLocators.writtenByAuthorText), expectedValue);
+		
+	}
+	
+	public void goToHealthInsuranceCalculator() {
+		helper.scrollIntoView(HealthInsuranceArticlePageLocators.healthInsuranceCalculatorSection);
+	}
+
+}

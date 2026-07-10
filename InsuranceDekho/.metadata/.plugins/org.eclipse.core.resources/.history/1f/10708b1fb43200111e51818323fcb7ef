@@ -1,0 +1,208 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.HomePageLocators;
+import utils.WebDriverHelper;
+
+public class HomePageActions {
+
+	WebDriver driver;
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	public HomePageActions(WebDriver driver, ExtentTest test) {
+		this.driver = driver;
+		this.test = test;
+		helper = new WebDriverHelper(driver);
+		helper.addLogAndReportInfo("Home Page Actions initialized successfully.", test);
+	}
+
+	/**
+	 * Step 1: Verify InsuranceDekho Logo is visible
+	 *
+	 * @Test_Case NV_US01_TC01
+	 */
+	public void verifyInsuranceDekhoIsVisible() {
+
+		if (helper.isElementDisplayed(HomePageLocators.insuranceDekhoLogo)) {
+			helper.verifyElementIsDisplayed(HomePageLocators.insuranceDekhoLogo, "InsuranceDekho Logo", test);
+		} else {
+			helper.verifyElementIsDisplayed(HomePageLocators.insuranceDekhoLogoFallback,
+					"InsuranceDekho Logo (Fallback)", test);
+		}
+	}
+
+	public void hoverOnInsuranceMenu() {
+		helper.addLogAndReportInfo("Hovering over 'Insurance' menu in navigation bar.", test);
+		helper.hoverElement(HomePageLocators.insuranceNav);
+		helper.addLogAndReportInfo("'Insurance' menu hovered successfully.", test);
+	}
+
+	public void clickOnCarInsurance() {
+		helper.addLogAndReportInfo("Clicking on 'Car Insurance' option from Insurance dropdown.", test);
+		helper.clickElement(HomePageLocators.carInsuranceLink);
+		helper.addLogAndReportInfo("'Car Insurance' option clicked successfully.", test);
+	}
+
+
+
+	public void hoverOnCarInsuranceMenu() {
+		helper.addLogAndReportInfo("Hovering over 'Car Insurance' under Insurance menu.", test);
+		helper.hoverElement(HomePageLocators.carInsuranceLink);
+		helper.addLogAndReportInfo("'Car Insurance' menu hovered successfully.", test);
+	}
+
+	public void clickOnAddOnCover() {
+		helper.addLogAndReportInfo("Clicking on 'Add on Cover' option.", test);
+		helper.clickElement(HomePageLocators.addOnCoverLink);
+		helper.addLogAndReportInfo("'Add on Cover' page navigation triggered successfully.", test);
+	}
+
+	// testcase3
+
+	public void hoverOnBikeInsuranceMenu() {
+		helper.addLogAndReportInfo("Hovering over 'Bike Insurance' under Insurance menu.", test);
+		helper.hoverElement(HomePageLocators.bikeInsuranceNav);
+		helper.waits();
+		helper.addLogAndReportInfo("'Bike Insurance' menu hovered successfully.", test);
+	}
+
+	public void clickOnClaimSettlement() {
+		helper.addLogAndReportInfo("Clicking on 'Claim Settlement' under Bike Insurance menu.", test);
+		helper.clickElement(HomePageLocators.claimSettlementLink);
+		helper.addLogAndReportInfo("'Claim Settlement' clicked successfully.", test);
+	}
+	
+	//testcase4
+	public void hoverOnLifeInsuranceMenu() {
+	    helper.addLogAndReportInfo("Hovering over 'Life Insurance' under Insurance menu.", test);
+	    helper.hoverElement(HomePageLocators.lifeInsuranceNav);
+	  
+	    helper.addLogAndReportInfo("'Life Insurance' menu hovered successfully.", test);
+	}
+
+	public void clickOnHumanLifeValueCalculator() {
+	    helper.addLogAndReportInfo("Clicking on 'Human Life Value Calculator' option.", test);
+	    helper.clickElement(HomePageLocators.humanLifeValueCalculatorLink);
+	    helper.waits();
+	    helper.addLogAndReportInfo("'Human Life Value Calculator' clicked successfully.", test);
+	}
+	
+	//testcase 6
+	public void hoverOverInvestmentMenu() {
+		helper.hoverElement(HomePageLocators.investmentLink);
+	}
+	
+	public void clickOnInvestmentPlans(){
+		helper.clickElement(HomePageLocators.investmentPLans);
+	}
+	
+	//testcase 7
+	public void hoverOverInsuranceAdvisors() {
+		helper.hoverElement(HomePageLocators.insuranceAdvisorsLink);
+	}
+	public void clickInsuranceAdvisorsInNewDelhi(){
+		helper.clickElement(HomePageLocators.insuranceAdvisorsInNewDelhi);
+	}
+	
+	//testcase12
+	public void hoverOverSupportNav() {
+		helper.hoverElement(HomePageLocators.supportMenu);
+	}
+	
+	public void clickOnRenewPolicy() {
+		helper.clickElement(HomePageLocators.renewPolicyLink);
+	}
+	
+	public void clickOnTermsAndCondition() {
+		helper.clickElement(HomePageLocators.termsAndConditionLink);
+	}
+	
+	public void verifyTandCtext() {
+		String expected = "*Standard T&C Apply";
+		helper.verifyPartialText(helper.getText(HomePageLocators.standardTandCLink), expected);	
+	}
+	
+	public void typeMobile(String value) {
+		helper.sendText(HomePageLocators.mobileNumberInput, value);
+	}
+	
+	public void clickOnContinue() {
+		helper.clickElement(HomePageLocators.continueButton);
+	}
+	
+	public void verifyOtpSentToSms(String expectedValue) {
+		
+		helper.verifyPartialText(helper.getText(HomePageLocators.otpSentToSms), expectedValue);
+	}
+	
+	//testcase13
+	public void verifyWrongMobileInput(String expectedValue) {
+		helper.verify(helper.getText(HomePageLocators.mobileValidationMessage), expectedValue);
+	}
+	
+	//testcase14 & testcase15
+	public void hoverOverNews() {
+		helper.hoverElement(HomePageLocators.newsNavigationLink);
+	}
+	
+	public void clickCarInsuranceNews() {
+		helper.clickElement(HomePageLocators.carInsuranceNews);
+	}
+	
+	//testcase15
+	public void hoverOverHealthInsuranceNews() {
+		helper.hoverElement(HomePageLocators.healthInsuranceNewsNavigation);
+	}
+	
+	public void clickHealthInsuranceArticle() {
+		helper.clickElement(HomePageLocators.HealthInsuranceNewsArticle);
+	}
+	
+	//testcase16
+	public void clickInvestmentNews() {
+		helper.clickElement(HomePageLocators.investmentNewsLink);
+	}
+	
+	//testcase17
+	public void clickBusinessNewsLink() {
+		helper.clickElement(HomePageLocators.businessNewsLink);
+	}
+	
+	//testcase18
+	public void verifyNavigationBarIsDisplayed() {
+		helper.verifyElementIsDisplayed(HomePageLocators.nevigationTag, "navigationBar", test);
+	}
+	
+	public void clcikTermInsuranceLink() {
+		helper.clickElement(HomePageLocators.termInsuranceLink);
+	}
+	public void clcikTravelInsuranceLink() {
+		helper.clickElement(HomePageLocators.travelInsuraneLink);
+	}
+	
+	public void clickFirstArticleInTravelInsuranceArticle() {
+		helper.clickElement(HomePageLocators.firstTravelInsuranceArticle);
+	}
+	
+	//testcase20
+	public void pageScrollsToTheBottom() {
+		helper.scrollToBottom();
+	}
+	
+	
+	public void pageScrollsToTheTop() {
+		helper.scrollToTop();
+	}
+	
+	public void refreshPage() {
+		helper.refreshPage();
+	}
+	
+	
+	
+	
+}

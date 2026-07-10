@@ -1,0 +1,59 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentTest;
+import uistore.BikeClaimSettlementPageLocators;
+import utils.WebDriverHelper;
+
+public class BikeClaimSettlementPageActions {
+
+    WebDriver driver;
+    WebDriverHelper helper;
+    ExtentTest test;
+
+    public BikeClaimSettlementPageActions(WebDriver driver, ExtentTest test) {
+        this.driver = driver;
+        this.test = test;
+        helper = new WebDriverHelper(driver);
+        helper.addLogAndReportInfo("Bike Claim Settlement Page Actions initialized successfully.", test);
+    }
+
+    public void verifyBikeInsuranceClaimHeadingIsPresent(String expectedValue) {
+    	helper.verify(helper.getText(BikeClaimSettlementPageLocators.bikeInsuranceClaimHeading), expectedValue);
+
+    }
+
+    public void scrollToCalculateTwoWheelerIdvSection() {
+    	helper.scrollIntoView(BikeClaimSettlementPageLocators.calculateTwoWheelerIdvSection);
+
+    }
+
+    public void selectBrandFirstOptions() {
+    	helper.clickElement(BikeClaimSettlementPageLocators.selectBrandDropdown);
+    	helper.clickElement(BikeClaimSettlementPageLocators.firstBrand);
+
+    }
+    
+    public void selectModelFirstOption() {
+    	helper.clickElement(BikeClaimSettlementPageLocators.selectModelDropdown);
+    	helper.sendText(BikeClaimSettlementPageLocators.selectModelDropdown, "Splendor Plus");
+    	helper.clickEnter(BikeClaimSettlementPageLocators.selectModelDropdown);
+    	helper.clickElement(BikeClaimSettlementPageLocators.firstModel);
+
+    }
+
+    public void selectYearFirstOption() {
+    	helper.clickElement(BikeClaimSettlementPageLocators.selectYearDropdown);
+    	helper.clickElement(BikeClaimSettlementPageLocators.firstYear);
+
+    }
+
+    public void clickCalculateAndVerifyIdvAmount(String expectedValue) {
+    	helper.clickElement(BikeClaimSettlementPageLocators.calculateButton);
+    	helper.verify(helper.getText(BikeClaimSettlementPageLocators.idvAmountText), expectedValue);
+    	
+
+    }
+    
+    
+}

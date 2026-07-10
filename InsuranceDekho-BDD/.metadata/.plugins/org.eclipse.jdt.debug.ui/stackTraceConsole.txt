@@ -1,0 +1,4 @@
+java.lang.NullPointerException: Cannot invoke "pages.HomePageActions.hoverOverInsuranceAdvisors()" because "this.home" is null
+	at stepdefinitions.VerifyBookHomeVisitAdvaisors.i_hover_over_insurance_advisors(VerifyBookHomeVisitAdvaisors.java:15)
+	at ✽.I hover over Insurance Advisors(file:///C:/Users/10853349/InsuranceDekho-BDD/insuranceDekhoBDD/features/NV_US02_TC02_Book_Home_Visit_Error.feature:6)
+

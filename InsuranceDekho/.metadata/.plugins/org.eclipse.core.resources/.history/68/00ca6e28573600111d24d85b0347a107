@@ -1,0 +1,121 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.CarInsuranceNewsPageLocators;
+import utils.WebDriverHelper;
+
+/**
+ * Class Name: CarInsuranceNewsPageActions
+ *
+ * Description: Page Action class responsible for handling user interactions and
+ * validations on the Car Insurance News page. This class supports verification
+ * of news header, navigation to news articles, and validation of author
+ * information.
+ *
+ * This class follows Page Action Model (PAM) principles and provides reusable,
+ * business-readable methods with step-level logging using Extent Reports.
+ *
+ * @Author: Ashish Kumar
+ */
+public class CarInsuranceNewsPageActions {
+
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	/**
+	 * Description: Initializes Car Insurance News Page actions using WebDriver and
+	 * ExtentTest instances for browser interaction and reporting.
+	 *
+	 * @Test_Case NV_US14_TC01 -
+	 *            verifyNavigationToCarInsuranceNewsAndAuthorInformationDisplay
+	 * @param driver WebDriver instance for browser interaction
+	 * @param test   ExtentTest instance for logging and reporting
+	 * @author Ashish Kumar
+	 */
+	public CarInsuranceNewsPageActions(WebDriver driver, ExtentTest test) {
+		try {
+			this.test = test;
+			helper = new WebDriverHelper(driver);
+			helper.addLogAndReportInfo("Car Insurance News Page Actions initialized successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception while initializing CarInsuranceNewsPageActions: " + e.getMessage(),
+					test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies that the Car Insurance News page header is displayed
+	 * correctly as per the expected business value.
+	 *
+	 * @Test_Case NV_US14_TC01 -
+	 *            verifyNavigationToCarInsuranceNewsAndAuthorInformationDisplay
+	 * @author Ashish Kumar
+	 */
+	public void verifyCarInsuranceNewsHeader() {
+		try {
+			String expectedValue = "Car Insurance News";
+
+			helper.addLogAndReportInfo("Verifying Car Insurance News page header.", test);
+
+			String actualHeader = helper.getText(CarInsuranceNewsPageLocators.carInsuranceNewsHeader);
+
+			helper.verify(actualHeader, expectedValue);
+
+			helper.addLogAndReportInfo("Car Insurance News header verified successfully. Expected: '" + expectedValue
+					+ "' | Actual: '" + actualHeader + "'", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyCarInsuranceNewsHeader", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on the first news article listed on the Car Insurance
+	 * News page to navigate to its details.
+	 *
+	 * @Test_Case NV_US14_TC01 -
+	 *            verifyNavigationToCarInsuranceNewsAndAuthorInformationDisplay
+	 * @author Ashish Kumar
+	 */
+	public void clickFirstNewsPresent() {
+		try {
+			helper.addLogAndReportInfo("Clicking on the first Car Insurance news article.", test);
+
+			helper.clickElement(CarInsuranceNewsPageLocators.firstNewsPresent);
+
+			helper.addLogAndReportInfo("First Car Insurance news article clicked successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickFirstNewsPresent", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies that the opened Car Insurance news article displays the
+	 * correct author information.
+	 *
+	 * @Test_Case NV_US14_TC01 -
+	 *            verifyNavigationToCarInsuranceNewsAndAuthorInformationDisplay
+	 * @author Ashish Kumar
+	 */
+	public void verifyNewsWrittenByAuthor() {
+		try {
+			String expectedValue = "Written by Navneet Bhatt";
+
+			helper.addLogAndReportInfo("Verifying author information for Car Insurance news article.", test);
+
+			String actualAuthor = helper.getText(CarInsuranceNewsPageLocators.writtenByAuthorText);
+
+			helper.verify(actualAuthor, expectedValue);
+
+			helper.addLogAndReportPass("Author information verified successfully. Expected: '" + expectedValue
+					+ "' | Actual: '" + actualAuthor + "'", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to verify News Written By Author", test);
+			throw e;
+		}
+	}
+}

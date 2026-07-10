@@ -1,0 +1,6 @@
+2026-04-09 19:47:03 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 19:47:03 INFO  utils.LoggerHandler - Step Passed: Insurance Advisors Page Actions initialized successfully.
+2026-04-09 19:47:05 INFO  utils.LoggerHandler - Step: Scrolling to filter section.
+2026-04-09 19:47:05 INFO  utils.LoggerHandler - Step Passed: Scrolled to filter section successfully.
+2026-04-09 19:47:05 INFO  utils.LoggerHandler - Step: Clicking location/city filter option.
+2026-04-09 19:47:05 ERROR utils.LoggerHandler - Step Failed: Unable to apply city filter

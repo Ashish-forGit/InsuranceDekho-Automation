@@ -1,0 +1,89 @@
+2026-04-08 01:24:42 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:24:42 INFO  utils.LoggerHandler - Verifying element is displayed: InsuranceDekho Logo
+2026-04-08 01:24:43 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> InsuranceDekho Logo
+2026-04-08 01:24:43 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 01:24:43 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 01:24:43 INFO  utils.LoggerHandler - Clicking on 'Car Insurance' option from Insurance dropdown.
+2026-04-08 01:24:44 INFO  utils.LoggerHandler - 'Car Insurance' option clicked successfully.
+2026-04-08 01:24:44 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:24:47 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:24:50 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-08 01:25:08 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:25:10 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-08 01:25:13 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:25:38 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:25:43 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:25:44 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:25:48 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:25:50 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:25:58 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:26:00 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:26:05 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:26:07 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:26:15 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:26:17 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:26:25 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:26:25 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 01:26:25 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 01:26:25 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 01:26:25 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 01:26:26 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 01:26:26 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 01:26:28 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 01:26:31 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:26:31 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 01:26:32 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 01:26:32 INFO  utils.LoggerHandler - Hovering over 'Car Insurance' under Insurance menu.
+2026-04-08 01:26:32 INFO  utils.LoggerHandler - 'Car Insurance' menu hovered successfully.
+2026-04-08 01:26:32 INFO  utils.LoggerHandler - Clicking on 'Add on Cover' option.
+2026-04-08 01:26:33 INFO  utils.LoggerHandler - 'Add on Cover' page navigation triggered successfully.
+2026-04-08 01:26:33 INFO  utils.LoggerHandler - Add-On Cover Page Actions initialized successfully.
+2026-04-08 01:26:33 INFO  utils.LoggerHandler - Scrolling to 'Calculate your Car IDV' section.
+2026-04-08 01:26:34 INFO  utils.LoggerHandler - 'Calculate your Car IDV' section is visible now.
+2026-04-08 01:26:37 INFO  utils.LoggerHandler - Clicking on 'Calculate' button to generate IDV amount.
+2026-04-08 01:26:37 INFO  utils.LoggerHandler - 'Calculate' button clicked successfully.
+2026-04-08 01:26:41 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:26:41 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 01:26:41 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 01:26:41 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 01:26:42 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 01:26:42 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 01:26:42 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 01:26:42 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 01:26:42 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 01:26:46 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:26:46 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 01:26:47 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 01:26:47 INFO  utils.LoggerHandler - Hovering over 'Bike Insurance' under Insurance menu.
+2026-04-08 01:26:50 INFO  utils.LoggerHandler - 'Bike Insurance' menu hovered successfully.
+2026-04-08 01:26:50 INFO  utils.LoggerHandler - Clicking on 'Claim Settlement' under Bike Insurance menu.
+2026-04-08 01:26:55 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:26:55 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 01:26:56 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 01:26:56 INFO  utils.LoggerHandler - Hovering over 'Life Insurance' under Insurance menu.
+2026-04-08 01:26:56 INFO  utils.LoggerHandler - 'Life Insurance' menu hovered successfully.
+2026-04-08 01:26:56 INFO  utils.LoggerHandler - Clicking on 'Human Life Value Calculator' option.
+2026-04-08 01:27:00 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:27:00 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 01:27:01 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 01:27:01 INFO  utils.LoggerHandler - Hovering over 'Life Insurance' under Insurance menu.
+2026-04-08 01:27:01 INFO  utils.LoggerHandler - 'Life Insurance' menu hovered successfully.
+2026-04-08 01:27:01 INFO  utils.LoggerHandler - Clicking on 'Human Life Value Calculator' option.
+2026-04-08 01:27:05 INFO  utils.LoggerHandler - 'Human Life Value Calculator' clicked successfully.
+2026-04-08 01:27:05 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-08 01:27:05 INFO  utils.LoggerHandler - Entering name: john@gh
+2026-04-08 01:27:09 INFO  utils.LoggerHandler - Name entered successfully.
+2026-04-08 01:27:09 INFO  utils.LoggerHandler - Entering birthday: 01012001
+2026-04-08 01:27:09 INFO  utils.LoggerHandler - Birthday entered successfully.
+2026-04-08 01:27:12 INFO  utils.LoggerHandler - Entering mobile number: 98765
+2026-04-08 01:27:15 INFO  utils.LoggerHandler - Mobile number entered successfully.
+2026-04-08 01:27:18 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:27:18 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 01:27:19 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 01:27:20 INFO  utils.LoggerHandler - Add-On Cover Page Actions initialized successfully.
+2026-04-08 01:27:22 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:27:26 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-08 01:27:41 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:27:43 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-08 01:27:54 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 01:27:56 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.

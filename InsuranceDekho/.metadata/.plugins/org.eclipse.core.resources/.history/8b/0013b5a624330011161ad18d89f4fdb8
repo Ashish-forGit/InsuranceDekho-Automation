@@ -1,0 +1,393 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.HomePageLocators;
+import utils.WebDriverHelper;
+
+public class HomePageActions {
+
+    WebDriver driver;
+    WebDriverHelper helper;
+    ExtentTest test;
+
+    public HomePageActions(WebDriver driver, ExtentTest test) {
+        try {
+            this.driver = driver;
+            this.test = test;
+            helper = new WebDriverHelper(driver);
+            helper.addLogAndReportInfo("Home Page Actions initialized successfully.", test);
+        } catch (Exception e) {
+            if (test != null) {
+                try {
+                    new WebDriverHelper(driver)
+                        .addLogAndReportInfo("Exception in HomePageActions constructor: " + e.getMessage(), test);
+                } catch (Exception ex) {}
+            }
+            throw e;
+        }
+    }
+
+    /**
+     * Step 1: Verify InsuranceDekho Logo is visible
+     *
+     * @Test_Case NV_US01_TC01
+     */
+    public void verifyInsuranceDekhoIsVisible() {
+        try {
+            if (helper.isElementDisplayed(HomePageLocators.insuranceDekhoLogo)) {
+                helper.verifyElementIsDisplayed(HomePageLocators.insuranceDekhoLogo, "InsuranceDekho Logo", test);
+            } else {
+                helper.verifyElementIsDisplayed(
+                        HomePageLocators.insuranceDekhoLogoFallback,
+                        "InsuranceDekho Logo (Fallback)", test);
+            }
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in verifyInsuranceDekhoIsVisible: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void hoverOnInsuranceMenu() {
+        try {
+            helper.addLogAndReportInfo("Hovering over 'Insurance' menu in navigation bar.", test);
+            helper.hoverElement(HomePageLocators.insuranceNav);
+            helper.addLogAndReportInfo("'Insurance' menu hovered successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in hoverOnInsuranceMenu: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void clickOnCarInsurance() {
+        try {
+            helper.addLogAndReportInfo("Clicking on 'Car Insurance' option from Insurance dropdown.", test);
+            helper.clickElement(HomePageLocators.carInsuranceLink);
+            helper.addLogAndReportInfo("'Car Insurance' option clicked successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clickOnCarInsurance: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void hoverOnCarInsuranceMenu() {
+        try {
+            helper.addLogAndReportInfo("Hovering over 'Car Insurance' under Insurance menu.", test);
+            helper.hoverElement(HomePageLocators.carInsuranceLink);
+            helper.addLogAndReportInfo("'Car Insurance' menu hovered successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in hoverOnCarInsuranceMenu: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void clickOnAddOnCover() {
+        try {
+            helper.addLogAndReportInfo("Clicking on 'Add on Cover' option.", test);
+            helper.clickElement(HomePageLocators.addOnCoverLink);
+            helper.addLogAndReportInfo("'Add on Cover' page navigation triggered successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clickOnAddOnCover: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    // testcase3
+    public void hoverOnBikeInsuranceMenu() {
+        try {
+            helper.addLogAndReportInfo("Hovering over 'Bike Insurance' under Insurance menu.", test);
+            helper.hoverElement(HomePageLocators.bikeInsuranceNav);
+            helper.waits();
+            helper.addLogAndReportInfo("'Bike Insurance' menu hovered successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in hoverOnBikeInsuranceMenu: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void clickOnClaimSettlement() {
+        try {
+            helper.addLogAndReportInfo("Clicking on 'Claim Settlement' under Bike Insurance menu.", test);
+            helper.clickElement(HomePageLocators.claimSettlementLink);
+            helper.addLogAndReportInfo("'Claim Settlement' clicked successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clickOnClaimSettlement: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    // testcase4
+    public void hoverOnLifeInsuranceMenu() {
+        try {
+            helper.addLogAndReportInfo("Hovering over 'Life Insurance' under Insurance menu.", test);
+            helper.hoverElement(HomePageLocators.lifeInsuranceNav);
+            helper.addLogAndReportInfo("'Life Insurance' menu hovered successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in hoverOnLifeInsuranceMenu: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void clickOnHumanLifeValueCalculator() {
+        try {
+            helper.addLogAndReportInfo("Clicking on 'Human Life Value Calculator' option.", test);
+            helper.hoverElement(HomePageLocators.humanLifeValueCalculatorLink);
+            helper.clickElement(HomePageLocators.humanLifeValueCalculatorLink);
+            helper.waits();
+            helper.addLogAndReportInfo("'Human Life Value Calculator' clicked successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clickOnHumanLifeValueCalculator: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    // testcase 6
+    public void hoverOverInvestmentMenu() {
+        try {
+            helper.hoverElement(HomePageLocators.investmentLink);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in hoverOverInvestmentMenu: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void clickOnInvestmentPlans() {
+        try {
+            helper.hoverElement(HomePageLocators.investmentPLans);
+            helper.clickElement(HomePageLocators.investmentPLans);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clickOnInvestmentPlans: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    // testcase 7
+    public void hoverOverInsuranceAdvisors() {
+        try {
+            helper.hoverElement(HomePageLocators.insuranceAdvisorsLink);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in hoverOverInsuranceAdvisors: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void clickInsuranceAdvisorsInNewDelhi() {
+        try {
+            helper.clickElement(HomePageLocators.insuranceAdvisorsInNewDelhi);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clickInsuranceAdvisorsInNewDelhi: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    // testcase12
+    public void hoverOverSupportNav() {
+        try {
+            helper.hoverElement(HomePageLocators.supportMenu);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in hoverOverSupportNav: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void clickOnRenewPolicy() {
+        try {
+            helper.clickElement(HomePageLocators.renewPolicyLink);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clickOnRenewPolicy: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void clickOnTermsAndCondition() {
+        try {
+            helper.clickElement(HomePageLocators.termsAndConditionLink);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clickOnTermsAndCondition: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void verifyTandCtext() {
+        try {
+            String expected = "*Standard T&amp;C Apply";
+            helper.verifyPartialText(helper.getText(HomePageLocators.standardTandCLink), expected);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in verifyTandCtext: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void typeMobile() {
+        try {
+        	String value="9876543210";
+            helper.sendText(HomePageLocators.mobileNumberInput, value);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in typeMobile: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+    public void typeWrongMobile() {
+    	try {
+    		String value="9876543";
+    		helper.sendText(HomePageLocators.mobileNumberInput, value);
+    	} catch (Exception e) {
+    		helper.addLogAndReportInfo("Exception in typeMobile: " + e.getMessage(), test);
+    		throw e;
+    	}
+    }
+
+    public void clickOnContinue() {
+        try {
+            helper.clickElement(HomePageLocators.continueButton);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clickOnContinue: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void verifyOtpSentToSms() {
+        try {
+        	String expectedValue="OTP sent by SMS";
+            helper.verifyPartialText(helper.getText(HomePageLocators.otpSentToSms), expectedValue);
+        } catch (Exception e) {
+            helper.addLogAndReportFail("Exception in verifyOtpSentToSms: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    // testcase13
+    public void verifyWrongMobileInput(String expectedValue) {
+        try {
+            helper.verify(helper.getText(HomePageLocators.mobileValidationMessage), expectedValue);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in verifyWrongMobileInput: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    // testcase14 & testcase15
+    public void hoverOverNews() {
+        try {
+            helper.hoverElement(HomePageLocators.newsNavigationLink);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in hoverOverNews: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void clickCarInsuranceNews() {
+        try {
+            helper.clickElement(HomePageLocators.carInsuranceNews);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clickCarInsuranceNews: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    // testcase15
+    public void hoverOverHealthInsuranceNews() {
+        try {
+            helper.hoverElement(HomePageLocators.healthInsuranceNewsNavigation);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in hoverOverHealthInsuranceNews: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void clickHealthInsuranceArticle() {
+        try {
+            helper.clickElement(HomePageLocators.HealthInsuranceNewsArticle);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clickHealthInsuranceArticle: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    // testcase16
+    public void clickInvestmentNews() {
+        try {
+            helper.clickElement(HomePageLocators.investmentNewsLink);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clickInvestmentNews: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    // testcase17
+    public void clickBusinessNewsLink() {
+        try {
+            helper.clickElement(HomePageLocators.businessNewsLink);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clickBusinessNewsLink: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    // testcase18
+    public void verifyNavigationBarIsDisplayed() {
+        try {
+            helper.verifyElementIsDisplayed(HomePageLocators.nevigationTag, "navigationBar", test);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in verifyNavigationBarIsDisplayed: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void clcikTermInsuranceLink() {
+        try {
+            helper.clickElement(HomePageLocators.termInsuranceLink);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clcikTermInsuranceLink: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void clcikTravelInsuranceLink() {
+        try {
+            helper.clickElement(HomePageLocators.travelInsuraneLink);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clcikTravelInsuranceLink: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void clickFirstArticleInTravelInsuranceArticle() {
+        try {
+            helper.hoverElement(HomePageLocators.firstTravelInsuranceArticle);
+            helper.clickElement(HomePageLocators.firstTravelInsuranceArticle);
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in clickFirstArticleInTravelInsuranceArticle: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    // testcase20
+    public void pageScrollsToTheBottom() {
+        try {
+            helper.scrollToBottom();
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in pageScrollsToTheBottom: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void pageScrollsToTheTop() {
+        try {
+            helper.scrollToTop();
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in pageScrollsToTheTop: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    public void refreshPage() {
+        try {
+            helper.refreshPage();
+        } catch (Exception e) {
+            helper.addLogAndReportInfo("Exception in refreshPage: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+}

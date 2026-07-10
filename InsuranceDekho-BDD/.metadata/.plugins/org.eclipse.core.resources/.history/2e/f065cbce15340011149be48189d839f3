@@ -1,0 +1,59 @@
+package stepdefinitions;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.HomePageActions;
+import pages.InsuranceAdvisorsActions;
+
+public class VerifyErrorInHomeVisitAdvaisor {
+	HomePageActions home = Hooks.homeAction;
+	InsuranceAdvisorsActions idAction = Hooks.advAction;
+
+
+
+
+
+    @When("I hover over Insurance Advisors")
+    public void hoverOverInsuranceAdvisors() {
+    	home.hoverOverInsuranceAdvisors();
+    }
+
+
+    @And("I click Insurance Advisors in New Delhi")
+    public void clickInsuranceAdvisorsInNewDelhi() {
+    	home.clickInsuranceAdvisorsInNewDelhi();
+    }
+
+
+    @Then("I verify Insurance Advisors Found text is displayed")
+    public void verifyInsuranceAdvisorsFoundText() {
+  idAction.verifyInsuranceAdvisorsFoundText();
+       
+    }
+
+
+    @When("I click Book Home Visit for first advisor")
+    public void clickBookHomeVisitForFirstAdvisor() throws InterruptedException {
+    	idAction.clickBookHomeVisitForFirstAdvisor();
+     
+    }
+
+
+    @And("I enter invalid Name and Mobile")
+    public void enterInvalidNameAndMobile() {
+    	idAction.enterErrorNameAndMobile();
+    }
+
+
+    @And("I submit the request")
+    public void submitRequest() throws InterruptedException {
+       idAction.submitRequest();
+    }
+
+    @Then("I verify input validation error is displayed")
+    public void verifyInputValidationErrorDisplayed() {
+    	idAction.verifyErrorInput();
+    }
+
+}

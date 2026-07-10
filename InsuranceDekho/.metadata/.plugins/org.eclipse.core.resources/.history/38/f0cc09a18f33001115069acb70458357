@@ -1,0 +1,219 @@
+2026-04-08 02:07:44 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:07:45 INFO  utils.LoggerHandler - Verifying element is displayed: InsuranceDekho Logo
+2026-04-08 02:07:45 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> InsuranceDekho Logo
+2026-04-08 02:07:45 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 02:07:45 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 02:07:45 INFO  utils.LoggerHandler - Clicking on 'Car Insurance' option from Insurance dropdown.
+2026-04-08 02:07:46 INFO  utils.LoggerHandler - 'Car Insurance' option clicked successfully.
+2026-04-08 02:07:46 INFO  utils.LoggerHandler - Car Insurance Page Actions initialized successfully.
+2026-04-08 02:07:46 INFO  utils.LoggerHandler - Verifying Car Insurance page heading.
+2026-04-08 02:07:46 INFO  utils.LoggerHandler - Car Insurance page heading verified successfully. Expected: 'Car Insurance' | Actual: 'Car Insurance'
+2026-04-08 02:07:50 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:07:53 INFO  utils.LoggerHandler - Insurance Advisors Page Actions initialized successfully.
+2026-04-08 02:08:01 INFO  utils.LoggerHandler - Entering customer name and mobile number.
+2026-04-08 02:08:01 INFO  utils.LoggerHandler - Customer name and mobile entered successfully.
+2026-04-08 02:08:13 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:08:15 INFO  utils.LoggerHandler - Insurance Advisors Page Actions initialized successfully.
+2026-04-08 02:08:15 INFO  utils.LoggerHandler - Exception in selectCityFilter: stale element reference: stale element not found in the current frame
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5c43c52b4c177d38cfb3742e9c73edca, clickElement {id=f.166F3C59E4B098CA34FD72A0264312E7.d.2ED09ADC5DCDF2EDDD44020A6F56693C.e.245}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\10853349\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58230}, goog:processID: 10072, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58230/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (5c43c52b4c177d38cfb3742e9c73edca)] -> xpath: //label[normalize-space()='Bangalore']]
+Session ID: 5c43c52b4c177d38cfb3742e9c73edca
+2026-04-08 02:08:19 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:08:29 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:08:35 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:08:37 INFO  utils.LoggerHandler - Car Insurance News Page Actions initialized successfully.
+2026-04-08 02:08:37 INFO  utils.LoggerHandler - Verifying Car Insurance News page header.
+2026-04-08 02:08:37 INFO  utils.LoggerHandler - Car Insurance News header verified successfully. Expected: 'Car Insurance News' | Actual: 'Car Insurance News'
+2026-04-08 02:08:37 INFO  utils.LoggerHandler - Clicking on the first Car Insurance news article.
+2026-04-08 02:08:37 INFO  utils.LoggerHandler - First Car Insurance news article clicked successfully.
+2026-04-08 02:08:37 INFO  utils.LoggerHandler - Verifying author information for Car Insurance news article.
+2026-04-08 02:08:37 INFO  utils.LoggerHandler - Author information verified successfully. Expected: 'Written by Navneet Bhatt' | Actual: 'Written by Navneet Bhatt'
+2026-04-08 02:08:41 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:08:43 INFO  utils.LoggerHandler - Health Insurance Article Page Actions initialized successfully.
+2026-04-08 02:08:43 INFO  utils.LoggerHandler - Verifying Health Insurance article header.
+2026-04-08 02:08:43 INFO  utils.LoggerHandler - Health Insurance article header verified successfully. Expected: 'Health Insurance Articles' | Actual: 'Health Insurance Articles'
+2026-04-08 02:08:43 INFO  utils.LoggerHandler - Clicking on the first Health Insurance article.
+2026-04-08 02:08:43 INFO  utils.LoggerHandler - First Health Insurance article clicked successfully.
+2026-04-08 02:08:43 INFO  utils.LoggerHandler - Verifying author information for Health Insurance article.
+2026-04-08 02:08:44 INFO  utils.LoggerHandler - Exception in verifyNewsWrittenByAuthor: stale element reference: stale element not found in the current frame
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4922f628430a2aa7ebb552b4da297366, actions {actions=[org.openqa.selenium.interactions.Sequence@6192a5d5]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\10853349\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49298}, goog:processID: 21432, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49298/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4922f628430a2aa7ebb552b4da297366
+2026-04-08 02:08:48 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:08:50 INFO  utils.LoggerHandler - Investment Insurance News Page Actions initialized successfully.
+2026-04-08 02:08:50 INFO  utils.LoggerHandler - Verifying Investment Insurance News page header.
+2026-04-08 02:08:50 INFO  utils.LoggerHandler - Investment Insurance News header verified successfully. Expected: 'Investment Insurance News' | Actual: 'Investment Insurance News'
+2026-04-08 02:08:50 INFO  utils.LoggerHandler - Scrolling to 'Best Investment Advisors in Your City' section.
+2026-04-08 02:08:50 INFO  utils.LoggerHandler - Investment Advisors section is visible now.
+2026-04-08 02:08:50 INFO  utils.LoggerHandler - Clicking on Investment Advisors in Gurgaon.
+2026-04-08 02:08:51 INFO  utils.LoggerHandler - Gurgaon Investment Advisors clicked successfully.
+2026-04-08 02:08:51 INFO  utils.LoggerHandler - Verifying Gurgaon Investment Advisors page header.
+2026-04-08 02:08:52 INFO  utils.LoggerHandler - Gurgaon Investment Advisors header verified successfully. Expected: '3 Investment Advisors in Gurgaon' | Actual: '3 Investment Advisors in Gurgaon'
+2026-04-08 02:08:56 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:08:58 INFO  utils.LoggerHandler - Business Insurance News Page Actions initialized successfully.
+2026-04-08 02:08:58 INFO  utils.LoggerHandler - Verifying Business Insurance News page header.
+2026-04-08 02:08:58 INFO  utils.LoggerHandler - Business Insurance News header verified successfully. Expected: 'Business Insurance News' | Actual: 'Business Insurance News'
+2026-04-08 02:08:58 INFO  utils.LoggerHandler - Entering customer name: John
+2026-04-08 02:08:59 INFO  utils.LoggerHandler - Entering business name: xyz
+2026-04-08 02:08:59 INFO  utils.LoggerHandler - Entering mobile number: 9876543210
+2026-04-08 02:08:59 INFO  utils.LoggerHandler - Selecting product type from Product Type dropdown.
+2026-04-08 02:09:02 INFO  utils.LoggerHandler - Product type selected successfully.
+2026-04-08 02:09:02 INFO  utils.LoggerHandler - Entering email address: test@email.com
+2026-04-08 02:09:03 INFO  utils.LoggerHandler - Scrolling to 'Get a Quote' button.
+2026-04-08 02:09:03 INFO  utils.LoggerHandler - Clicking on 'Get a Quote' button.
+2026-04-08 02:09:03 INFO  utils.LoggerHandler - Verifying Thank You confirmation message.
+2026-04-08 02:09:03 INFO  utils.LoggerHandler - Thank You message verified successfully.
+2026-04-08 02:09:07 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:09:09 INFO  utils.LoggerHandler - Business Insurance News Page Actions initialized successfully.
+2026-04-08 02:09:09 INFO  utils.LoggerHandler - Verifying Business Insurance News page header.
+2026-04-08 02:09:09 INFO  utils.LoggerHandler - Business Insurance News header verified successfully. Expected: 'Business Insurance News' | Actual: 'Business Insurance News'
+2026-04-08 02:09:09 INFO  utils.LoggerHandler - Entering customer name: John
+2026-04-08 02:09:10 INFO  utils.LoggerHandler - Entering business name: xyz
+2026-04-08 02:09:10 INFO  utils.LoggerHandler - Entering mobile number: 987654
+2026-04-08 02:09:10 INFO  utils.LoggerHandler - Selecting product type from Product Type dropdown.
+2026-04-08 02:09:13 INFO  utils.LoggerHandler - Product type selected successfully.
+2026-04-08 02:09:13 INFO  utils.LoggerHandler - Entering email address: test@email.com
+2026-04-08 02:09:13 INFO  utils.LoggerHandler - Verifying invalid mobile number error message.
+2026-04-08 02:09:13 INFO  utils.LoggerHandler - Error message verified successfully.
+2026-04-08 02:09:17 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:09:17 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 02:09:18 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 02:09:18 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 02:09:18 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 02:09:19 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 02:09:19 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 02:09:20 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 02:09:20 INFO  utils.LoggerHandler - Exception in verifyNavigationBarIsDisplayed: stale element reference: stale element not found in the current frame
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a3b9ec3e6534a51319d126654a6c8347, isElementDisplayed {id=f.3ADD7EE9668C698747BEF6B05F39EBF9.d.D1DCB04977906F4764D01F22FDC0EAC8.e.374}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\10853349\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62714}, goog:processID: 20244, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62714/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a3b9ec3e6534a51319d126654a6c8347)] -> xpath: //header]
+Session ID: a3b9ec3e6534a51319d126654a6c8347
+2026-04-08 02:09:24 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:09:24 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 02:09:25 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 02:09:25 INFO  utils.LoggerHandler - Hovering over 'Car Insurance' under Insurance menu.
+2026-04-08 02:09:25 INFO  utils.LoggerHandler - 'Car Insurance' menu hovered successfully.
+2026-04-08 02:09:25 INFO  utils.LoggerHandler - Clicking on 'Add on Cover' option.
+2026-04-08 02:09:26 INFO  utils.LoggerHandler - 'Add on Cover' page navigation triggered successfully.
+2026-04-08 02:09:26 INFO  utils.LoggerHandler - Add-On Cover Page Actions initialized successfully.
+2026-04-08 02:09:26 INFO  utils.LoggerHandler - Attempting to scroll to 'Calculate your Car IDV' section.
+2026-04-08 02:09:26 INFO  utils.LoggerHandler - 'Calculate your Car IDV' section is visible now.
+2026-04-08 02:09:26 INFO  utils.LoggerHandler - Clicking on Brand dropdown.
+2026-04-08 02:09:29 INFO  utils.LoggerHandler - Selecting first available brand from dropdown.
+2026-04-08 02:09:30 INFO  utils.LoggerHandler - Car brand selected successfully.
+2026-04-08 02:09:30 INFO  utils.LoggerHandler - Clicking on Model dropdown.
+2026-04-08 02:09:30 INFO  utils.LoggerHandler - Entering car model value 'Alto 800'.
+2026-04-08 02:09:30 INFO  utils.LoggerHandler - Selecting first matching model from dropdown.
+2026-04-08 02:09:30 INFO  utils.LoggerHandler - Car model selected successfully.
+2026-04-08 02:09:30 INFO  utils.LoggerHandler - Clicking on Year dropdown.
+2026-04-08 02:09:30 INFO  utils.LoggerHandler - Selecting first available year.
+2026-04-08 02:09:30 INFO  utils.LoggerHandler - Manufacturing year selected successfully.
+2026-04-08 02:09:30 INFO  utils.LoggerHandler - Clicking on 'Calculate' button to generate IDV amount.
+2026-04-08 02:09:30 INFO  utils.LoggerHandler - 'Calculate' button clicked successfully.
+2026-04-08 02:09:30 INFO  utils.LoggerHandler - Verifying calculated IDV amount is displayed.
+2026-04-08 02:09:30 INFO  utils.LoggerHandler - IDV amount verified successfully. Expected: 'Rs. 2,58,547' | Actual: 'Rs. 2,58,547'
+2026-04-08 02:09:34 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:09:34 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 02:09:34 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 02:09:34 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 02:09:35 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 02:09:35 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 02:09:35 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 02:09:35 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-08 02:09:35 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-08 02:09:39 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:09:39 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 02:09:40 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 02:09:40 INFO  utils.LoggerHandler - Hovering over 'Bike Insurance' under Insurance menu.
+2026-04-08 02:09:44 INFO  utils.LoggerHandler - 'Bike Insurance' menu hovered successfully.
+2026-04-08 02:09:44 INFO  utils.LoggerHandler - Clicking on 'Claim Settlement' under Bike Insurance menu.
+2026-04-08 02:09:45 INFO  utils.LoggerHandler - Exception in clickOnClaimSettlement: element click intercepted: Element <a title="Bike Insurance ..." href="/bike-insurance/claim-settlement">Claim Settlement</a> is not clickable at point (547, 448). Other element would receive the click: <div class="subMenu2_wrap">...</div>
+  (Session info: chrome=146.0.7680.178)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8c39a5d864e46497cacf62b25f57864d, clickElement {id=f.342A18C8951BD9D5C1D92E4A56F1ED54.d.BBF44DA03282B1CC8688F4C3B292274C.e.214}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\10853349\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56708}, goog:processID: 3396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56708/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (8c39a5d864e46497cacf62b25f57864d)] -> xpath: //a[@title='Bike Insurance Claim Settlement']]
+Session ID: 8c39a5d864e46497cacf62b25f57864d
+2026-04-08 02:09:50 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:09:50 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 02:09:51 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 02:09:51 INFO  utils.LoggerHandler - Hovering over 'Life Insurance' under Insurance menu.
+2026-04-08 02:09:51 INFO  utils.LoggerHandler - 'Life Insurance' menu hovered successfully.
+2026-04-08 02:09:51 INFO  utils.LoggerHandler - Clicking on 'Human Life Value Calculator' option.
+2026-04-08 02:09:55 INFO  utils.LoggerHandler - 'Human Life Value Calculator' clicked successfully.
+2026-04-08 02:09:55 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-08 02:09:55 INFO  utils.LoggerHandler - Verifying HLV Calculator page title.
+2026-04-08 02:09:55 INFO  utils.LoggerHandler - HLV Calculator page title verified successfully.
+2026-04-08 02:09:59 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:09:59 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 02:10:00 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 02:10:00 INFO  utils.LoggerHandler - Hovering over 'Life Insurance' under Insurance menu.
+2026-04-08 02:10:00 INFO  utils.LoggerHandler - 'Life Insurance' menu hovered successfully.
+2026-04-08 02:10:00 INFO  utils.LoggerHandler - Clicking on 'Human Life Value Calculator' option.
+2026-04-08 02:10:05 INFO  utils.LoggerHandler - 'Human Life Value Calculator' clicked successfully.
+2026-04-08 02:10:05 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-08 02:10:05 INFO  utils.LoggerHandler - Verifying HLV Calculator page title.
+2026-04-08 02:10:05 INFO  utils.LoggerHandler - HLV Calculator page title verified successfully.
+2026-04-08 02:10:05 INFO  utils.LoggerHandler - Entering name: john@gh
+2026-04-08 02:10:08 INFO  utils.LoggerHandler - Name entered successfully.
+2026-04-08 02:10:08 INFO  utils.LoggerHandler - Entering birthday: 01012001
+2026-04-08 02:10:11 INFO  utils.LoggerHandler - Birthday entered successfully.
+2026-04-08 02:10:11 INFO  utils.LoggerHandler - Selecting annual income range 3–5 Lakhs.
+2026-04-08 02:10:12 INFO  utils.LoggerHandler - Annual income option selected successfully.
+2026-04-08 02:10:12 INFO  utils.LoggerHandler - Entering mobile number: 98765
+2026-04-08 02:10:15 INFO  utils.LoggerHandler - Mobile number entered successfully.
+2026-04-08 02:10:15 INFO  utils.LoggerHandler - Verifying error message displayed on HLV calculator.
+2026-04-08 02:10:15 INFO  utils.LoggerHandler - Error message verified successfully.
+2026-04-08 02:10:17 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:10:17 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 02:10:19 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 02:10:21 INFO  utils.LoggerHandler - Investment Plans Page Actions initialized successfully.
+2026-04-08 02:10:21 INFO  utils.LoggerHandler - Verifying 'Best Investment Plans in India' page heading.
+2026-04-08 02:10:21 INFO  utils.LoggerHandler - Investment Plans page heading verified successfully. Expected: 'Best Investment Plans in India 2026' | Actual: 'Best Investment Plans in India 2026'
+2026-04-08 02:10:21 INFO  utils.LoggerHandler - Clicking on 'Market Linked' investment plans link.
+2026-04-08 02:10:21 INFO  utils.LoggerHandler - 'Market Linked' investment plans link clicked successfully.
+2026-04-08 02:10:21 INFO  utils.LoggerHandler - Verifying Online Savings Plan text.
+2026-04-08 02:10:21 INFO  utils.LoggerHandler - Savings plan text verified successfully. Expected: 'Online Savings Plan' | Actual: 'Online Savings Plan'
+2026-04-08 02:10:25 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:10:27 INFO  utils.LoggerHandler - Insurance Advisors Page Actions initialized successfully.
+2026-04-08 02:10:27 INFO  utils.LoggerHandler - Verifying Insurance Advisors found text.
+2026-04-08 02:10:28 INFO  utils.LoggerHandler - Insurance Advisors found text verified successfully.
+2026-04-08 02:10:28 INFO  utils.LoggerHandler - Clicking 'Book Home Visit' for first advisor.
+2026-04-08 02:10:32 INFO  utils.LoggerHandler - Book Home Visit clicked for first advisor.
+2026-04-08 02:10:32 INFO  utils.LoggerHandler - Entering customer name and mobile number.
+2026-04-08 02:10:32 INFO  utils.LoggerHandler - Customer name and mobile entered successfully.
+2026-04-08 02:10:32 INFO  utils.LoggerHandler - Submitting insurance advisor booking request.
+2026-04-08 02:10:35 INFO  utils.LoggerHandler - Verifying Thank You confirmation message.
+2026-04-08 02:10:38 INFO  utils.LoggerHandler - Thank You message verified successfully.
+2026-04-08 02:10:41 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:10:44 INFO  utils.LoggerHandler - Insurance Advisors Page Actions initialized successfully.
+2026-04-08 02:10:44 INFO  utils.LoggerHandler - Verifying Insurance Advisors found text.
+2026-04-08 02:10:44 INFO  utils.LoggerHandler - Insurance Advisors found text verified successfully.
+2026-04-08 02:10:44 INFO  utils.LoggerHandler - Clicking 'Book Home Visit' for first advisor.
+2026-04-08 02:10:47 INFO  utils.LoggerHandler - Book Home Visit clicked for first advisor.
+2026-04-08 02:10:47 INFO  utils.LoggerHandler - Entering customer name and mobile number.
+2026-04-08 02:10:47 INFO  utils.LoggerHandler - Customer name and mobile entered successfully.
+2026-04-08 02:10:47 INFO  utils.LoggerHandler - Submitting insurance advisor booking request.
+2026-04-08 02:10:51 INFO  utils.LoggerHandler - Verifying input error message.
+2026-04-08 02:10:55 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 02:10:57 INFO  utils.LoggerHandler - Insurance Advisors Page Actions initialized successfully.
+2026-04-08 02:11:04 INFO  utils.LoggerHandler - Entering customer name and mobile number.
+2026-04-08 02:11:05 INFO  utils.LoggerHandler - Customer name and mobile entered successfully.

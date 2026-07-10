@@ -1,0 +1,12 @@
+2026-04-09 00:15:19 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 00:15:19 INFO  utils.LoggerHandler - Step: Hovering over 'News' menu in the navigation bar.
+2026-04-09 00:15:20 INFO  utils.LoggerHandler - Step Passed: Hovered over 'News' menu successfully.
+2026-04-09 00:15:20 INFO  utils.LoggerHandler - Step: Clicking on 'Car Insurance News' option under News menu.
+2026-04-09 00:15:20 INFO  utils.LoggerHandler - Step Passed: Clicked on 'Car Insurance News' successfully.
+2026-04-09 00:15:20 INFO  utils.LoggerHandler - Car Insurance News Page Actions initialized successfully.
+2026-04-09 00:15:20 INFO  utils.LoggerHandler - Verifying Car Insurance News page header.
+2026-04-09 00:15:20 INFO  utils.LoggerHandler - Car Insurance News header verified successfully. Expected: 'Car Insurance News' | Actual: 'Car Insurance News'
+2026-04-09 00:15:20 INFO  utils.LoggerHandler - Clicking on the first Car Insurance news article.
+2026-04-09 00:15:21 INFO  utils.LoggerHandler - First Car Insurance news article clicked successfully.
+2026-04-09 00:15:21 INFO  utils.LoggerHandler - Verifying author information for Car Insurance news article.
+2026-04-09 00:15:21 INFO  utils.LoggerHandler - Author information verified successfully. Expected: 'Written by Navneet Bhatt' | Actual: 'Written by Navneet Bhatt'

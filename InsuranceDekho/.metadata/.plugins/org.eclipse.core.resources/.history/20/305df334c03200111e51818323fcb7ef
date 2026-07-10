@@ -1,0 +1,85 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.HumanLifeValuePageLocators;
+import utils.WebDriverHelper;
+
+public class HumanLifeValuePageActions {
+
+    WebDriver driver;
+    WebDriverHelper helper;
+    ExtentTest test;
+
+    public HumanLifeValuePageActions(WebDriver driver, ExtentTest test) {
+        this.driver = driver;
+        this.test = test;
+        helper = new WebDriverHelper(driver);
+        helper.addLogAndReportInfo("Human Life Value Page Actions initialized successfully.", test);
+    }
+
+    public void verifyHlvCalculatorPageTitle(String expectedTitleContains) {
+    	helper.verify(helper.getPageTitle(), expectedTitleContains);
+
+    }
+
+    public void selectMale() {
+        helper.addLogAndReportInfo("Selecting gender as 'Male'.", test);
+        helper.clickElement(HumanLifeValuePageLocators.maleOption);
+        helper.addLogAndReportInfo("Male option selected successfully.", test);
+    }
+
+    public void enterName(String name) {
+        helper.addLogAndReportInfo("Entering name: " + name, test);
+        helper.jsClick(HumanLifeValuePageLocators.nameField);
+        
+        helper.sendText(HumanLifeValuePageLocators.nameField, name);
+        helper.waits();
+        helper.clickEnter(HumanLifeValuePageLocators.nameField);
+        helper.addLogAndReportInfo("Name entered successfully.", test);
+    }
+
+    public void enterBirthday(String dob) {
+        helper.addLogAndReportInfo("Entering birthday: " + dob, test);
+//        helper.clickElement(HumanLifeValuePageLocators.dobField);
+        helper.sendTexttoElement(HumanLifeValuePageLocators.dobField, dob);
+        helper.addLogAndReportInfo("Birthday entered successfully.", test);
+        helper.waits();
+    }
+
+    public void selectNonSmoker() {
+        helper.addLogAndReportInfo("Selecting 'Non Smoker' option.", test);
+        helper.clickElement(HumanLifeValuePageLocators.nonSmokerOption);
+        helper.addLogAndReportInfo("'Non Smoker' option selected successfully.", test);
+    }
+
+    public void selectAnnualIncome() {
+    	helper.clickElement(HumanLifeValuePageLocators.annualIncomeOption_3to5);
+
+    }
+
+    public void enterMobileNumber(String mobile) {
+        helper.addLogAndReportInfo("Entering mobile number: " + mobile, test);
+        helper.sendTexttoElement(HumanLifeValuePageLocators.mobileNumberField, mobile);
+        helper.waits();
+        helper.addLogAndReportInfo("Mobile number entered successfully.", test);
+    }
+
+    public void clickViewPlansForFree() {
+        helper.addLogAndReportInfo("Clicking on 'View Plans for Free' button.", test);
+        helper.clickElement(HumanLifeValuePageLocators.viewPlansForFreeButton);
+        helper.addLogAndReportInfo("'View Plans for Free' clicked successfully.", test);
+    }
+
+    public void verifyUserNameDisplayedOnTop(String expectedName) {
+    	helper.verify(helper.getText(HumanLifeValuePageLocators.resultUserNameTop), expectedName);
+    	
+
+    }
+    public void verifyerrorMessageDisplayed(String expectedName) {
+    	helper.verify(helper.getText(HumanLifeValuePageLocators.errorMesssage), expectedName);
+    	
+    	
+    }
+}

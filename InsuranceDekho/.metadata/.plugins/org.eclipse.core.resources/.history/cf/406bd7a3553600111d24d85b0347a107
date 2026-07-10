@@ -1,0 +1,56 @@
+package utils;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+/**
+ * Class Name: ExcelUtils
+ *
+ * Description: Utility class responsible for reading test data from Excel
+ * (.xlsx) files.
+ *
+ * This class is commonly used to support data-driven testing by supplying input
+ * values such as test data, expected results, and configuration parameters to
+ * test cases and automation workflows.
+ *
+ * @author Ashish Kumar
+ */
+public class ExcelUtils {
+
+	/**
+	 * Description: Reads data from an Excel file based on the provided sheet name,
+	 * row index, and column index. The cell value is formatted and returned as a
+	 * String irrespective of its original data type.
+	 *
+	 * @param filePath Absolute or relative path of the Excel file
+	 * @param sheet    Sheet name from which data is read
+	 * @param row      Row index (0-based)
+	 * @param col      Column index (0-based)
+	 * @return Cell value as formatted String, or empty string if an error occurs
+	 * @author Ashish Kumar
+	 */
+	public static String readData(String filePath, String sheet, int row, int col) {
+
+		try (FileInputStream file = new FileInputStream(filePath); XSSFWorkbook wb = new XSSFWorkbook(file)) {
+
+			XSSFSheet sheet1 = wb.getSheet(sheet);
+			XSSFRow row1 = sheet1.getRow(row);
+			XSSFCell cell = row1.getCell(col);
+
+			DataFormatter format = new DataFormatter();
+			return format.formatCellValue(cell); // convert every cell value to string
+
+		} catch (IOException e) {
+			e.printStackTrace();
+
+		}
+		return "";
+
+	}
+}

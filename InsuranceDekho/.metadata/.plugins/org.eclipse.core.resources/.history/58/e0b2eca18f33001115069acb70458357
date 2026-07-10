@@ -1,0 +1,10 @@
+2026-04-08 18:06:08 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 18:06:10 INFO  utils.LoggerHandler - Insurance Advisors Page Actions initialized successfully.
+2026-04-08 18:06:10 INFO  utils.LoggerHandler - Verifying Insurance Advisors found text.
+2026-04-08 18:06:10 INFO  utils.LoggerHandler - Insurance Advisors found text verified successfully.
+2026-04-08 18:06:10 INFO  utils.LoggerHandler - Clicking 'Book Home Visit' for first advisor.
+2026-04-08 18:06:14 INFO  utils.LoggerHandler - Book Home Visit clicked for first advisor.
+2026-04-08 18:06:14 INFO  utils.LoggerHandler - Entering customer name and mobile number.
+2026-04-08 18:06:14 INFO  utils.LoggerHandler - Customer name and mobile entered successfully.
+2026-04-08 18:06:14 INFO  utils.LoggerHandler - Submitting insurance advisor booking request.
+2026-04-08 18:06:17 INFO  utils.LoggerHandler - Verifying input error message.

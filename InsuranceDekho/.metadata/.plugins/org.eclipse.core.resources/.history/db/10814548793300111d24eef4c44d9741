@@ -1,0 +1,706 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.HomePageLocators;
+import utils.WebDriverHelper;
+
+public class HomePageActions {
+
+	WebDriver driver;
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	/**
+	 * Description: Initializes Home Page actions using WebDriver and ExtentTest
+	 * instances for UI interaction and reporting.
+	 *
+	 * @Test_Case NV_US01_TC01 - , NV_US01_TC02 - , NV_US01_TC03 -
+	 * 
+	 * @author Ashish Kumar
+	 */
+	public HomePageActions(WebDriver driver, ExtentTest test) {
+		try {
+			this.driver = driver;
+			this.test = test;
+			helper = new WebDriverHelper(driver);
+			helper.addLogAndReportInfo("Home Page Actions initialized successfully.", test);
+		} catch (Exception e) {
+			if (test != null) {
+				try {
+					new WebDriverHelper(driver)
+							.addLogAndReportInfo("Exception in HomePageActions constructor: " + e.getMessage(), test);
+				} catch (Exception ex) {
+				}
+			}
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies that InsuranceDekho logo is visible on Home page.
+	 *
+	 * @Test_Case NV_US01_TC01 - verifyHomePageLogoVisibility
+	 * @author Ashish Kumar
+	 */
+
+	public void verifyInsuranceDekhoIsVisible() {
+		try {
+			if (helper.isElementDisplayed(HomePageLocators.insuranceDekhoLogo)) {
+				helper.verifyElementIsDisplayed(HomePageLocators.insuranceDekhoLogo, "InsuranceDekho Logo", test);
+			} else {
+				helper.verifyElementIsDisplayed(HomePageLocators.insuranceDekhoLogoFallback,
+						"InsuranceDekho Logo (Fallback)", test);
+			}
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in verifyInsuranceDekhoIsVisible: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Hovers over the Insurance menu in the navigation bar.
+	 *
+	 * @Test_Case NV_US01_TC01 - , NV_US01_TC02 - , NV_US01_TC03 - ,
+	 * 
+	 * 
+	 * @author Ashish Kumar
+	 */
+	public void hoverOnInsuranceMenu() {
+		try {
+			helper.addLogAndReportInfo("Hovering over 'Insurance' menu in navigation bar.", test);
+			helper.hoverElement(HomePageLocators.insuranceNav);
+			helper.addLogAndReportInfo("'Insurance' menu hovered successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to hover 'Insurance'", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on Car Insurance option under Insurance menu.
+	 *
+	 * @Test_Case NV_US01_TC01 - , NV_US01_TC02 - ,
+	 * @author Ashish Kumar
+	 */
+	public void clickOnCarInsurance() {
+		try {
+			helper.addLogAndReportInfo("Clicking on 'Car Insurance' option from Insurance dropdown.", test);
+			helper.clickElement(HomePageLocators.carInsuranceLink);
+			helper.addLogAndReportInfo("'Car Insurance' option clicked successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickOnCarInsurance: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Hovers on Car Insurance option under Insurance menu.
+	 *
+	 * @Test_Case NV_US01_TC02 - ,
+	 * @author Ashish Kumar
+	 */
+	public void hoverOnCarInsuranceMenu() {
+		try {
+			helper.addLogAndReportInfo("Hovering over 'Car Insurance' under Insurance menu.", test);
+			helper.hoverElement(HomePageLocators.carInsuranceLink);
+			helper.addLogAndReportInfo("'Car Insurance' menu hovered successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in hoverOnCarInsuranceMenu: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on Add On Cover page under Car Insurance.
+	 *
+	 * @Test_Case NV_US01_TC02 -
+	 * @author Ashish Kumar
+	 */
+	public void clickOnAddOnCover() {
+		try {
+			helper.addLogAndReportInfo("Clicking on 'Add on Cover' option.", test);
+			helper.clickElement(HomePageLocators.addOnCoverLink);
+			helper.addLogAndReportInfo("'Add on Cover' page navigation triggered successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickOnAddOnCover: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Hover over Bike Insurance.
+	 *
+	 * @Test_Case NV_US01_TC03 -
+	 * @author Ashish Kumar
+	 */
+	public void hoverOnBikeInsuranceMenu() {
+		try {
+			helper.addLogAndReportInfo("Hovering over 'Bike Insurance' under Insurance menu.", test);
+			helper.hoverElement(HomePageLocators.bikeInsuranceNav);
+			helper.waits();
+			helper.addLogAndReportInfo("'Bike Insurance' menu hovered successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to hover bike insurance", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on Claim Settlement under Bike Insurance.
+	 *
+	 * 
+	 * @author Ashish Kumar
+	 */
+	public void clickOnClaimSettlement() {
+		try {
+			helper.addLogAndReportInfo("Clicking on 'Claim Settlement' under Bike Insurance menu.", test);
+			helper.clickElement(HomePageLocators.claimSettlementLink);
+			helper.addLogAndReportInfo("'Claim Settlement' clicked successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickOnClaimSettlement: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Hover over Life Insurance.
+	 *
+	 * 
+	 * @author Ashish Kumar
+	 */
+	public void hoverOnLifeInsuranceMenu() {
+		try {
+			helper.addLogAndReportInfo("Hovering over 'Life Insurance' under Insurance menu.", test);
+			helper.hoverElement(HomePageLocators.lifeInsuranceNav);
+			helper.addLogAndReportInfo("'Life Insurance' menu hovered successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in hoverOnLifeInsuranceMenu: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks to Human Life Value calculator under Life Insurance.
+	 *
+	 * 
+	 * @author Ashish Kumar
+	 */
+	public void clickOnHumanLifeValueCalculator() {
+		try {
+			helper.addLogAndReportInfo("Clicking on 'Human Life Value Calculator' option.", test);
+			helper.hoverElement(HomePageLocators.humanLifeValueCalculatorLink);
+			helper.clickElement(HomePageLocators.humanLifeValueCalculatorLink);
+			helper.waits();
+			helper.addLogAndReportInfo("'Human Life Value Calculator' clicked successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickOnHumanLifeValueCalculator: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Hover over Investment.
+	 *
+	 * 
+	 * @author Ashish Kumar
+	 */
+	public void hoverOverInvestmentMenu() {
+		try {
+			helper.hoverElement(HomePageLocators.investmentLink);
+			helper.addLogAndReportInfo("Hover over Investment.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Failed to hover over Investment Menu: ", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks over Investment Plans.
+	 *
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void clickOnInvestmentPlans() {
+		try {
+			helper.hoverElement(HomePageLocators.investmentPLans);
+			helper.clickElement(HomePageLocators.investmentPLans);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickOnInvestmentPlans: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Hover over Insurance Advisors.
+	 *
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void hoverOverInsuranceAdvisors() {
+		try {
+			helper.hoverElement(HomePageLocators.insuranceAdvisorsLink);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in hoverOverInsuranceAdvisors: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on Insurance Advisors in New Delhi.
+	 *
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void clickInsuranceAdvisorsInNewDelhi() {
+		try {
+			helper.clickElement(HomePageLocators.insuranceAdvisorsInNewDelhi);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickInsuranceAdvisorsInNewDelhi: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Hover over Support in navigation.
+	 *
+	 * 
+	 * @author Ashish Kumar
+	 */
+	public void hoverOverSupportNav() {
+		try {
+			helper.hoverElement(HomePageLocators.supportMenu);
+
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in hoverOverSupportNav: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on Support in navigation.
+	 *
+	 * 
+	 * @author Ashish Kumar
+	 */
+	public void clickOnRenewPolicy() {
+		try {
+			helper.clickElement(HomePageLocators.renewPolicyLink);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickOnRenewPolicy: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on the Terms and Conditions link displayed on the Home
+	 * page.
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void clickOnTermsAndCondition() {
+		try {
+			helper.addLogAndReportInfo("Step: Clicking on 'Terms and Conditions' link.", test);
+
+			helper.clickElement(HomePageLocators.termsAndConditionLink);
+
+			helper.addLogAndReportPass("Step Passed: 'Terms and Conditions' link clicked successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail(
+					"Step Failed: Unable to click 'Terms and Conditions' link. Error: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies that the Terms and Conditions text is displayed
+	 * correctly on the page.
+	 *
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void verifyTandCtext() {
+		try {
+			String expected = "*Standard T&amp;amp;C Apply";
+
+			helper.addLogAndReportInfo("Step: Verifying Terms and Conditions text is displayed.", test);
+
+			helper.verifyPartialText(helper.getText(HomePageLocators.standardTandCLink), expected);
+
+			helper.addLogAndReportPass("Step Passed: Terms and Conditions text verified successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail(
+					"Step Failed: Unable to verify Terms and Conditions text. Error: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters a valid mobile number into the mobile number input field
+	 * as part of the Renew Policy flow.
+	 *
+	 * @Test_Case NV_US12_TC01 - verifyRenewPolicyOtpValidation
+	 * @author Ashish Kumar
+	 */
+	public void typeMobile() {
+	    try {
+	        String value = "9876543211";
+
+	        helper.addLogAndReportInfo(
+	            "Step: Entering valid mobile number in input field: " + value, test
+	        );
+
+	        helper.sendText(HomePageLocators.mobileNumberInput, value);
+
+	        helper.addLogAndReportPass(
+	            "Step Passed: Valid mobile number entered successfully.", test
+	        );
+	    } catch (Exception e) {
+	        helper.addLogAndReportFail(
+	            "Step Failed: Unable to enter valid mobile number. Error: " + e.getMessage(), test
+	        );
+	        throw e;
+	    }
+	}
+
+
+	/**
+	 * Description: Enters an invalid mobile number into the mobile number input
+	 * field to trigger validation error.
+	 *
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void typeWrongMobile() {
+		try {
+			String value = "9876543";
+
+			helper.addLogAndReportInfo("Step: Entering invalid mobile number in input field: " + value, test);
+
+			helper.sendText(HomePageLocators.mobileNumberInput, value);
+
+			helper.addLogAndReportPass("Step Passed: Invalid mobile number entered successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Step Failed: Unable to enter invalid mobile number. Error: " + e.getMessage(),
+					test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on the Continue button to proceed in the current flow.
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void clickOnContinue() {
+		try {
+			helper.addLogAndReportInfo("Step: Clicking on 'Continue' button.", test);
+
+			helper.clickElement(HomePageLocators.continueButton);
+
+			helper.addLogAndReportPass("Step Passed: 'Continue' button clicked successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Step Failed: Unable to click 'Continue' button. Error: " + e.getMessage(),
+					test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies OTP sent confirmation message.
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void verifyOtpSentToSms() {
+		try {
+			String expectedValue = "OTP sent by SMS";
+			helper.verifyPartialText(helper.getText(HomePageLocators.otpSentToSms), expectedValue);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyOtpSentToSms: ", test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Validates error message for invalid mobile number input.
+	 *
+	 * 
+	 * @author Ashish Kumar
+	 */
+	public void verifyWrongMobileInput() {
+		try {
+			String expectedValue = "Invalid mobile number.";
+			helper.verify(helper.getText(HomePageLocators.mobileValidationMessage), expectedValue);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in verifyWrongMobileInput: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	// testcase14 & testcase15
+	/**
+	 * Description: Hovers over the News menu in the navigation bar to display
+	 * available news categories.
+	 *
+	 *
+	 *            verifyHealthInsuranceNewsNavigation
+	 * @author Ashish Kumar
+	 */
+	public void hoverOverNews() {
+		try {
+			helper.addLogAndReportInfo("Step: Hovering over 'News' menu in the navigation bar.", test);
+
+			helper.hoverElement(HomePageLocators.newsNavigationLink);
+
+			helper.addLogAndReportPass("Step Passed: Hovered over 'News' menu successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Step Failed: Unable to hover over 'News' menu. Error: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on the Car Insurance News option under the News menu.
+	 *
+	 *
+	 * @Author Ashish Kumar
+	 */
+	public void clickCarInsuranceNews() {
+		try {
+			helper.addLogAndReportInfo("Step: Clicking on 'Car Insurance News' option under News menu.", test);
+
+			helper.clickElement(HomePageLocators.carInsuranceNews);
+
+			helper.addLogAndReportPass("Step Passed: Clicked on 'Car Insurance News' successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Step Failed: Unable to click 'Car Insurance News'. Error: " + e.getMessage(),
+					test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Hovers over Health Insurance News option under the News menu.
+	 *
+	 * 
+	 * @Author Ashish Kumar
+	 */
+	public void hoverOverHealthInsuranceNews() {
+		try {
+			helper.addLogAndReportInfo("Step: Hovering over 'Health Insurance News' option under News menu.", test);
+
+			helper.hoverElement(HomePageLocators.healthInsuranceNewsNavigation);
+
+			helper.addLogAndReportPass("Step Passed: Hovered over 'Health Insurance News' successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail(
+					"Step Failed: Unable to hover over 'Health Insurance News'. Error: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on the Health Insurance article displayed under News
+	 * section.
+	 *
+	 * 
+	 * @Author Ashish Kumar
+	 */
+	public void clickHealthInsuranceArticle() {
+		try {
+			helper.addLogAndReportInfo("Step: Clicking on the Health Insurance article under News section.", test);
+
+			helper.clickElement(HomePageLocators.HealthInsuranceNewsArticle);
+
+			helper.addLogAndReportPass("Step Passed: Health Insurance article clicked successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail(
+					"Step Failed: Unable to click Health Insurance article. Error: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on Investment News option under the News menu.
+	 *
+	 * @Author Ashish Kumar
+	 */
+	public void clickInvestmentNews() {
+		try {
+			helper.addLogAndReportInfo("Step: Clicking on 'Investment News' under News menu.", test);
+
+			helper.clickElement(HomePageLocators.investmentNewsLink);
+
+			helper.addLogAndReportPass("Step Passed: Clicked on 'Investment News' successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Step Failed: Unable to click 'Investment News'. Error: " + e.getMessage(),
+					test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on Business News option under the News menu.
+	 *
+	 * @Author Ashish Kumar
+	 */
+	public void clickBusinessNewsLink() {
+		try {
+			helper.addLogAndReportInfo("Step: Clicking on 'Business News' under News menu.", test);
+
+			helper.clickElement(HomePageLocators.businessNewsLink);
+
+			helper.addLogAndReportPass("Step Passed: Clicked on 'Business News' successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Step Failed: Unable to click 'Business News'. Error: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies navigation bar is displayed on Home page.
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void verifyNavigationBarIsDisplayed() {
+		try {
+			helper.addLogAndReportInfo("Step: Verifying the navigation bar is displayed on the Home page.", test);
+
+			helper.verifyElementIsDisplayed(HomePageLocators.nevigationTag, "navigationBar", test);
+
+			helper.addLogAndReportPass("Step Passed: Navigation bar is displayed successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Step Failed: Navigation bar is not displayed. Error: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on the "Term Insurance" link from the navigation menu
+	 * to navigate to the Term Insurance page.
+	 *
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void clcikTermInsuranceLink() {
+	    try {
+	        helper.addLogAndReportInfo("Step: Clicking on 'Term Insurance' link from navigation menu.", test);
+
+	        helper.clickElement(HomePageLocators.termInsuranceLink);
+
+	        helper.addLogAndReportPass("Step Passed: 'Term Insurance' link clicked successfully.", test);
+	    } catch (Exception e) {
+	        helper.addLogAndReportFail(
+	            "Step Failed: Unable to click 'Term Insurance' link. Error: " + e.getMessage(), test
+	        );
+	        throw e;
+	    }
+	}
+
+	/**
+	 * Description: Clicks on the "Travel Insurance" link from the navigation menu
+	 * to navigate to the Travel Insurance page.
+	 *
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void clcikTravelInsuranceLink() {
+	    try {
+	        helper.addLogAndReportInfo("Step: Clicking on 'Travel Insurance' link from navigation menu.", test);
+
+	        helper.clickElement(HomePageLocators.travelInsuraneLink);
+
+	        helper.addLogAndReportPass("Step Passed: 'Travel Insurance' link clicked successfully.", test);
+	    } catch (Exception e) {
+	        helper.addLogAndReportFail(
+	            "Step Failed: Unable to click 'Travel Insurance' link. Error: " + e.getMessage(), test
+	        );
+	        throw e; // ✅ Important: fail-fast so test doesn't falsely pass
+	    }
+	}
+
+	/**
+	 * Description: Opens the first Travel Insurance article by hovering over it
+	 * and clicking on the article card/link.
+	 *
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void clickFirstArticleInTravelInsuranceArticle() {
+	    try {
+	        helper.addLogAndReportInfo("Step: Hovering over the first Travel Insurance article.", test);
+
+	        helper.hoverElement(HomePageLocators.firstTravelInsuranceArticle);
+
+	        helper.addLogAndReportInfo("Step: Clicking on the first Travel Insurance article.", test);
+
+	        helper.clickElement(HomePageLocators.firstTravelInsuranceArticle);
+
+	        helper.addLogAndReportPass("Step Passed: First Travel Insurance article opened successfully.", test);
+	    } catch (Exception e) {
+	        helper.addLogAndReportFail(
+	            "Step Failed: Unable to open first Travel Insurance article. Error: " + e.getMessage(), test
+	        );
+	        throw e; // ✅ Important: fail-fast so test doesn't falsely pass
+	    }
+	}
+
+	/**
+	 * Description: Scrolls the current page to the bottom using JavaScript. This
+	 * action is used to validate page scroll behavior and footer visibility.
+	 *
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void pageScrollsToTheBottom() {
+		try {
+			helper.addLogAndReportInfo("Step: Scrolling page to the bottom.", test);
+
+			helper.scrollToBottom();
+
+			helper.addLogAndReportPass("Step Passed: Page scrolled to the bottom successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Step Failed: Unable to scroll page to the bottom.", test);
+
+		}
+	}
+
+	/**
+	 * Description: Scrolls the current page back to the top using JavaScript. This
+	 * action verifies navigation back to the top after scrolling down.
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void pageScrollsToTheTop() {
+		try {
+			helper.addLogAndReportInfo("Step: Scrolling page to the top.", test);
+
+			helper.scrollToTop();
+
+			helper.addLogAndReportPass("Step Passed: Page scrolled to the top successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Step Failed: Unable to scroll page to the top. Error: ", test);
+
+		}
+	}
+
+	/**
+	 * Description: Refreshes the current page and reloads all UI elements. This
+	 * action verifies that the page reloads successfully.
+	 *
+	 * @author Ashish Kumar
+	 */
+	public void refreshPage() {
+		try {
+			helper.addLogAndReportInfo("Step: Refreshing the current page.", test);
+
+			helper.refreshPage();
+
+			helper.addLogAndReportPass("Step Passed: Page refreshed successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Step Failed: Unable to refresh the page. Error: ", test);
+
+		}
+	}
+}

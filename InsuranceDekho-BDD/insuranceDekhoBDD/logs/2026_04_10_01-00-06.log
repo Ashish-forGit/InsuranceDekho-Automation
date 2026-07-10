@@ -1,0 +1,382 @@
+2026-04-10 01:00:06 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:00:06 INFO  utils.LoggerHandler - Investment Insurance News Page Actions initialized successfully.
+2026-04-10 01:00:06 INFO  utils.LoggerHandler - Step: Hovering over 'News' menu in the navigation bar.
+2026-04-10 01:00:10 INFO  utils.LoggerHandler - Step Passed: Hovered over 'News' menu successfully.
+2026-04-10 01:00:10 INFO  utils.LoggerHandler - Step: Clicking on 'Investment News' under News menu.
+2026-04-10 01:00:11 INFO  utils.LoggerHandler - Step Passed: Clicked on 'Investment News' successfully.
+2026-04-10 01:00:11 INFO  utils.LoggerHandler - Verifying Investment Insurance News page header.
+2026-04-10 01:00:11 INFO  utils.LoggerHandler - Investment Insurance News header verified successfully. Expected: 'Investment Insurance News' | Actual: 'Investment Insurance News'
+2026-04-10 01:00:11 INFO  utils.LoggerHandler - Scrolling to 'Best Investment Advisors in Your City' section.
+2026-04-10 01:00:11 INFO  utils.LoggerHandler - Investment Advisors section is visible now.
+2026-04-10 01:00:11 INFO  utils.LoggerHandler - Clicking on Investment Advisors in Gurgaon.
+2026-04-10 01:00:12 INFO  utils.LoggerHandler - Gurgaon Investment Advisors clicked successfully.
+2026-04-10 01:00:12 INFO  utils.LoggerHandler - Verifying Gurgaon Investment Advisors page header.
+2026-04-10 01:00:12 INFO  utils.LoggerHandler - Gurgaon Investment Advisors header verified successfully. Expected: '3 Investment Advisors in Gurgaon' | Actual: '3 Investment Advisors in Gurgaon'
+2026-04-10 01:00:16 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:00:16 INFO  utils.LoggerHandler - Car Insurance Page Actions initialized successfully.
+2026-04-10 01:00:18 INFO  utils.LoggerHandler - Verifying element is displayed: InsuranceDekho Logo
+2026-04-10 01:00:19 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> InsuranceDekho Logo
+2026-04-10 01:00:19 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-10 01:00:19 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-10 01:00:19 INFO  utils.LoggerHandler - Clicking on 'Car Insurance' option from Insurance dropdown.
+2026-04-10 01:00:20 INFO  utils.LoggerHandler - 'Car Insurance' option clicked successfully.
+2026-04-10 01:00:20 INFO  utils.LoggerHandler - Verifying Car Insurance page heading.
+2026-04-10 01:00:20 INFO  utils.LoggerHandler - Car Insurance page heading verified successfully. Expected: 'Car Insurance' | Actual: 'Car Insurance'
+2026-04-10 01:00:26 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:00:26 INFO  utils.LoggerHandler - Add-On Cover Page Actions initialized successfully.
+2026-04-10 01:00:26 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-10 01:00:26 ERROR utils.LoggerHandler - Failed to hover 'Insurance'
+2026-04-10 01:00:26 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-10 01:00:27 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-10 01:00:27 INFO  utils.LoggerHandler - Hovering over 'Car Insurance' under Insurance menu.
+2026-04-10 01:00:27 INFO  utils.LoggerHandler - 'Car Insurance' menu hovered successfully.
+2026-04-10 01:00:27 INFO  utils.LoggerHandler - Clicking on 'Add on Cover' option.
+2026-04-10 01:00:28 INFO  utils.LoggerHandler - 'Add on Cover' page navigation triggered successfully.
+2026-04-10 01:00:28 INFO  utils.LoggerHandler - Attempting to scroll to 'Calculate your Car IDV' section.
+2026-04-10 01:00:28 INFO  utils.LoggerHandler - 'Calculate your Car IDV' section is visible now.
+2026-04-10 01:00:28 INFO  utils.LoggerHandler - Clicking on Brand dropdown.
+2026-04-10 01:00:31 INFO  utils.LoggerHandler - Selecting first available brand from dropdown.
+2026-04-10 01:00:32 INFO  utils.LoggerHandler - Car brand selected successfully.
+2026-04-10 01:00:32 INFO  utils.LoggerHandler - Clicking on Model dropdown.
+2026-04-10 01:00:32 INFO  utils.LoggerHandler - Entering car model value 'Alto 800'.
+2026-04-10 01:00:32 INFO  utils.LoggerHandler - Selecting first matching model from dropdown.
+2026-04-10 01:00:32 INFO  utils.LoggerHandler - Car model selected successfully.
+2026-04-10 01:00:32 INFO  utils.LoggerHandler - Clicking on Year dropdown.
+2026-04-10 01:00:32 INFO  utils.LoggerHandler - Selecting first available year.
+2026-04-10 01:00:32 INFO  utils.LoggerHandler - Manufacturing year selected successfully.
+2026-04-10 01:00:32 INFO  utils.LoggerHandler - Clicking on 'Calculate' button to generate IDV amount.
+2026-04-10 01:00:32 INFO  utils.LoggerHandler - 'Calculate' button clicked successfully.
+2026-04-10 01:00:32 INFO  utils.LoggerHandler - Verifying calculated IDV amount is displayed.
+2026-04-10 01:00:33 INFO  utils.LoggerHandler - IDV amount verified successfully. Expected: 'Rs. 2,58,547' | Actual: 'Rs. 2,58,547'
+2026-04-10 01:00:39 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:00:39 INFO  utils.LoggerHandler - Bike Claim Settlement Page Actions initialized successfully.
+2026-04-10 01:00:39 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-10 01:00:40 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-10 01:00:40 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-10 01:00:40 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-10 01:00:40 INFO  utils.LoggerHandler - Hovering over 'Bike Insurance' under Insurance menu.
+2026-04-10 01:00:43 INFO  utils.LoggerHandler - 'Bike Insurance' menu hovered successfully.
+2026-04-10 01:00:43 INFO  utils.LoggerHandler - Clicking on 'Claim Settlement' under Bike Insurance menu.
+2026-04-10 01:00:46 INFO  utils.LoggerHandler - 'Claim Settlement' clicked successfully.
+2026-04-10 01:00:46 INFO  utils.LoggerHandler - Verifying Bike Insurance Claim Settlement page heading.
+2026-04-10 01:00:46 INFO  utils.LoggerHandler - Bike Insurance Claim heading verified successfully. Expected: 'Bike Insurance Claim' | Actual: 'Bike Insurance Claim'
+2026-04-10 01:00:46 INFO  utils.LoggerHandler - Scrolling to 'Calculate Two Wheeler IDV' section.
+2026-04-10 01:00:47 INFO  utils.LoggerHandler - 'Calculate Two Wheeler IDV' section is now visible.
+2026-04-10 01:00:47 INFO  utils.LoggerHandler - Selecting first brand option from Brand dropdown.
+2026-04-10 01:00:47 INFO  utils.LoggerHandler - First brand selected successfully.
+2026-04-10 01:00:47 INFO  utils.LoggerHandler - Selecting first bike model option.
+2026-04-10 01:00:47 INFO  utils.LoggerHandler - Entering model name 'Splendor Plus'.
+2026-04-10 01:00:48 INFO  utils.LoggerHandler - Bike model selected successfully.
+2026-04-10 01:00:48 INFO  utils.LoggerHandler - Selecting manufacturing year from Year dropdown.
+2026-04-10 01:00:48 INFO  utils.LoggerHandler - Manufacturing year selected successfully.
+2026-04-10 01:00:48 INFO  utils.LoggerHandler - Clicking on Calculate button to generate IDV amount.
+2026-04-10 01:00:49 INFO  utils.LoggerHandler - IDV amount verified successfully. Expected: 'Rs. 64,323' | Actual: 'Rs. 64,323'
+2026-04-10 01:00:56 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:00:56 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-10 01:00:56 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-10 01:00:56 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-10 01:00:56 INFO  utils.LoggerHandler - Hovering over 'Life Insurance' under Insurance menu.
+2026-04-10 01:00:56 INFO  utils.LoggerHandler - 'Life Insurance' menu hovered successfully.
+2026-04-10 01:00:56 INFO  utils.LoggerHandler - Clicking on 'Human Life Value Calculator' option.
+2026-04-10 01:01:01 INFO  utils.LoggerHandler - 'Human Life Value Calculator' clicked successfully.
+2026-04-10 01:01:01 INFO  utils.LoggerHandler - Verifying HLV Calculator page title.
+2026-04-10 01:01:01 INFO  utils.LoggerHandler - HLV Calculator page title verified successfully.
+2026-04-10 01:01:08 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:01:08 INFO  utils.LoggerHandler - Human Life Value Page Actions initialized successfully.
+2026-04-10 01:01:08 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-10 01:01:09 ERROR utils.LoggerHandler - Failed to hover 'Insurance'
+2026-04-10 01:01:09 INFO  utils.LoggerHandler - Hovering over 'Life Insurance' under Insurance menu.
+2026-04-10 01:01:10 INFO  utils.LoggerHandler - 'Life Insurance' menu hovered successfully.
+2026-04-10 01:01:10 INFO  utils.LoggerHandler - Clicking on 'Human Life Value Calculator' option.
+2026-04-10 01:01:30 INFO  utils.LoggerHandler - Exception in clickOnHumanLifeValueCalculator: Expected condition failed: waiting for element found by By.linkText: Human Life Value Calculator to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Human Life Value Calculator"}.
+(tried for 15 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\10853349\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58588}, goog:processID: 10004, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58588/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9840323bad1d91d2dc5e511456603370
+2026-04-10 01:01:30 INFO  utils.LoggerHandler - Verifying HLV Calculator page title.
+2026-04-10 01:01:30 INFO  utils.LoggerHandler - HLV Calculator page title verified successfully.
+2026-04-10 01:01:30 INFO  utils.LoggerHandler - Entering name: john@gh
+2026-04-10 01:01:40 ERROR utils.LoggerHandler - Exception in enterName
+2026-04-10 01:01:41 INFO  utils.LoggerHandler - Entering birthday: 01012001
+2026-04-10 01:01:51 ERROR utils.LoggerHandler - Exception in enterBirthday
+2026-04-10 01:01:51 INFO  utils.LoggerHandler - Selecting annual income range 3–5 Lakhs.
+2026-04-10 01:02:01 INFO  utils.LoggerHandler - Exception in selectAnnualIncome
+2026-04-10 01:02:01 INFO  utils.LoggerHandler - Entering mobile number: 98765
+2026-04-10 01:02:11 ERROR utils.LoggerHandler - Exception in enterMobileNumber
+2026-04-10 01:02:11 INFO  utils.LoggerHandler - Verifying error message displayed on HLV calculator.
+2026-04-10 01:02:32 ERROR utils.LoggerHandler - Failed to verify error message displayed
+2026-04-10 01:02:39 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:02:39 INFO  utils.LoggerHandler - Investment Plans Page Actions initialized successfully.
+2026-04-10 01:02:39 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-10 01:02:39 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-10 01:02:40 INFO  utils.LoggerHandler - Hover over Investment.
+2026-04-10 01:02:40 INFO  utils.LoggerHandler - Verifying 'Best Investment Plans in India' page heading.
+2026-04-10 01:02:42 INFO  utils.LoggerHandler - Investment Plans page heading verified successfully. Expected: 'Best Investment Plans in India 2026' | Actual: 'Best Investment Plans in India 2026'
+2026-04-10 01:02:42 INFO  utils.LoggerHandler - Clicking on 'Market Linked' investment plans link.
+2026-04-10 01:02:42 INFO  utils.LoggerHandler - 'Market Linked' investment plans link clicked successfully.
+2026-04-10 01:02:42 INFO  utils.LoggerHandler - Verifying Online Savings Plan text.
+2026-04-10 01:02:42 INFO  utils.LoggerHandler - Savings plan text verified successfully. Expected: 'Online Savings Plan' | Actual: 'Online Savings Plan'
+2026-04-10 01:02:46 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:02:46 INFO  utils.LoggerHandler - Step Passed: Insurance Advisors Page Actions initialized successfully.
+2026-04-10 01:02:51 INFO  utils.LoggerHandler - Step: Hovering on 'Insurance Advisors Found' text.
+2026-04-10 01:02:52 INFO  utils.LoggerHandler - Step Passed: Hover action performed successfully.
+2026-04-10 01:02:52 INFO  utils.LoggerHandler - Step: Fetching 'Insurance Advisors Found' text.
+2026-04-10 01:02:52 INFO  utils.LoggerHandler - Step: Verifying 'Insurance Advisors Found' text.
+2026-04-10 01:02:52 INFO  utils.LoggerHandler - Step Passed: Insurance Advisors found text verified successfully. Expected: '6 Insurance Advisors found' | Actual: '6 Insurance Advisors found'
+2026-04-10 01:02:52 INFO  utils.LoggerHandler - Step: Hovering over 'Book Home Visit' for first advisor.
+2026-04-10 01:02:52 INFO  utils.LoggerHandler - Step Passed: Hovered over first advisor 'Book Home Visit' button.
+2026-04-10 01:02:52 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Book Home Visit'.
+2026-04-10 01:02:55 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-10 01:02:55 INFO  utils.LoggerHandler - Step: Clicking 'Book Home Visit' for first advisor.
+2026-04-10 01:02:55 INFO  utils.LoggerHandler - Step Passed: Clicked 'Book Home Visit' for first advisor successfully.
+2026-04-10 01:02:55 INFO  utils.LoggerHandler - Step: Entering Name in booking form: John
+2026-04-10 01:02:55 INFO  utils.LoggerHandler - Step Passed: Name entered successfully.
+2026-04-10 01:02:55 INFO  utils.LoggerHandler - Step: Entering Mobile Number in booking form: 9876543210
+2026-04-10 01:02:56 INFO  utils.LoggerHandler - Step Passed: Mobile number entered successfully.
+2026-04-10 01:02:56 INFO  utils.LoggerHandler - Step: Waiting before clicking Submit.
+2026-04-10 01:02:59 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-10 01:02:59 INFO  utils.LoggerHandler - Step: Clicking Submit button to submit request.
+2026-04-10 01:02:59 INFO  utils.LoggerHandler - Step Passed: Submit button clicked successfully.
+2026-04-10 01:02:59 INFO  utils.LoggerHandler - Step: Waiting for Thank You message to appear.
+2026-04-10 01:03:02 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-10 01:03:02 INFO  utils.LoggerHandler - Step: Fetching Thank You message text.
+2026-04-10 01:03:02 INFO  utils.LoggerHandler - Step: Verifying Thank You message text.
+2026-04-10 01:03:02 INFO  utils.LoggerHandler - Step Passed: Thank You message verified successfully. Expected: 'Thank you!' | Actual: 'Thank you!'
+2026-04-10 01:03:08 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:03:08 INFO  utils.LoggerHandler - Step Passed: Insurance Advisors Page Actions initialized successfully.
+2026-04-10 01:03:10 INFO  utils.LoggerHandler - Step: Hovering on 'Insurance Advisors Found' text.
+2026-04-10 01:03:11 INFO  utils.LoggerHandler - Step Passed: Hover action performed successfully.
+2026-04-10 01:03:11 INFO  utils.LoggerHandler - Step: Fetching 'Insurance Advisors Found' text.
+2026-04-10 01:03:11 INFO  utils.LoggerHandler - Step: Verifying 'Insurance Advisors Found' text.
+2026-04-10 01:03:11 INFO  utils.LoggerHandler - Step Passed: Insurance Advisors found text verified successfully. Expected: '6 Insurance Advisors found' | Actual: '6 Insurance Advisors found'
+2026-04-10 01:03:11 INFO  utils.LoggerHandler - Step: Hovering over 'Book Home Visit' for first advisor.
+2026-04-10 01:03:11 INFO  utils.LoggerHandler - Step Passed: Hovered over first advisor 'Book Home Visit' button.
+2026-04-10 01:03:11 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Book Home Visit'.
+2026-04-10 01:03:14 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-10 01:03:14 INFO  utils.LoggerHandler - Step: Clicking 'Book Home Visit' for first advisor.
+2026-04-10 01:03:14 INFO  utils.LoggerHandler - Step Passed: Clicked 'Book Home Visit' for first advisor successfully.
+2026-04-10 01:03:14 INFO  utils.LoggerHandler - Step: Entering Name in booking form: John
+2026-04-10 01:03:15 INFO  utils.LoggerHandler - Step Passed: Name entered successfully.
+2026-04-10 01:03:15 INFO  utils.LoggerHandler - Step: Entering invalid Mobile Number in booking form: 98765
+2026-04-10 01:03:15 INFO  utils.LoggerHandler - Step Passed: Invalid mobile number entered successfully.
+2026-04-10 01:03:15 INFO  utils.LoggerHandler - Step: Waiting before clicking Submit.
+2026-04-10 01:03:18 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-10 01:03:18 INFO  utils.LoggerHandler - Step: Clicking Submit button to submit request.
+2026-04-10 01:03:18 INFO  utils.LoggerHandler - Step Passed: Submit button clicked successfully.
+2026-04-10 01:03:18 INFO  utils.LoggerHandler - Step: Fetching validation error message text.
+2026-04-10 01:03:18 INFO  utils.LoggerHandler - Step: Verifying validation error message text.
+2026-04-10 01:03:18 INFO  utils.LoggerHandler - Step Passed: Error message verified successfully. Expected: 'The mobile must be at least 10 characters.' | Actual: 'The mobile must be at least 10 characters.'
+2026-04-10 01:03:25 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:03:25 INFO  utils.LoggerHandler - Step Passed: Insurance Advisors Page Actions initialized successfully.
+2026-04-10 01:03:27 INFO  utils.LoggerHandler - Step: Hovering over 'Book Home Visit' button.
+2026-04-10 01:03:28 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Book Home Visit' button.
+2026-04-10 01:03:28 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Book Home Visit' button.
+2026-04-10 01:03:31 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-10 01:03:31 INFO  utils.LoggerHandler - Step: Clicking 'Book Home Visit' button.
+2026-04-10 01:03:32 INFO  utils.LoggerHandler - Step Passed: 'Book Home Visit' button clicked successfully.
+2026-04-10 01:03:32 INFO  utils.LoggerHandler - Step: Hovering over 'Schedule Home Visit' button.
+2026-04-10 01:03:32 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Schedule Home Visit' button.
+2026-04-10 01:03:32 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Schedule Home Visit'.
+2026-04-10 01:03:35 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-10 01:03:35 INFO  utils.LoggerHandler - Step: Clicking 'Schedule Home Visit' button.
+2026-04-10 01:03:35 INFO  utils.LoggerHandler - Step Passed: 'Schedule Home Visit' clicked successfully.
+2026-04-10 01:03:35 INFO  utils.LoggerHandler - Step: Entering Name in booking form: John
+2026-04-10 01:03:35 INFO  utils.LoggerHandler - Step Passed: Name entered successfully.
+2026-04-10 01:03:35 INFO  utils.LoggerHandler - Step: Entering Mobile Number in booking form: 9876543210
+2026-04-10 01:03:35 INFO  utils.LoggerHandler - Step Passed: Mobile number entered successfully.
+2026-04-10 01:03:35 INFO  utils.LoggerHandler - Step: Hovering over 'Schedule Home Visit' button.
+2026-04-10 01:03:36 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Schedule Home Visit' button.
+2026-04-10 01:03:36 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Schedule Home Visit'.
+2026-04-10 01:03:39 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-10 01:03:39 INFO  utils.LoggerHandler - Step: Clicking 'Schedule Home Visit' button.
+2026-04-10 01:03:39 INFO  utils.LoggerHandler - Step Passed: 'Schedule Home Visit' clicked successfully.
+2026-04-10 01:03:39 INFO  utils.LoggerHandler - Step: Hovering over 'Schedule Visit' button.
+2026-04-10 01:03:59 ERROR utils.LoggerHandler - Step Failed: Unable to click 'Schedule Visit'. Error: Expected condition failed: waiting for element found by By.xpath: //button[@class='button submitButton'][text()='Schedule Visit'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='button submitButton'][text()='Schedule Visit']"}.
+(tried for 15 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\10853349\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51271}, goog:processID: 2796, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51271/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 22f529e07b4a385ac125e677c3190aa3
+2026-04-10 01:04:05 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:04:05 INFO  utils.LoggerHandler - Step Passed: Insurance Advisors Page Actions initialized successfully.
+2026-04-10 01:04:08 INFO  utils.LoggerHandler - Step: Hovering over 'Book Home Visit' button.
+2026-04-10 01:04:08 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Book Home Visit' button.
+2026-04-10 01:04:08 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Book Home Visit' button.
+2026-04-10 01:04:11 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-10 01:04:11 INFO  utils.LoggerHandler - Step: Clicking 'Book Home Visit' button.
+2026-04-10 01:04:12 INFO  utils.LoggerHandler - Step Passed: 'Book Home Visit' button clicked successfully.
+2026-04-10 01:04:12 INFO  utils.LoggerHandler - Step: Hovering over 'Schedule Home Visit' button.
+2026-04-10 01:04:12 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Schedule Home Visit' button.
+2026-04-10 01:04:12 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Schedule Home Visit'.
+2026-04-10 01:04:15 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-10 01:04:15 INFO  utils.LoggerHandler - Step: Clicking 'Schedule Home Visit' button.
+2026-04-10 01:04:15 INFO  utils.LoggerHandler - Step Passed: 'Schedule Home Visit' clicked successfully.
+2026-04-10 01:04:15 INFO  utils.LoggerHandler - Step: Entering Name in booking form: John
+2026-04-10 01:04:15 INFO  utils.LoggerHandler - Step Passed: Name entered successfully.
+2026-04-10 01:04:15 INFO  utils.LoggerHandler - Step: Entering Mobile Number in booking form: 9876543210
+2026-04-10 01:04:15 INFO  utils.LoggerHandler - Step Passed: Mobile number entered successfully.
+2026-04-10 01:04:15 INFO  utils.LoggerHandler - Step: Hovering over 'Schedule Home Visit' button.
+2026-04-10 01:04:15 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Schedule Home Visit' button.
+2026-04-10 01:04:15 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Schedule Home Visit'.
+2026-04-10 01:04:18 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-10 01:04:18 INFO  utils.LoggerHandler - Step: Clicking 'Schedule Home Visit' button.
+2026-04-10 01:04:19 INFO  utils.LoggerHandler - Step Passed: 'Schedule Home Visit' clicked successfully.
+2026-04-10 01:04:19 INFO  utils.LoggerHandler - Step: Hovering over 'Schedule Visit' button.
+2026-04-10 01:04:20 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Schedule Visit' button.
+2026-04-10 01:04:20 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Schedule Visit'.
+2026-04-10 01:04:23 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-10 01:04:23 INFO  utils.LoggerHandler - Step: Clicking 'Schedule Visit' button.
+2026-04-10 01:04:23 INFO  utils.LoggerHandler - Step Passed: 'Schedule Visit' clicked successfully.
+2026-04-10 01:04:23 INFO  utils.LoggerHandler - Step: Clicking on 'Enter location manually' option.
+2026-04-10 01:04:24 INFO  utils.LoggerHandler - Step Passed: 'Enter location manually' option selected successfully.
+2026-04-10 01:04:24 INFO  utils.LoggerHandler - Step: Entering pincode: 110055
+2026-04-10 01:04:24 INFO  utils.LoggerHandler - Step Passed: Pincode entered successfully.
+2026-04-10 01:04:24 INFO  utils.LoggerHandler - Step: Entering house number/address: House1
+2026-04-10 01:04:24 INFO  utils.LoggerHandler - Step Passed: House number/address entered successfully.
+2026-04-10 01:04:24 INFO  utils.LoggerHandler - Step: Clicking 'Schedule Visit' CTA from location details section.
+2026-04-10 01:04:24 INFO  utils.LoggerHandler - Step Passed: 'Schedule Visit' CTA clicked successfully.
+2026-04-10 01:04:24 INFO  utils.LoggerHandler - Step: Fetching area field validation error message.
+2026-04-10 01:04:24 INFO  utils.LoggerHandler - Step: Verifying area field validation error message.
+2026-04-10 01:04:24 INFO  utils.LoggerHandler - Step Passed: Area validation message verified successfully. Expected: 'The road/area/sector field is required.' | Actual: 'The road/area/sector field is required.'
+2026-04-10 01:04:30 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:04:30 INFO  utils.LoggerHandler - Step Passed: Insurance Advisors Page Actions initialized successfully.
+2026-04-10 01:04:33 INFO  utils.LoggerHandler - Step: Scrolling to filter section.
+2026-04-10 01:04:33 INFO  utils.LoggerHandler - Step Passed: Scrolled to filter section successfully.
+2026-04-10 01:04:33 INFO  utils.LoggerHandler - Step: Clicking location/city filter option.
+2026-04-10 01:04:34 INFO  utils.LoggerHandler - Step Passed: Location/city filter selected successfully.
+2026-04-10 01:04:37 INFO  utils.LoggerHandler - Step: Waiting for location header to be visible.
+2026-04-10 01:04:37 INFO  utils.LoggerHandler - Step Passed: Location header is visible.
+2026-04-10 01:04:37 INFO  utils.LoggerHandler - Step: Verifying advisor location header.
+2026-04-10 01:04:37 INFO  utils.LoggerHandler - Step Passed: Location header verified successfully.
+2026-04-10 01:04:37 INFO  utils.LoggerHandler - Step: Verifying 'No Advisors Found' message.
+2026-04-10 01:04:37 INFO  utils.LoggerHandler - Step Passed: No advisor message verified successfully.
+2026-04-10 01:04:42 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:04:43 INFO  utils.LoggerHandler - Step: Clicking on 'Terms and Conditions' link.
+2026-04-10 01:04:44 INFO  utils.LoggerHandler - Step Passed: 'Terms and Conditions' link clicked successfully.
+2026-04-10 01:04:44 INFO  utils.LoggerHandler - Step: Verifying Terms and Conditions text is displayed.
+2026-04-10 01:04:44 INFO  utils.LoggerHandler - Step Passed: Terms and Conditions text verified successfully.
+2026-04-10 01:04:44 INFO  utils.LoggerHandler - Step: Entering valid mobile number in input field: 9876546111
+2026-04-10 01:04:44 INFO  utils.LoggerHandler - Step Passed: Valid mobile number entered successfully.
+2026-04-10 01:04:44 INFO  utils.LoggerHandler - Step: Clicking on 'Continue' button.
+2026-04-10 01:04:44 INFO  utils.LoggerHandler - Step Passed: 'Continue' button clicked successfully.
+2026-04-10 01:04:48 INFO  utils.LoggerHandler - Verified Otp sent to mobile
+2026-04-10 01:04:54 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:04:55 INFO  utils.LoggerHandler - Step: Clicking on 'Terms and Conditions' link.
+2026-04-10 01:04:55 INFO  utils.LoggerHandler - Step Passed: 'Terms and Conditions' link clicked successfully.
+2026-04-10 01:04:55 INFO  utils.LoggerHandler - Step: Verifying Terms and Conditions text is displayed.
+2026-04-10 01:04:55 INFO  utils.LoggerHandler - Step Passed: Terms and Conditions text verified successfully.
+2026-04-10 01:04:55 INFO  utils.LoggerHandler - Step: Entering invalid mobile number in input field: 9876543
+2026-04-10 01:04:55 INFO  utils.LoggerHandler - Step Passed: Invalid mobile number entered successfully.
+2026-04-10 01:04:55 INFO  utils.LoggerHandler - Step: Clicking on 'Continue' button.
+2026-04-10 01:04:55 INFO  utils.LoggerHandler - Step Passed: 'Continue' button clicked successfully.
+2026-04-10 01:04:55 INFO  utils.LoggerHandler - Verified Wrong phone number input
+2026-04-10 01:05:01 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:05:01 INFO  utils.LoggerHandler - Car Insurance News Page Actions initialized successfully.
+2026-04-10 01:05:01 INFO  utils.LoggerHandler - Step: Hovering over 'News' menu in the navigation bar.
+2026-04-10 01:05:02 INFO  utils.LoggerHandler - Step Passed: Hovered over 'News' menu successfully.
+2026-04-10 01:05:02 INFO  utils.LoggerHandler - Step: Clicking on 'Car Insurance News' option under News menu.
+2026-04-10 01:05:03 INFO  utils.LoggerHandler - Step Passed: Clicked on 'Car Insurance News' successfully.
+2026-04-10 01:05:03 INFO  utils.LoggerHandler - Verifying Car Insurance News page header.
+2026-04-10 01:05:03 INFO  utils.LoggerHandler - Car Insurance News header verified successfully. Expected: 'Car Insurance News' | Actual: 'Car Insurance News'
+2026-04-10 01:05:03 INFO  utils.LoggerHandler - Clicking on the first Car Insurance news article.
+2026-04-10 01:05:03 INFO  utils.LoggerHandler - First Car Insurance news article clicked successfully.
+2026-04-10 01:05:03 INFO  utils.LoggerHandler - Verifying author information for Car Insurance news article.
+2026-04-10 01:05:03 INFO  utils.LoggerHandler - Author information verified successfully. Expected: 'Written by Navneet Bhatt' | Actual: 'Written by Navneet Bhatt'
+2026-04-10 01:05:10 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:05:10 INFO  utils.LoggerHandler - Health Insurance Article Page Actions initialized successfully.
+2026-04-10 01:05:10 INFO  utils.LoggerHandler - Step: Hovering over 'News' menu in the navigation bar.
+2026-04-10 01:05:11 INFO  utils.LoggerHandler - Step Passed: Hovered over 'News' menu successfully.
+2026-04-10 01:05:11 INFO  utils.LoggerHandler - Step: Hovering over 'Health Insurance News' option under News menu.
+2026-04-10 01:05:11 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Health Insurance News' successfully.
+2026-04-10 01:05:11 INFO  utils.LoggerHandler - Step: Clicking on the Health Insurance article under News section.
+2026-04-10 01:05:12 INFO  utils.LoggerHandler - Step Passed: Health Insurance article clicked successfully.
+2026-04-10 01:05:12 INFO  utils.LoggerHandler - Verifying Health Insurance article header.
+2026-04-10 01:05:12 INFO  utils.LoggerHandler - Health Insurance article header verified successfully. Expected: 'Health Insurance Articles' | Actual: 'Health Insurance Articles'
+2026-04-10 01:05:12 INFO  utils.LoggerHandler - Clicking on the first Health Insurance article.
+2026-04-10 01:05:12 INFO  utils.LoggerHandler - First Health Insurance article clicked successfully.
+2026-04-10 01:05:12 INFO  utils.LoggerHandler - Verifying author information for Health Insurance article.
+2026-04-10 01:05:12 INFO  utils.LoggerHandler - Author verified successfully. Expected: 'Written by Kritika Singh' | Actual: 'Written by Kritika Singh'
+2026-04-10 01:05:12 INFO  utils.LoggerHandler - Scrolling to Health Insurance calculator section.
+2026-04-10 01:05:13 INFO  utils.LoggerHandler - Health Insurance calculator section is visible now.
+2026-04-10 01:05:13 INFO  utils.LoggerHandler - Entering age value: 25
+2026-04-10 01:05:13 INFO  utils.LoggerHandler - Entering pincode value: 110055
+2026-04-10 01:05:13 INFO  utils.LoggerHandler - Clicking on 'Calculate Price' button.
+2026-04-10 01:05:14 INFO  utils.LoggerHandler - 'Calculate Price' button clicked successfully.
+2026-04-10 01:05:14 INFO  utils.LoggerHandler - Entering customer name: John
+2026-04-10 01:05:15 INFO  utils.LoggerHandler - Entering mobile number: 9876543210
+2026-04-10 01:05:15 INFO  utils.LoggerHandler - Clicking on 'View Plans' button.
+2026-04-10 01:05:16 INFO  utils.LoggerHandler - 'View Plans' button clicked successfully.
+2026-04-10 01:05:16 INFO  utils.LoggerHandler - Verifying number of Health Insurance plans found.
+2026-04-10 01:05:17 INFO  utils.LoggerHandler - Plans count verified successfully. Expected: '0 Plans found' | Actual: '0 Plans found'
+2026-04-10 01:05:23 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:05:23 INFO  utils.LoggerHandler - Business Insurance News Page Actions initialized successfully.
+2026-04-10 01:05:23 INFO  utils.LoggerHandler - Step: Hovering over 'News' menu in the navigation bar.
+2026-04-10 01:05:24 INFO  utils.LoggerHandler - Step Passed: Hovered over 'News' menu successfully.
+2026-04-10 01:05:24 INFO  utils.LoggerHandler - Step: Clicking on 'Business News' under News menu.
+2026-04-10 01:05:25 INFO  utils.LoggerHandler - Step Passed: Clicked on 'Business News' successfully.
+2026-04-10 01:05:25 INFO  utils.LoggerHandler - Verifying Business Insurance News page header.
+2026-04-10 01:05:25 ERROR utils.LoggerHandler - Faild to verify Business Insurance News header
+2026-04-10 01:05:31 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:05:31 INFO  utils.LoggerHandler - Business Insurance News Page Actions initialized successfully.
+2026-04-10 01:05:31 INFO  utils.LoggerHandler - Step: Hovering over 'News' menu in the navigation bar.
+2026-04-10 01:05:32 INFO  utils.LoggerHandler - Step Passed: Hovered over 'News' menu successfully.
+2026-04-10 01:05:32 INFO  utils.LoggerHandler - Step: Clicking on 'Business News' under News menu.
+2026-04-10 01:05:33 INFO  utils.LoggerHandler - Step Passed: Clicked on 'Business News' successfully.
+2026-04-10 01:05:33 INFO  utils.LoggerHandler - Verifying Business Insurance News page header.
+2026-04-10 01:05:33 ERROR utils.LoggerHandler - Faild to verify Business Insurance News header
+2026-04-10 01:05:39 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:05:39 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 01:05:40 ERROR utils.LoggerHandler - Step Failed: Navigation bar is not displayed.
+2026-04-10 01:05:40 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-10 01:05:40 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-10 01:05:40 INFO  utils.LoggerHandler - Step: Clicking on 'Term Insurance' link from navigation menu.
+2026-04-10 01:05:41 INFO  utils.LoggerHandler - Step Passed: 'Term Insurance' link clicked successfully.
+2026-04-10 01:05:41 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 01:05:41 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-10 01:05:41 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-10 01:05:41 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-10 01:05:43 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 01:05:44 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-10 01:05:44 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-10 01:05:44 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-10 01:05:44 INFO  utils.LoggerHandler - Step: Hovering over 'News' menu in the navigation bar.
+2026-04-10 01:05:44 INFO  utils.LoggerHandler - Step Passed: Hovered over 'News' menu successfully.
+2026-04-10 01:05:44 INFO  utils.LoggerHandler - Step: Clicking on 'Travel Insurance' link from navigation menu.
+2026-04-10 01:05:45 INFO  utils.LoggerHandler - Step Passed: 'Travel Insurance' link clicked successfully.
+2026-04-10 01:05:45 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 01:05:45 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-10 01:05:45 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-10 01:05:45 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-10 01:05:45 INFO  utils.LoggerHandler - Step: Hovering over the first Travel Insurance article.
+2026-04-10 01:05:45 INFO  utils.LoggerHandler - Step: Clicking on the first Travel Insurance article.
+2026-04-10 01:05:46 INFO  utils.LoggerHandler - Step Passed: First Travel Insurance article opened successfully.
+2026-04-10 01:05:46 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 01:05:46 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-10 01:05:46 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-10 01:05:46 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-10 01:05:52 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:05:52 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 01:05:52 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-10 01:05:52 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-10 01:05:52 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-10 01:05:52 INFO  utils.LoggerHandler - Step: Scrolling page to the bottom.
+2026-04-10 01:05:52 INFO  utils.LoggerHandler - Step Passed: Page scrolled to the bottom successfully.
+2026-04-10 01:05:52 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 01:05:53 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-10 01:05:53 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-10 01:05:53 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-10 01:05:53 INFO  utils.LoggerHandler - Step: Scrolling page to the top.
+2026-04-10 01:05:53 INFO  utils.LoggerHandler - Step Passed: Page scrolled to the top successfully.
+2026-04-10 01:05:53 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 01:05:53 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-10 01:05:53 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-10 01:05:53 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.
+2026-04-10 01:05:53 INFO  utils.LoggerHandler - Step: Refreshing the current page.
+2026-04-10 01:05:54 INFO  utils.LoggerHandler - Step Passed: Page refreshed successfully.
+2026-04-10 01:05:54 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 01:05:54 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-10 01:05:54 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-10 01:05:54 INFO  utils.LoggerHandler - Step Passed: Navigation bar is displayed successfully.

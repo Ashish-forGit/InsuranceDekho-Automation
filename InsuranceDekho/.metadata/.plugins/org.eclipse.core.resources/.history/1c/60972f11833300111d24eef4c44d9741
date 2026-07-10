@@ -1,0 +1,281 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.HumanLifeValuePageLocators;
+import utils.WebDriverHelper;
+
+/**
+ * Class Name: HumanLifeValuePageActions
+ *
+ * Description: Page Action class responsible for handling all user
+ * interactions, validations, and navigation steps related to the Human Life
+ * Value (HLV) Calculator page. This includes user detail entry, option
+ * selection, calculator submission, result validation, and error handling.
+ *
+ * This class follows the Page Action Model (PAM) pattern and provides
+ * business-readable, reusable methods with step-level execution logs integrated
+ * using Extent Reports.
+ *
+ * @Author: Ashish Kumar
+ */
+public class HumanLifeValuePageActions {
+
+	WebDriver driver;
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	/**
+	 * Description: Initializes Human Life Value Page Actions using WebDriver and
+	 * ExtentTest instances for browser interaction and detailed execution
+	 * reporting.
+	 *
+	 * @Test_Case NV_US04_TC01 -
+	 *            verifyHumanLifeValueCalculatorPageUsingLifeInsuranceNavigation,
+	 *            NV_US04_TC02 - verifyInvalidMobileNumberValidationOnHlvCalculator
+	 * @param driver WebDriver instance for browser interaction
+	 * @param test   ExtentTest instance for logging and reporting
+	 * @author Ashish Kumar
+	 */
+	public HumanLifeValuePageActions(WebDriver driver, ExtentTest test) {
+		try {
+			this.driver = driver;
+			this.test = test;
+			helper = new WebDriverHelper(driver);
+			helper.addLogAndReportInfo("Human Life Value Page Actions initialized successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception while initializing HumanLifeValuePageActions: " + e.getMessage(),
+					test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies that the HLV Calculator page title contains the
+	 * expected text to confirm correct navigation to the Human Life Value
+	 * Calculator page.
+	 *
+	 * @Test_Case NV_US04_TC01 -
+	 *            verifyHumanLifeValueCalculatorPageUsingLifeInsuranceNavigation
+	 * @author Ashish Kumar
+	 */
+	public void verifyHlvCalculatorPageTitle() {
+		try {
+			String expectedTitleContains = "Human Life Value (HLV) Calculator: Know Worth of Your Life";
+			helper.addLogAndReportInfo("Verifying HLV Calculator page title.", test);
+
+			helper.verify(helper.getPageTitle(), expectedTitleContains);
+
+			helper.addLogAndReportPass("HLV Calculator page title verified successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in verifyHlvCalculatorPageTitle: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Selects the gender option as 'Male' in the HLV calculator form.
+	 *
+	 * @Test_Case NV_US04_TC01 -
+	 *            verifyHumanLifeValueCalculatorPageUsingLifeInsuranceNavigation,
+	 *            NV_US04_TC02 - verifyInvalidMobileNumberValidationOnHlvCalculator
+	 * @author Ashish Kumar
+	 */
+	public void selectMale() {
+		try {
+			helper.addLogAndReportInfo("Selecting gender as 'Male'.", test);
+
+			helper.clickElement(HumanLifeValuePageLocators.maleOption);
+
+			helper.addLogAndReportInfo("Male option selected successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in selectMale: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters the user name in the Name input field of the HLV
+	 * calculator form.
+	 *
+	 * @Test_Case NV_US04_TC01 -
+	 *            verifyHumanLifeValueCalculatorPageUsingLifeInsuranceNavigation,
+	 *            NV_US04_TC02 - verifyInvalidMobileNumberValidationOnHlvCalculator
+	 * @author Ashish Kumar
+	 */
+	public void enterName() {
+		try {
+			String name = "john@gh";
+			helper.addLogAndReportInfo("Entering name: " + name, test);
+
+			helper.jsClick(HumanLifeValuePageLocators.nameField);
+
+			helper.sendText(HumanLifeValuePageLocators.nameField, name);
+
+			helper.waits();
+			helper.clickEnter(HumanLifeValuePageLocators.nameField);
+
+			helper.addLogAndReportPass("Name entered successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in enterName: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters the user's date of birth in the Birthday field of the HLV
+	 * calculator.
+	 *
+	 * @Test_Case NV_US04_TC01 -
+	 *            verifyHumanLifeValueCalculatorPageUsingLifeInsuranceNavigation,
+	 *            NV_US04_TC02 - verifyInvalidMobileNumberValidationOnHlvCalculator
+	 * @author Ashish Kumar
+	 */
+	public void enterBirthday() {
+		try {
+			String dob = "01012001";
+			helper.addLogAndReportInfo("Entering birthday: " + dob, test);
+
+			helper.sendTexttoElement(HumanLifeValuePageLocators.dobField, dob);
+
+			helper.waits();
+
+			helper.addLogAndReportPass("Birthday entered successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in enterBirthday: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Selects the 'Non Smoker' lifestyle option in the HLV calculator.
+	 *
+	 * @Test_Case NV_US04_TC01 -
+	 *            verifyHumanLifeValueCalculatorPageUsingLifeInsuranceNavigation,
+	 *            NV_US04_TC02 - verifyInvalidMobileNumberValidationOnHlvCalculator
+	 * @author Ashish Kumar
+	 */
+	public void selectNonSmoker() {
+		try {
+			helper.addLogAndReportInfo("Selecting 'Non Smoker' option.", test);
+
+			helper.clickElement(HumanLifeValuePageLocators.nonSmokerOption);
+
+			helper.addLogAndReportInfo("'Non Smoker' option selected successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in selectNonSmoker: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Selects the annual income range option (₹3–5 Lakhs) in the HLV
+	 * calculator form.
+	 *
+	 * @Test_Case NV_US04_TC01 -
+	 *            verifyHumanLifeValueCalculatorPageUsingLifeInsuranceNavigation,
+	 *            NV_US04_TC02 - verifyInvalidMobileNumberValidationOnHlvCalculator
+	 * @author Ashish Kumar
+	 */
+	public void selectAnnualIncome() {
+		try {
+			helper.addLogAndReportInfo("Selecting annual income range 3–5 Lakhs.", test);
+
+			helper.clickElement(HumanLifeValuePageLocators.annualIncomeOption_3to5);
+
+			helper.addLogAndReportInfo("Annual income option selected successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in selectAnnualIncome: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Enters the user's mobile number in the HLV calculator form.
+	 * (Used for negative validation flow with invalid mobile input.)
+	 *
+	 * @Test_Case NV_US04_TC02 - verifyInvalidMobileNumberValidationOnHlvCalculator
+	 * @author Ashish Kumar
+	 */
+	public void enterMobileNumber() {
+		try {
+			String mobile = "98765";
+			helper.addLogAndReportInfo("Entering mobile number: " + mobile, test);
+
+			helper.sendTexttoElement(HumanLifeValuePageLocators.mobileNumberField, mobile);
+
+			helper.waits();
+
+			helper.addLogAndReportPass("Mobile number entered successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Exception in enterMobileNumber: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Clicks on the 'View Plans for Free' button to submit the HLV
+	 * calculation form.
+	 *
+	 * @Test_Case NV_US04_TC01 -
+	 *            verifyHumanLifeValueCalculatorPageUsingLifeInsuranceNavigation,
+	 *            NV_US04_TC02 - verifyInvalidMobileNumberValidationOnHlvCalculator
+	 * @author Ashish Kumar
+	 */
+	public void clickViewPlansForFree() {
+		try {
+			helper.addLogAndReportInfo("Clicking on 'View Plans for Free' button.", test);
+
+			helper.clickElement(HumanLifeValuePageLocators.viewPlansForFreeButton);
+
+			helper.addLogAndReportInfo("'View Plans for Free' clicked successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportInfo("Exception in clickViewPlansForFree: " + e.getMessage(), test);
+			throw e;
+		}
+	}
+
+	/**
+	 * Description: Verifies that the entered user name is displayed correctly on
+	 * the HLV result page header.
+	 *
+	 * @Test_Case NV_US04_TC01 -
+	 *            verifyHumanLifeValueCalculatorPageUsingLifeInsuranceNavigation
+	 * @param expectedName Expected user name
+	 * @author Ashish Kumar
+	 */
+	public void verifyUserNameDisplayedOnTop(String expectedName) {
+		try {
+			helper.addLogAndReportInfo("Verifying user name displayed on result page.", test);
+
+			helper.verify(helper.getText(HumanLifeValuePageLocators.resultUserNameTop), expectedName);
+
+			helper.addLogAndReportPass("User name verified successfully on result page.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to verify UserName displayed on top", test);
+			
+		}
+	}
+
+	/**
+	 * Description: Verifies that the expected error message is displayed when
+	 * invalid mobile number is provided in the HLV calculator form.
+	 *
+	 * @Test_Case NV_US04_TC02 - verifyInvalidMobileNumberValidationOnHlvCalculator
+	 * @author Ashish Kumar
+	 */
+	public void verifyerrorMessageDisplayed() {
+		try {
+			String expectedName = "Please enter a valid mobile number.";
+			helper.addLogAndReportInfo("Verifying error message displayed on HLV calculator.", test);
+
+			helper.verify(helper.getText(HumanLifeValuePageLocators.errorMesssage), expectedName);
+
+			helper.addLogAndReportPass("Error message verified successfully.", test);
+		} catch (Exception e) {
+			helper.addLogAndReportFail("Failed to verify error message displayed", test);
+			throw e;
+		}
+	}
+}

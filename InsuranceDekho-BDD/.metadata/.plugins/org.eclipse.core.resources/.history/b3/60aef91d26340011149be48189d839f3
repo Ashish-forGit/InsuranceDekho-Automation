@@ -1,0 +1,34 @@
+package stepdefinitions;
+
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class VerifyArticleAuthor {
+
+	
+
+
+	@When("I hover over News menu")
+	public void i_hover_over_news_menu() {
+
+	}
+	@When("I click on Car Insurance News")
+	public void i_click_on_car_insurance_news() {
+
+	}
+	@Then("I verify Car Insurance News header is displayed")
+	public void i_verify_car_insurance_news_header_is_displayed() {
+
+	}
+	@When("I open first news article")
+	public void i_open_first_news_article() {
+
+	}
+	@Then("I verify news is written by author")
+	public void i_verify_news_is_written_by_author() {
+
+	}
+
+
+
+}

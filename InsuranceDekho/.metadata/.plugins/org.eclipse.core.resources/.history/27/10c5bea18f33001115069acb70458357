@@ -1,0 +1,11 @@
+2026-04-08 18:04:59 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 18:04:59 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-08 18:05:00 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-08 18:05:00 INFO  utils.LoggerHandler - Hover over Investment.
+2026-04-08 18:05:07 INFO  utils.LoggerHandler - Investment Plans Page Actions initialized successfully.
+2026-04-08 18:05:07 INFO  utils.LoggerHandler - Verifying 'Best Investment Plans in India' page heading.
+2026-04-08 18:05:07 INFO  utils.LoggerHandler - Investment Plans page heading verified successfully. Expected: 'Best Investment Plans in India 2026' | Actual: 'Best Investment Plans in India 2026'
+2026-04-08 18:05:07 INFO  utils.LoggerHandler - Clicking on 'Market Linked' investment plans link.
+2026-04-08 18:05:07 INFO  utils.LoggerHandler - 'Market Linked' investment plans link clicked successfully.
+2026-04-08 18:05:07 INFO  utils.LoggerHandler - Verifying Online Savings Plan text.
+2026-04-08 18:05:07 INFO  utils.LoggerHandler - Savings plan text verified successfully. Expected: 'Online Savings Plan' | Actual: 'Online Savings Plan'

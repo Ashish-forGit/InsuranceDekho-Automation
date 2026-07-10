@@ -1,0 +1,26 @@
+2026-04-09 00:18:33 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 00:18:33 INFO  utils.LoggerHandler - Step: Hovering over 'News' menu in the navigation bar.
+2026-04-09 00:18:35 INFO  utils.LoggerHandler - Step Passed: Hovered over 'News' menu successfully.
+2026-04-09 00:18:35 INFO  utils.LoggerHandler - Step: Hovering over 'Health Insurance News' option under News menu.
+2026-04-09 00:18:35 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Health Insurance News' successfully.
+2026-04-09 00:18:35 INFO  utils.LoggerHandler - Step: Clicking on the Health Insurance article under News section.
+2026-04-09 00:18:36 INFO  utils.LoggerHandler - Step Passed: Health Insurance article clicked successfully.
+2026-04-09 00:18:36 INFO  utils.LoggerHandler - Health Insurance Article Page Actions initialized successfully.
+2026-04-09 00:18:36 INFO  utils.LoggerHandler - Verifying Health Insurance article header.
+2026-04-09 00:18:36 INFO  utils.LoggerHandler - Health Insurance article header verified successfully. Expected: 'Health Insurance Articles' | Actual: 'Health Insurance Articles'
+2026-04-09 00:18:36 INFO  utils.LoggerHandler - Clicking on the first Health Insurance article.
+2026-04-09 00:18:37 INFO  utils.LoggerHandler - First Health Insurance article clicked successfully.
+2026-04-09 00:18:37 INFO  utils.LoggerHandler - Verifying author information for Health Insurance article.
+2026-04-09 00:18:37 INFO  utils.LoggerHandler - Author verified successfully. Expected: 'Written by Kritika Singh' | Actual: 'Written by Kritika Singh'
+2026-04-09 00:18:37 INFO  utils.LoggerHandler - Scrolling to Health Insurance calculator section.
+2026-04-09 00:18:37 INFO  utils.LoggerHandler - Health Insurance calculator section is visible now.
+2026-04-09 00:18:37 INFO  utils.LoggerHandler - Entering age value: 25
+2026-04-09 00:18:38 INFO  utils.LoggerHandler - Entering pincode value: 110055
+2026-04-09 00:18:38 INFO  utils.LoggerHandler - Clicking on 'Calculate Price' button.
+2026-04-09 00:18:39 INFO  utils.LoggerHandler - 'Calculate Price' button clicked successfully.
+2026-04-09 00:18:39 INFO  utils.LoggerHandler - Entering customer name: John
+2026-04-09 00:18:40 INFO  utils.LoggerHandler - Entering mobile number: 9876543210
+2026-04-09 00:18:40 INFO  utils.LoggerHandler - Clicking on 'View Plans' button.
+2026-04-09 00:18:41 INFO  utils.LoggerHandler - 'View Plans' button clicked successfully.
+2026-04-09 00:18:41 INFO  utils.LoggerHandler - Verifying number of Health Insurance plans found.
+2026-04-09 00:18:42 INFO  utils.LoggerHandler - Plans count verified successfully. Expected: '0 Plans found' | Actual: '0 Plans found'

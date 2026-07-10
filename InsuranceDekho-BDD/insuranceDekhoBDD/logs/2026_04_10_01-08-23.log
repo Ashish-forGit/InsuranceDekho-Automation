@@ -1,0 +1,15 @@
+2026-04-10 01:08:23 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-10 01:08:29 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 01:08:29 ERROR utils.LoggerHandler - Step Failed: Navigation bar is not displayed.
+2026-04-10 01:08:30 INFO  utils.LoggerHandler - Step: Scrolling page to the bottom.
+2026-04-10 01:08:30 ERROR utils.LoggerHandler - Step Failed: Unable to scroll page to the bottom.
+2026-04-10 01:08:30 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 01:08:30 ERROR utils.LoggerHandler - Step Failed: Navigation bar is not displayed.
+2026-04-10 01:08:30 INFO  utils.LoggerHandler - Step: Scrolling page to the top.
+2026-04-10 01:08:30 ERROR utils.LoggerHandler - Step Failed: Unable to scroll page to the top.
+2026-04-10 01:08:31 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 01:08:31 ERROR utils.LoggerHandler - Step Failed: Navigation bar is not displayed.
+2026-04-10 01:08:31 INFO  utils.LoggerHandler - Step: Refreshing the current page.
+2026-04-10 01:08:31 ERROR utils.LoggerHandler - Step Failed: Unable to refresh the page.
+2026-04-10 01:08:31 INFO  utils.LoggerHandler - Step: Verifying the navigation bar is displayed on the Home page.
+2026-04-10 01:08:31 ERROR utils.LoggerHandler - Step Failed: Navigation bar is not displayed.

@@ -1,0 +1,64 @@
+package uistore;
+
+import org.openqa.selenium.By;
+
+public class HomePageLocators {
+
+	// 1) InsuranceDekho logo / brand visibility (choose the one that works best)
+	public static final By insuranceDekhoLogo = By
+			.xpath("//header[contains(@class,'head')]//a[contains(@title,'InsuranceDekho')]");
+
+	// Fallback if above doesn't work (common pattern)
+	public static final By insuranceDekhoLogoFallback = By
+			.xpath("//img[contains(@src,'id-main-logo') or contains(@alt,'InsuranceDekho')]");
+
+	// 2) Hover target: Insurance menu
+	public static final By insuranceNav = By.linkText("Insurance");
+
+	// 3) Click: Car Insurance option under Insurance menu
+	public static final By carInsuranceLink = By.linkText("Car Insurance");
+
+	// testcase2
+	public static final By addOnCoverLink = By.xpath("//a[@title='Car Insurance Add on Cover']");
+
+	// testcase3
+
+	public static final By bikeInsuranceNav = By.linkText("Bike Insurance");
+
+	public static final By claimSettlementLink = By.xpath("//a[@title='Bike Insurance Claim Settlement']");
+
+	// testcase4
+
+	public static final By lifeInsuranceNav = By.linkText("Life Insurance");
+
+	public static final By humanLifeValueCalculatorLink = By.xpath("// a[@title='Human Life Value Calculator']");
+
+	// testcase6
+	public static final By investmentLink = By.xpath("//li[@title='Investment']/a");
+	public static final By investmentPLans = By.xpath(
+			"//a[@title='Investment' and @href='/investment']/following-sibling::div[contains(@class,'subMenu2')]//a[@title='Investment plans' and contains(@href,'/investment/plans')]");
+
+	// tectcase7
+	public static final By insuranceAdvisorsLink = By.linkText("Insurance Advisors");
+	public static final By insuranceAdvisorsInNewDelhi = By.linkText("Insurance Advisors in New Delhi");
+
+	// testcase12
+	public static final By supportMenu = By.linkText("Support");
+	public static final By renewPolicyLink = By.linkText("Renew Policy");
+	public static final By termsAndConditionLink = By.xpath("//div[@class='gs_control-group']//small/a");
+	public static final By standardTandCLink = By.xpath("//div[@class='myTerm']/p");
+	public static final By mobileNumberInput = By.id("mobileNumber");
+	public static final By continueButton = By.xpath("//div[@class='gs_control-group']//span[text()='Continue ']");
+	public static final By otpSentToSms = By.xpath("//p[@class='loginV2ModalOtptext']");
+	
+	//testcase 13
+	public static final By mobileValidationMessage = By.xpath("//div[@class='srv-validation-message']");
+	
+	//testcase14
+	public static final By newsNavigationLink = By.linkText("News");
+	public static final By newsNavigationLink = By.linkText("Car Insurance");
+	
+	
+	
+
+}

@@ -1,0 +1,8 @@
+2026-04-07 03:34:16 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 03:34:16 INFO  utils.LoggerHandler - Verifying element is displayed: InsuranceDekho Logo
+2026-04-07 03:34:16 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> InsuranceDekho Logo
+2026-04-07 03:34:16 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-07 03:34:17 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-07 03:34:17 INFO  utils.LoggerHandler - Clicking on 'Car Insurance' option from Insurance dropdown.
+2026-04-07 03:34:18 INFO  utils.LoggerHandler - 'Car Insurance' option clicked successfully.
+2026-04-07 03:34:18 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.

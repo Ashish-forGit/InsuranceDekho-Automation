@@ -1,0 +1,9 @@
+2026-04-09 00:13:05 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 00:13:08 INFO  utils.LoggerHandler - Step: Clicking on 'Terms and Conditions' link.
+2026-04-09 00:13:08 INFO  utils.LoggerHandler - Step Passed: 'Terms and Conditions' link clicked successfully.
+2026-04-09 00:13:08 INFO  utils.LoggerHandler - Step: Verifying Terms and Conditions text is displayed.
+2026-04-09 00:13:08 INFO  utils.LoggerHandler - Step Passed: Terms and Conditions text verified successfully.
+2026-04-09 00:13:08 INFO  utils.LoggerHandler - Step: Entering invalid mobile number in input field: 9876543
+2026-04-09 00:13:08 INFO  utils.LoggerHandler - Step Passed: Invalid mobile number entered successfully.
+2026-04-09 00:13:08 INFO  utils.LoggerHandler - Step: Clicking on 'Continue' button.
+2026-04-09 00:13:08 INFO  utils.LoggerHandler - Step Passed: 'Continue' button clicked successfully.

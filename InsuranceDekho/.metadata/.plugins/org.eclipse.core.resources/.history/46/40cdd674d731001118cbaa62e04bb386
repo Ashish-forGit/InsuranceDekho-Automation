@@ -1,0 +1,64 @@
+package uistore;
+
+import org.openqa.selenium.By;
+
+public class InsuranceAdvisorsLocators {
+
+
+    // Result page verification text
+    public static final By insuranceAdvisorsFoundText =
+            By.xpath("//div[@class='agentFound']/p");
+    
+    // Book Home Visit beside first advisor
+    public static final By firstAdvisorBookHomeVisitBtn =
+            By.xpath("(//div[@class='fusionLeadBox']/div[@class='insuranceAgent-button']/button)[1]");
+
+    // Popup/Form inputs
+    public static final By nameInput =
+            By.id("name");
+
+    public static final By mobileInput =
+            By.id("mobile");
+
+    public static final By submitBtn =
+            By.xpath("//from[@class='formwrap']/div[@class='form-control']/button");
+
+    // Thank you message
+    public static final By thankYouText =
+            By.xpath("//div[@class='LeadForm']//h2");
+    
+    public static final By errorText =
+    		By.xpath("//div[@class='form-control withEdit']/div[@class='srv-validation-message']");
+    
+    //testcase9
+    public static final By bookhomeVisitButton = By.xpath("(//div[@class='contentLeft']/a/span)[1]");
+    public static final By scheduleHomeVisitButton = By.xpath("//button[@class='button submitButton'][text()='Schedule Home Visit']");
+    public static final By scheduleVisitButton = By.xpath("//button[@class='button submitButton'][text()='Schedule Visit']");
+    public static final By scheduleVisitButtonTwo = By.xpath("//div[@class='SelectLocation']//div[@class='PopupBottom']/button");
+ 
+    public static final By selectLocationManually = By.xpath("//div[@class='selectManualLoc']/a");
+    
+    public static final By pincodeInput =
+            By.id("pincode");
+    
+    public static final By addressInput =
+    		By.id("address_1");
+    
+    public static final By areaInput =
+    		By.id("area");
+    
+    public static final By yourLocationDetailsText = By.xpath("//div[@class='PopupWrap']/h4");
+    
+    //testcasr10
+    public static final By locationScheduleVist = By.xpath("//div[@class='SelectLocation']//div[@class='PopupBottom']/button[text()='Schedule Visit']");
+    public static final By areaInputError = By.xpath("//div[@class='gs_control-group']/div[@class='srv-validation-message']");
+    
+    //testcase11
+    public static final By filterLocation = By.xpath("//label[@title='City']/input[@title='Bangalore'][@type='radio']");
+    public static final By advaisorInLocationHeading = By.xpath("//div[@class='titleGrp']/h1");
+    public static final By noAdvaisorFoundHeading = By.xpath("(//div[@class='quotesListe']/div/div)[1]");
+    
+    
+    
+    
+}

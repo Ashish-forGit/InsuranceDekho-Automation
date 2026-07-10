@@ -1,0 +1,16 @@
+package uistore;
+
+import org.openqa.selenium.By;
+
+public class BusinessInsuranceNewsLocators {
+	public static final By investmentInsuranceNewsHeader = By.xpath("//h1[@class='newsh1']");
+	public static final By nameInput = By.id("name");
+	public static final By businessNameInput = By.id("businessName");
+	public static final By mobileInput = By.id("mobile");
+	public static final By productTypeDropdown = By.id("productType");
+	public static final By emailInputField = By.id("email");
+	public static final By getAQuoteButton = By.xpath("//button[@class='css-uxh3bc']");
+	
+	
+
+}

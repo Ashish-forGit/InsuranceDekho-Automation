@@ -1,0 +1,425 @@
+package runner;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
+import pages.AddOnCoverPageActions;
+import pages.BikeClaimSettlementPageActions;
+import pages.BusinessInsuranceNewsPageActions;
+import pages.CarInsuranceNewsPageActions;
+import pages.CarInsurancePageActions;
+import pages.HealthInsuranceArticlePageActions;
+import pages.HomePageActions;
+import pages.HumanLifeValuePageActions;
+import pages.InsuranceAdvisorsActions;
+import pages.InvestmentInsuranceNewsPageActions;
+import pages.InvestmentPlansPageActions;
+import utils.Base;
+import utils.Reporter;
+
+public class TestRunner extends Base {
+
+	public ExtentReports report;
+	public ExtentTest test;
+
+	@BeforeClass
+	public void createRepo() {
+		report = Reporter.generateReport("insuranceDekho_report");
+	}
+
+	@BeforeMethod
+	public void setup() {
+		openBrowser();
+
+	}
+
+//	@Test
+	public void test1() {
+		test = report.createTest("NV_US01_TC01: Navigate to Car Insurance page and verify heading");
+
+		HomePageActions home = new HomePageActions(driver, test);
+		home.verifyInsuranceDekhoIsVisible();
+		home.hoverOnInsuranceMenu();
+		home.clickOnCarInsurance();
+
+		CarInsurancePageActions car = new CarInsurancePageActions(driver, test);
+		car.verifyCarInsuranceHeadingIsPresent();
+
+	}
+
+//	@Test
+	public void test2() {
+		test = report.createTest("NV_US01_TC02: Calculate Car IDV via Add-on Cover and verify amount displayed");
+		HomePageActions home = new HomePageActions(driver, test);
+		home.hoverOnInsuranceMenu();
+		home.hoverOnCarInsuranceMenu();
+		home.clickOnAddOnCover();
+
+		AddOnCoverPageActions addOnCoverAction = new AddOnCoverPageActions(driver, test);
+		addOnCoverAction.scrollToCalculateCarIdvSection();
+		addOnCoverAction.selectBrandFirstOption();
+		addOnCoverAction.selectModelFirstOption();
+		addOnCoverAction.selectYearFirstOption();
+		addOnCoverAction.clickCalculateAmount();
+		addOnCoverAction.verifyAmountPresent();
+
+	}
+
+//	@Test
+	public void test3() {
+		test = report.createTest("NV_US01_TC03: Two-Wheeler IDV via Bike Claim Settlement and verify amount");
+
+		HomePageActions home = new HomePageActions(driver, test);
+		home.hoverOnInsuranceMenu();
+		home.hoverOnBikeInsuranceMenu();
+		home.clickOnClaimSettlement();
+
+		BikeClaimSettlementPageActions claim = new BikeClaimSettlementPageActions(driver, test);
+		claim.verifyBikeInsuranceClaimHeadingIsPresent();
+		claim.scrollToCalculateTwoWheelerIdvSection();
+		claim.selectBrandFirstOptions();
+		claim.selectModelFirstOption();
+		claim.selectYearFirstOption();
+		claim.clickCalculateAndVerifyIdvAmount();
+
+	}
+
+//	@Test
+	public void test4() {
+		test = report
+				.createTest("NV_US01_TC04: Verify Human Life Value Calculator is navigated through Life Insurance");
+
+		HomePageActions home = new HomePageActions(driver, test);
+
+		home.hoverOnInsuranceMenu();
+		home.hoverOnLifeInsuranceMenu();
+		home.clickOnHumanLifeValueCalculator();
+
+		HumanLifeValuePageActions hlv = new HumanLifeValuePageActions(driver, test);
+
+		hlv.verifyHlvCalculatorPageTitle();
+
+	}
+
+//	@Test
+	public void test5() {
+		test = report.createTest("NV_US01_TC05: Human Life Value Calculator and verify error message in HLVC");
+
+		HomePageActions home = new HomePageActions(driver, test);
+
+		home.hoverOnInsuranceMenu();
+		home.hoverOnLifeInsuranceMenu();
+		home.clickOnHumanLifeValueCalculator();
+
+		HumanLifeValuePageActions hlv = new HumanLifeValuePageActions(driver, test);
+
+		hlv.verifyHlvCalculatorPageTitle();
+		hlv.enterName();
+		hlv.enterBirthday();
+		hlv.selectAnnualIncome();
+		hlv.enterMobileNumber();
+		hlv.verifyerrorMessageDisplayed();
+
+	}
+
+//	@Test
+	public void test6() {
+		test = report.createTest("NV_US01_TC06: Navigating Investment Plans and verifying saving plan");
+		HomePageActions home = new HomePageActions(driver, test);
+
+		home.hoverOnInsuranceMenu();
+		home.hoverOverInvestmentMenu();
+		home.clickOnInvestmentPlans();
+
+		InvestmentPlansPageActions investmentPlansActions = new InvestmentPlansPageActions(driver, test);
+		investmentPlansActions.verifyBestInvestmentPlansHeading();
+		investmentPlansActions.clickOnMarketLinked();
+		investmentPlansActions.verifySavingPlan();
+
+	}
+
+//	@Test
+	public void test7() throws InterruptedException {
+		test = report.createTest("NV_US02_TC01: Verifying booking home visit advaisors");
+		HomePageActions home = new HomePageActions(driver, test);
+
+		home.hoverOverInsuranceAdvisors();
+		home.clickInsuranceAdvisorsInNewDelhi();
+
+		InsuranceAdvisorsActions advAction = new InsuranceAdvisorsActions(driver, test);
+		advAction.verifyInsuranceAdvisorsFoundText();
+		advAction.clickBookHomeVisitForFirstAdvisor();
+		advAction.enterNameAndMobile();
+		advAction.submitRequest();
+		advAction.verifyThankYouText();
+
+	}
+
+//	@Test
+	public void test8() throws InterruptedException {
+		test = report.createTest("NV_US02_TC02: Verifying booking home visit advaisors error message");
+		HomePageActions home = new HomePageActions(driver, test);
+
+		home.hoverOverInsuranceAdvisors();
+		home.clickInsuranceAdvisorsInNewDelhi();
+
+		InsuranceAdvisorsActions advAction = new InsuranceAdvisorsActions(driver, test);
+		advAction.verifyInsuranceAdvisorsFoundText();
+		advAction.clickBookHomeVisitForFirstAdvisor();
+		advAction.enterErrorNameAndMobile();
+		advAction.submitRequest();
+		advAction.verifyErrorInput();
+
+	}
+
+//	@Test
+	public void test9() throws InterruptedException {
+		test = report.createTest("NV_US02_TC03: Verify Book Home Visit flow for Insurance Advisors");
+		HomePageActions home = new HomePageActions(driver, test);
+
+		home.hoverOverInsuranceAdvisors();
+		home.clickInsuranceAdvisorsInNewDelhi();
+
+		InsuranceAdvisorsActions advAction = new InsuranceAdvisorsActions(driver, test);
+		advAction.clickBookHomeVisit();
+		advAction.clickScheduleHomeVisit();
+		advAction.enterNameAndMobile();
+		advAction.clickScheduleHomeVisit();
+		advAction.clickScheduleVisit();
+		advAction.clickEnterLoactionManually();
+		advAction.verifyYourLoactionDetails();
+		advAction.typePincode();
+		advAction.typeHouseNo();
+		advAction.typeArea();
+
+	}
+
+//	@Test
+	public void test10() throws InterruptedException {
+		test = report.createTest(
+				"NV_US02_TC04: Verify error message when incomplete manual location details are provided while booking 'Home Visit'");
+		HomePageActions home = new HomePageActions(driver, test);
+
+		home.hoverOverInsuranceAdvisors();
+		home.clickInsuranceAdvisorsInNewDelhi();
+
+		InsuranceAdvisorsActions advAction = new InsuranceAdvisorsActions(driver, test);
+		advAction.clickBookHomeVisit();
+		advAction.clickScheduleHomeVisit();
+		advAction.enterNameAndMobile();
+		advAction.clickScheduleHomeVisit();
+		advAction.clickScheduleVisit();
+		advAction.clickEnterLoactionManually();
+		advAction.typePincode();
+		advAction.typeHouseNo();
+		advAction.clickLocationScheduleVisit();
+		advAction.verifyAreaInputError();
+
+	}
+
+	@Test
+	public void test11() {
+		test = report.createTest(
+				"NV_US02_TC05: Verify ‘No Advisors Found’ message when filtering Insurance Advisors by city");
+
+		HomePageActions home = new HomePageActions(driver, test);
+		home.hoverOverInsuranceAdvisors();
+		home.clickInsuranceAdvisorsInNewDelhi();
+
+		InsuranceAdvisorsActions advAction = new InsuranceAdvisorsActions(driver, test);
+		advAction.selectCityFilter();
+
+		advAction.verifyLocationHeaderAndNotFoundAdvaisor();
+
+	}
+
+//	@Test
+	public void test12() {
+		test = report
+				.createTest("NV_US03_TC01: Verify Renew Policy navigation and OTP confirmation from Support menu");
+
+		HomePageActions home = new HomePageActions(driver, test);
+		home.hoverOverSupportNav();
+		home.clickOnRenewPolicy();
+		home.clickOnTermsAndCondition();
+		home.verifyTandCtext();
+		home.typeMobile();
+		home.clickOnContinue();
+		home.verifyOtpSentToSms();
+
+	}
+
+//	@Test
+	public void test13() {
+		test = report.createTest("NV_US03_TC02: Verify invalid mobile number validation message from Support menu");
+
+		HomePageActions home = new HomePageActions(driver, test);
+		home.hoverOverSupportNav();
+		home.clickOnRenewPolicy();
+		home.clickOnTermsAndCondition();
+		home.verifyTandCtext();
+		home.typeWrongMobile();
+		home.clickOnContinue();
+		home.verifyWrongMobileInput();
+
+	}
+
+//	@Test
+	public void test14() {
+		test = report.createTest(
+				" NV_US04_TC01: Verify navigation to Car Insurance news and display of article author information");
+
+		HomePageActions home = new HomePageActions(driver, test);
+		home.hoverOverNews();
+		home.clickCarInsuranceNews();
+
+		CarInsuranceNewsPageActions carInsuranceNews = new CarInsuranceNewsPageActions(driver, test);
+		carInsuranceNews.verifyCarInsuranceNewsHeader();
+		carInsuranceNews.clickFirstNewsPresent();
+		carInsuranceNews.verifyNewsWrittenByAuthor();
+	}
+
+//	@Test
+	public void test15() {
+		test = report.createTest(
+				"NV_US04_TC02: Verify Health Insurance articles navigation and insurance plan search results");
+
+		HomePageActions home = new HomePageActions(driver, test);
+		home.hoverOverNews();
+		home.hoverOverHealthInsuranceNews();
+		home.clickHealthInsuranceArticle();
+
+		HealthInsuranceArticlePageActions healthInsuranceArticleAction = new HealthInsuranceArticlePageActions(driver,
+				test);
+		healthInsuranceArticleAction.verifyHealthInsuranceArticleHeader();
+		healthInsuranceArticleAction.clickFirstArticlePresent();
+		healthInsuranceArticleAction.verifyNewsWrittenByAuthor();
+		healthInsuranceArticleAction.goToHealthInsuranceCalculator();
+		healthInsuranceArticleAction.typeAge();
+		healthInsuranceArticleAction.typePincode();
+		healthInsuranceArticleAction.clickCalculatePrice();
+
+		healthInsuranceArticleAction.typeName();
+		healthInsuranceArticleAction.typeMobileNumber();
+		healthInsuranceArticleAction.clickViewPlans();
+		healthInsuranceArticleAction.verifyNumberOfPlansFound();
+
+	}
+
+//	@Test
+	public void test16() {
+		test = report.createTest(
+				"NV_US04_TC03: Verify navigation from Investment News to city specific Investment Advisors listing");
+
+		HomePageActions home = new HomePageActions(driver, test);
+		home.hoverOverNews();
+		home.clickInvestmentNews();
+
+		InvestmentInsuranceNewsPageActions investmentInsuranceNewsAction = new InvestmentInsuranceNewsPageActions(
+				driver, test);
+		investmentInsuranceNewsAction.verifyInvestmentInsuranceNewsHeader();
+		investmentInsuranceNewsAction.goToInvestmentAdvisorsinYourCity();
+		investmentInsuranceNewsAction.clickGurgaonAdvisors();
+		investmentInsuranceNewsAction.verifyInsuranceAdvaisorsInGurgaonHeader();
+
+	}
+
+//	@Test
+	public void test17() {
+		test = report.createTest("NV_US04_TC04: Verify successful quote submission from Business News section");
+
+		HomePageActions home = new HomePageActions(driver, test);
+		home.hoverOverNews();
+		home.clickBusinessNewsLink();
+
+		BusinessInsuranceNewsPageActions bussinessInsuranceNewsActions = new BusinessInsuranceNewsPageActions(driver,
+				test);
+		bussinessInsuranceNewsActions.verifyBusinessInsuranceNewsHeader();
+		bussinessInsuranceNewsActions.typeName();
+		bussinessInsuranceNewsActions.typeBussinessName();
+		bussinessInsuranceNewsActions.typeMobile();
+
+		bussinessInsuranceNewsActions.selectProductType();
+		bussinessInsuranceNewsActions.typeEmail();
+		bussinessInsuranceNewsActions.clickGetQuoteButton();
+		bussinessInsuranceNewsActions.verifyThankYouText();
+
+	}
+
+//	@Test
+	public void test18() {
+		test = report.createTest(
+				"NV_US04_TC05: Verify validation error messages and disabled 'Get a Quote' submission for invalid inputs from Business News");
+
+		HomePageActions home = new HomePageActions(driver, test);
+		home.hoverOverNews();
+		home.clickBusinessNewsLink();
+
+		BusinessInsuranceNewsPageActions bussinessInsuranceNewsActions = new BusinessInsuranceNewsPageActions(driver,
+				test);
+		bussinessInsuranceNewsActions.verifyBusinessInsuranceNewsHeader();
+		bussinessInsuranceNewsActions.typeName();
+		bussinessInsuranceNewsActions.typeBussinessName();
+		bussinessInsuranceNewsActions.typeWrongMobile();
+
+		bussinessInsuranceNewsActions.selectProductType();
+		bussinessInsuranceNewsActions.typeEmail();
+		bussinessInsuranceNewsActions.verifyErrorMessage();
+
+	}
+
+//	@Test
+	public void test19() {
+		test = report.createTest(
+				"NV_US05_TC01: Verify navigation bar visibility across all pages");
+
+		HomePageActions home = new HomePageActions(driver, test);
+		home.verifyNavigationBarIsDisplayed();
+		home.hoverOnInsuranceMenu();
+		home.clcikTermInsuranceLink();
+		home.verifyNavigationBarIsDisplayed();
+		home.hoverOverInsuranceAdvisors();
+		home.clickInsuranceAdvisorsInNewDelhi();
+		home.verifyNavigationBarIsDisplayed();
+		home.hoverOverNews();
+		home.clcikTravelInsuranceLink();
+		home.verifyNavigationBarIsDisplayed();
+		home.clickFirstArticleInTravelInsuranceArticle();
+		home.verifyNavigationBarIsDisplayed();
+
+	}
+
+//	@Test
+	public void test20() {
+		test = report.createTest("NV_US05_TC02: Verify navigation bar behavior on page scroll and page reload");
+
+		HomePageActions home = new HomePageActions(driver, test);
+		home.verifyNavigationBarIsDisplayed();
+		home.pageScrollsToTheBottom();
+		home.verifyNavigationBarIsDisplayed();
+		home.pageScrollsToTheTop();
+		home.verifyNavigationBarIsDisplayed();
+		home.refreshPage();
+		home.verifyNavigationBarIsDisplayed();
+
+	}
+
+	@AfterMethod
+	public void teardown() {
+		if (driver != null) {
+			driver.quit();
+		}
+	}
+
+	@AfterClass
+	public void flushReport() {
+		report.flush();
+	}
+
+}

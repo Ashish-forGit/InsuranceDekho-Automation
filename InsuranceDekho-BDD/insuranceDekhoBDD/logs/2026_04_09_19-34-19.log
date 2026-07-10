@@ -1,0 +1,41 @@
+2026-04-09 19:34:19 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 19:34:19 INFO  utils.LoggerHandler - Step Passed: Insurance Advisors Page Actions initialized successfully.
+2026-04-09 19:34:22 INFO  utils.LoggerHandler - Step: Hovering over 'Book Home Visit' button.
+2026-04-09 19:34:23 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Book Home Visit' button.
+2026-04-09 19:34:23 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Book Home Visit' button.
+2026-04-09 19:34:26 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-09 19:34:26 INFO  utils.LoggerHandler - Step: Clicking 'Book Home Visit' button.
+2026-04-09 19:34:26 INFO  utils.LoggerHandler - Step Passed: 'Book Home Visit' button clicked successfully.
+2026-04-09 19:34:26 INFO  utils.LoggerHandler - Step: Hovering over 'Schedule Home Visit' button.
+2026-04-09 19:34:26 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Schedule Home Visit' button.
+2026-04-09 19:34:26 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Schedule Home Visit'.
+2026-04-09 19:34:29 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-09 19:34:29 INFO  utils.LoggerHandler - Step: Clicking 'Schedule Home Visit' button.
+2026-04-09 19:34:29 INFO  utils.LoggerHandler - Step Passed: 'Schedule Home Visit' clicked successfully.
+2026-04-09 19:34:29 INFO  utils.LoggerHandler - Step: Entering Name in booking form: John
+2026-04-09 19:34:29 INFO  utils.LoggerHandler - Step Passed: Name entered successfully.
+2026-04-09 19:34:29 INFO  utils.LoggerHandler - Step: Entering Mobile Number in booking form: 9876543210
+2026-04-09 19:34:29 INFO  utils.LoggerHandler - Step Passed: Mobile number entered successfully.
+2026-04-09 19:34:29 INFO  utils.LoggerHandler - Step: Hovering over 'Schedule Home Visit' button.
+2026-04-09 19:34:30 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Schedule Home Visit' button.
+2026-04-09 19:34:30 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Schedule Home Visit'.
+2026-04-09 19:34:33 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-09 19:34:33 INFO  utils.LoggerHandler - Step: Clicking 'Schedule Home Visit' button.
+2026-04-09 19:34:33 INFO  utils.LoggerHandler - Step Passed: 'Schedule Home Visit' clicked successfully.
+2026-04-09 19:34:33 INFO  utils.LoggerHandler - Step: Hovering over 'Schedule Visit' button.
+2026-04-09 19:34:34 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Schedule Visit' button.
+2026-04-09 19:34:34 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Schedule Visit'.
+2026-04-09 19:34:37 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-09 19:34:37 INFO  utils.LoggerHandler - Step: Clicking 'Schedule Visit' button.
+2026-04-09 19:34:37 INFO  utils.LoggerHandler - Step Passed: 'Schedule Visit' clicked successfully.
+2026-04-09 19:34:37 INFO  utils.LoggerHandler - Step: Clicking on 'Enter location manually' option.
+2026-04-09 19:34:37 INFO  utils.LoggerHandler - Step Passed: 'Enter location manually' option selected successfully.
+2026-04-09 19:34:37 INFO  utils.LoggerHandler - Step: Entering pincode: 110055
+2026-04-09 19:34:38 INFO  utils.LoggerHandler - Step Passed: Pincode entered successfully.
+2026-04-09 19:34:38 INFO  utils.LoggerHandler - Step: Entering house number/address: House1
+2026-04-09 19:34:38 INFO  utils.LoggerHandler - Step Passed: House number/address entered successfully.
+2026-04-09 19:34:38 INFO  utils.LoggerHandler - Step: Clicking 'Schedule Visit' CTA from location details section.
+2026-04-09 19:34:38 INFO  utils.LoggerHandler - Step Passed: 'Schedule Visit' CTA clicked successfully.
+2026-04-09 19:34:38 INFO  utils.LoggerHandler - Step: Fetching area field validation error message.
+2026-04-09 19:34:38 INFO  utils.LoggerHandler - Step: Verifying area field validation error message.
+2026-04-09 19:34:38 INFO  utils.LoggerHandler - Step Passed: Area validation message verified successfully. Expected: 'The road/area/sector field is required.' | Actual: 'The road/area/sector field is required.'

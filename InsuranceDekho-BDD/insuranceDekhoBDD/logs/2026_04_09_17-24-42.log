@@ -1,0 +1,61 @@
+2026-04-09 17:24:42 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 17:24:42 INFO  utils.LoggerHandler - Car Insurance Page Actions initialized successfully.
+2026-04-09 17:24:43 INFO  utils.LoggerHandler - Verifying element is displayed: InsuranceDekho Logo
+2026-04-09 17:24:43 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> InsuranceDekho Logo
+2026-04-09 17:24:43 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 17:24:43 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-09 17:24:43 INFO  utils.LoggerHandler - Clicking on 'Car Insurance' option from Insurance dropdown.
+2026-04-09 17:24:44 INFO  utils.LoggerHandler - 'Car Insurance' option clicked successfully.
+2026-04-09 17:24:44 INFO  utils.LoggerHandler - Verifying Car Insurance page heading.
+2026-04-09 17:24:44 INFO  utils.LoggerHandler - Car Insurance page heading verified successfully. Expected: 'Car Insurance' | Actual: 'Car Insurance'
+2026-04-09 17:24:51 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 17:24:51 INFO  utils.LoggerHandler - Add-On Cover Page Actions initialized successfully.
+2026-04-09 17:24:51 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 17:24:52 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-09 17:24:52 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 17:24:52 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-09 17:24:52 INFO  utils.LoggerHandler - Hovering over 'Car Insurance' under Insurance menu.
+2026-04-09 17:24:52 INFO  utils.LoggerHandler - 'Car Insurance' menu hovered successfully.
+2026-04-09 17:24:52 INFO  utils.LoggerHandler - Clicking on 'Add on Cover' option.
+2026-04-09 17:24:53 INFO  utils.LoggerHandler - 'Add on Cover' page navigation triggered successfully.
+2026-04-09 17:24:53 INFO  utils.LoggerHandler - Attempting to scroll to 'Calculate your Car IDV' section.
+2026-04-09 17:24:53 INFO  utils.LoggerHandler - 'Calculate your Car IDV' section is visible now.
+2026-04-09 17:24:53 INFO  utils.LoggerHandler - Clicking on Brand dropdown.
+2026-04-09 17:24:56 INFO  utils.LoggerHandler - Selecting first available brand from dropdown.
+2026-04-09 17:24:56 INFO  utils.LoggerHandler - Car brand selected successfully.
+2026-04-09 17:24:56 INFO  utils.LoggerHandler - Clicking on Model dropdown.
+2026-04-09 17:24:57 INFO  utils.LoggerHandler - Entering car model value 'Alto 800'.
+2026-04-09 17:24:57 INFO  utils.LoggerHandler - Selecting first matching model from dropdown.
+2026-04-09 17:24:57 INFO  utils.LoggerHandler - Car model selected successfully.
+2026-04-09 17:24:57 INFO  utils.LoggerHandler - Clicking on Year dropdown.
+2026-04-09 17:24:57 INFO  utils.LoggerHandler - Selecting first available year.
+2026-04-09 17:24:57 INFO  utils.LoggerHandler - Manufacturing year selected successfully.
+2026-04-09 17:24:57 INFO  utils.LoggerHandler - Clicking on 'Calculate' button to generate IDV amount.
+2026-04-09 17:24:57 INFO  utils.LoggerHandler - 'Calculate' button clicked successfully.
+2026-04-09 17:24:57 INFO  utils.LoggerHandler - Verifying calculated IDV amount is displayed.
+2026-04-09 17:24:57 INFO  utils.LoggerHandler - IDV amount verified successfully. Expected: 'Rs. 2,58,547' | Actual: 'Rs. 2,58,547'
+2026-04-09 17:25:04 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 17:25:04 INFO  utils.LoggerHandler - Bike Claim Settlement Page Actions initialized successfully.
+2026-04-09 17:25:04 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 17:25:05 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-09 17:25:05 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 17:25:05 INFO  utils.LoggerHandler - 'Insurance' menu hovered successfully.
+2026-04-09 17:25:05 INFO  utils.LoggerHandler - Hovering over 'Bike Insurance' under Insurance menu.
+2026-04-09 17:25:08 INFO  utils.LoggerHandler - 'Bike Insurance' menu hovered successfully.
+2026-04-09 17:25:08 INFO  utils.LoggerHandler - Clicking on 'Claim Settlement' under Bike Insurance menu.
+2026-04-09 17:25:10 INFO  utils.LoggerHandler - 'Claim Settlement' clicked successfully.
+2026-04-09 17:25:10 INFO  utils.LoggerHandler - Verifying Bike Insurance Claim Settlement page heading.
+2026-04-09 17:25:10 INFO  utils.LoggerHandler - Bike Insurance Claim heading verified successfully. Expected: 'Bike Insurance Claim' | Actual: 'Bike Insurance Claim'
+2026-04-09 17:25:10 INFO  utils.LoggerHandler - Scrolling to 'Calculate Two Wheeler IDV' section.
+2026-04-09 17:25:10 INFO  utils.LoggerHandler - 'Calculate Two Wheeler IDV' section is now visible.
+2026-04-09 17:25:10 INFO  utils.LoggerHandler - Selecting first brand option from Brand dropdown.
+2026-04-09 17:25:10 INFO  utils.LoggerHandler - First brand selected successfully.
+2026-04-09 17:25:10 INFO  utils.LoggerHandler - Selecting first bike model option.
+2026-04-09 17:25:10 INFO  utils.LoggerHandler - Entering model name 'Splendor Plus'.
+2026-04-09 17:25:11 INFO  utils.LoggerHandler - Bike model selected successfully.
+2026-04-09 17:25:11 INFO  utils.LoggerHandler - Selecting manufacturing year from Year dropdown.
+2026-04-09 17:25:11 INFO  utils.LoggerHandler - Manufacturing year selected successfully.
+2026-04-09 17:25:11 INFO  utils.LoggerHandler - Clicking on Calculate button to generate IDV amount.
+2026-04-09 17:25:11 INFO  utils.LoggerHandler - IDV amount verified successfully. Expected: 'Rs. 64,323' | Actual: 'Rs. 64,323'
+2026-04-09 17:25:17 INFO  utils.LoggerHandler - Hovering over 'Insurance' menu in navigation bar.
+2026-04-09 17:25:17 ERROR utils.LoggerHandler - Failed to hover 'Insurance'

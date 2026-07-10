@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="utils.WebDriverHelper"/>
+    <fullyQualifiedTypeName name="uistore.CarInsurancePageLocators"/>
+    <fullyQualifiedTypeName name="pages.CarInsurancePageActions"/>
+    <fullyQualifiedTypeName name="pages.BikeClaimSettlementPageActions"/>
+    <fullyQualifiedTypeName name="uistore.BikeClaimSettlementPageLocators"/>
+    <fullyQualifiedTypeName name="uistore.HumanLifeValuePageLocators"/>
+    <fullyQualifiedTypeName name="pages.HomePageActions"/>
+    <fullyQualifiedTypeName name="pages.InsuranceAdvisorsActions"/>
+    <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+    <fullyQualifiedTypeName name="uistore.InsuranceAdvisorsLocators"/>
+    <fullyQualifiedTypeName name="java.lang.AssertionError"/>
+    <fullyQualifiedTypeName name="uistore.CarInsuranceNewsPageLocators"/>
+    <fullyQualifiedTypeName name="pages.CarInsuranceNewsPageActions"/>
+    <fullyQualifiedTypeName name="java.lang.Byte"/>
+    <fullyQualifiedTypeName name="pages.HealthInsuranceArticlePageActions"/>
+    <fullyQualifiedTypeName name="uistore.HealthInsuranceArticlePageLocators"/>
+    <fullyQualifiedTypeName name="uistore.InvestmentInsuranceNewsPageLocators"/>
+    <fullyQualifiedTypeName name="pages.InvestmentInsuranceNewsPageActions"/>
+    <fullyQualifiedTypeName name="pages.BusinessInsuranceNewsPageActions"/>
+    <fullyQualifiedTypeName name="uistore.BusinessInsuranceNewsLocators"/>
+    <fullyQualifiedTypeName name="uistore.HomePageLocators"/>
+    <fullyQualifiedTypeName name="pages.AddOnCoverPageActions"/>
+    <fullyQualifiedTypeName name="uistore.AddOnCoverPageLocators"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="uistore.InvestmentPlansPageLocators"/>
+    <fullyQualifiedTypeName name="pages.InvestmentPlansPageActions"/>
+    <fullyQualifiedTypeName name="utils.Reporter"/>
+    <fullyQualifiedTypeName name="org.testng.Assert"/>
+    <fullyQualifiedTypeName name="utils.Base"/>
+    <fullyQualifiedTypeName name="utils.Screenshots"/>
+</qualifiedTypeNameHistroy>

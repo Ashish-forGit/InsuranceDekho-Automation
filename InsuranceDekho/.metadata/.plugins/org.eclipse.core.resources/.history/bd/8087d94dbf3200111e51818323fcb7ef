@@ -1,0 +1,29 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.CarInsurancePageLocators;
+import utils.WebDriverHelper;
+
+public class CarInsurancePageActions {
+	WebDriver driver;
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	public CarInsurancePageActions(WebDriver driver, ExtentTest test) {
+		this.driver = driver;
+		this.test = test;
+		helper = new WebDriverHelper(driver);
+		helper.addLogAndReportInfo("Home Page Actions initialized successfully.", test);
+	}
+	
+	public void verifyCarInsuranceHeadingIsPresent(String expectedValue) {
+		helper.verify(helper.getText(CarInsurancePageLocators.carInsuranceHeading), expectedValue);
+	}
+	
+	
+	
+
+}

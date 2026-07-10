@@ -1,0 +1,90 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.CarInsurancePageLocators;
+import utils.WebDriverHelper;
+
+/**
+ * Class Name: CarInsurancePageActions
+ *
+ * Description:
+ * Page Action class responsible for handling validations and interactions
+ * on the Car Insurance landing page. This class primarily validates
+ * the presence of Car Insurance related headers and ensures that
+ * users are navigated to the correct Car Insurance page.
+ *
+ * This class follows the Page Action Model (PAM) design pattern
+ * and integrates step-level logging using Extent Reports to
+ * provide clear execution traceability.
+ *
+ * @Author: Ashish Kumar
+ */
+public class CarInsurancePageActions {
+
+    WebDriver driver;
+    WebDriverHelper helper;
+    ExtentTest test;
+
+    /**
+     * Constructor: CarInsurancePageActions
+     *
+     * Description:
+     * Initializes Car Insurance Page Actions using WebDriver
+     * and ExtentTest instances for browser interaction and
+     * test execution logging.
+     *
+     * @param driver WebDriver instance for browser interaction
+     * @param test   ExtentTest instance for logging and reporting
+     */
+    public CarInsurancePageActions(WebDriver driver, ExtentTest test) {
+        try {
+            this.driver = driver;
+            this.test = test;
+            helper = new WebDriverHelper(driver);
+            helper.addLogAndReportInfo(
+                "Car Insurance Page Actions initialized successfully.", test
+            );
+        } catch (Exception e) {
+            helper.addLogAndReportInfo(
+                "Exception while initializing CarInsurancePageActions: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Method Name: verifyCarInsuranceHeadingIsPresent
+     *
+     * Description:
+     * Verifies that the Car Insurance page heading is displayed
+     * correctly and matches the expected business value.
+     *
+     * @param expectedValue Expected Car Insurance page heading text
+     */
+    public void verifyCarInsuranceHeadingIsPresent(String expectedValue) {
+        try {
+            helper.addLogAndReportInfo(
+                "Verifying Car Insurance page heading.", test
+            );
+
+            String actualHeading = helper.getText(
+                CarInsurancePageLocators.carInsuranceHeading
+            );
+
+            helper.verify(actualHeading, expectedValue);
+
+            helper.addLogAndReportInfo(
+                "Car Insurance page heading verified successfully. Expected: '"
+                + expectedValue + "' | Actual: '" + actualHeading + "'", test
+            );
+        } catch (Exception e) {
+            helper.addLogAndReportInfo(
+                "Exception in verifyCarInsuranceHeadingIsPresent: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+}

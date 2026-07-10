@@ -1,0 +1,12 @@
+2026-04-09 19:50:25 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 19:50:25 INFO  utils.LoggerHandler - Step Passed: Insurance Advisors Page Actions initialized successfully.
+2026-04-09 19:50:27 INFO  utils.LoggerHandler - Step: Scrolling to filter section.
+2026-04-09 19:50:27 INFO  utils.LoggerHandler - Step Passed: Scrolled to filter section successfully.
+2026-04-09 19:50:27 INFO  utils.LoggerHandler - Step: Clicking location/city filter option.
+2026-04-09 19:50:28 INFO  utils.LoggerHandler - Step Passed: Location/city filter selected successfully.
+2026-04-09 19:50:28 INFO  utils.LoggerHandler - Step: Waiting for location header to be visible.
+2026-04-09 19:50:28 INFO  utils.LoggerHandler - Step Passed: Location header is visible.
+2026-04-09 19:50:28 INFO  utils.LoggerHandler - Step: Verifying advisor location header.
+2026-04-09 19:50:28 INFO  utils.LoggerHandler - Step Passed: Location header verified successfully.
+2026-04-09 19:50:28 INFO  utils.LoggerHandler - Step: Verifying 'No Advisors Found' message.
+2026-04-09 19:50:28 INFO  utils.LoggerHandler - Step Passed: No advisor message verified successfully.

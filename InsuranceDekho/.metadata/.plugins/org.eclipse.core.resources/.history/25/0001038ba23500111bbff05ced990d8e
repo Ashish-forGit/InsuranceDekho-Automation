@@ -1,0 +1,190 @@
+package utils;
+
+import org.testng.*;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
+
+
+/**
+ * Class Name: ConsoleProgressBarListener
+ *
+ * Description:
+ * TestNG listener that prints a real-time progress bar in the console during test execution.
+ * It tracks discovered tests, excluded tests, and execution results (PASS/FAIL/SKIP) and prints a final summary
+ * when suite execution finishes. Intended for console visibility during local/CI runs and does not affect reports.
+ *
+ * @author Ashish Kumar
+ */
+public class ConsoleProgressBarListener implements IExecutionListener, ITestListener {
+
+    private static final int BAR_WIDTH = 40;
+
+    // Unique methods across contexts (handles multiple <test> blocks)
+    private final Set<String> discoveredMethods = ConcurrentHashMap.newKeySet();
+    private final Set<String> excludedMethods   = ConcurrentHashMap.newKeySet();
+
+    // Result tracking (names)
+    private final Set<String> passedTests = ConcurrentHashMap.newKeySet();
+    private final Set<String> failedTests = ConcurrentHashMap.newKeySet();
+    private final Set<String> skippedTests = ConcurrentHashMap.newKeySet();
+
+    // Counters
+    private final AtomicInteger completed = new AtomicInteger(0);
+    private final AtomicInteger passed = new AtomicInteger(0);
+    private final AtomicInteger failed = new AtomicInteger(0);
+    private final AtomicInteger skipped = new AtomicInteger(0);
+
+    private volatile int totalDiscovered = 0;
+    private volatile int totalExcluded = 0;
+    private volatile int totalWillRun = 0;
+
+    private long startTime;
+
+    @Override
+    public void onExecutionStart() {
+        startTime = System.currentTimeMillis();
+        System.out.println("\n=== Test Execution Started ===");
+    }
+
+    @Override
+    public void onStart(ITestContext context) {
+        // All methods in this context
+        for (ITestNGMethod m : context.getAllTestMethods()) {
+            discoveredMethods.add(uniqueId(m));
+        }
+
+        // Excluded/disabled methods (by suite/groups/method excludes)
+        for (ITestNGMethod m : context.getExcludedMethods()) {
+            excludedMethods.add(uniqueId(m));
+        }
+
+        // Calculate totals (unique across contexts)
+        totalDiscovered = discoveredMethods.size();
+        totalExcluded   = excludedMethods.size();
+        totalWillRun    = Math.max(totalDiscovered - totalExcluded, 0);
+
+        printTotals();
+        renderProgress(null, null);
+    }
+
+    private void printTotals() {
+        System.out.println(String.format(
+                "Total Test Cases Discovered  : %d%n" +
+                "Test Cases Will Run (Enabled): %d%n" +
+                "Disabled/Excluded Test Cases : %d%n",
+                totalDiscovered, totalWillRun, totalExcluded
+        ));
+    }
+
+    @Override
+    public void onTestSuccess(ITestResult result) {
+        passed.incrementAndGet();
+        passedTests.add(testDisplayName(result));
+        incrementAndRender(result, "PASS");
+    }
+
+    @Override
+    public void onTestFailure(ITestResult result) {
+        failed.incrementAndGet();
+        failedTests.add(testDisplayName(result));
+        incrementAndRender(result, "FAIL");
+    }
+
+    @Override
+    public void onTestSkipped(ITestResult result) {
+        skipped.incrementAndGet();
+        skippedTests.add(testDisplayName(result));
+        incrementAndRender(result, "SKIP");
+    }
+
+    private void incrementAndRender(ITestResult result, String status) {
+        completed.incrementAndGet();
+        renderProgress(result.getMethod().getMethodName(), status);
+    }
+
+    private void renderProgress(String currentTest, String status) {
+        int done = completed.get();
+        int total = Math.max(totalWillRun, 1); // avoid division by zero
+
+        double percent = (done * 100.0) / total;
+        int filled = (int) ((done / (double) total) * BAR_WIDTH);
+
+        String bar = "█".repeat(Math.max(0, filled)) + "░".repeat(Math.max(0, BAR_WIDTH - filled));
+
+        String extra = "";
+        if (currentTest != null && status != null) {
+            extra = String.format(" | %s: %s", status, currentTest);
+        }
+
+        System.out.print(String.format("\r[%s] %d/%d (%.1f%%)%s",
+                bar, done, total, percent, extra));
+    }
+
+    private String uniqueId(ITestNGMethod m) {
+        return m.getRealClass().getName() + "#" + m.getMethodName();
+    }
+
+    private String testDisplayName(ITestResult result) {
+        // Shows ClassName#methodName (and parameters if data-driven)
+        String className = result.getMethod().getRealClass().getSimpleName();
+        String methodName = result.getMethod().getMethodName();
+
+        Object[] params = result.getParameters();
+        if (params != null && params.length > 0) {
+            return className + "#" + methodName + " " + Arrays.toString(params);
+        }
+        return className + "#" + methodName;
+    }
+
+    @Override
+    public void onExecutionFinish() {
+        long endTime = System.currentTimeMillis();
+        double seconds = (endTime - startTime) / 1000.0;
+
+        // finish progress line neatly
+        renderProgress(null, null);
+        System.out.println();
+
+        // Print final summary
+        printFinalSummary(seconds);
+    }
+
+    private void printFinalSummary(double seconds) {
+        int runTests = completed.get();
+
+        System.out.println("\n=== Final Execution Summary ===");
+        System.out.println(String.format("Total Discovered           : %d", totalDiscovered));
+        System.out.println(String.format("Enabled (Will Run)         : %d", totalWillRun));
+        System.out.println(String.format("Disabled/Excluded          : %d", totalExcluded));
+        System.out.println(String.format("Total Tests Executed (Run) : %d", runTests));
+
+        System.out.println("\n--- Results ---");
+        System.out.println(String.format("PASSED : %d", passed.get()));
+        printTestNames(passedTests);
+
+        System.out.println(String.format("\nFAILED : %d", failed.get()));
+        printTestNames(failedTests);
+
+        System.out.println(String.format("\nSKIPPED: %d", skipped.get()));
+        printTestNames(skippedTests);
+
+        System.out.println(String.format("\nExecution Time: %.2fs", seconds));
+        System.out.println("================================\n");
+    }
+
+    private void printTestNames(Set<String> tests) {
+        if (tests == null || tests.isEmpty()) {
+            System.out.println("  (none)");
+            return;
+        }
+
+        // Sort for stable output
+        List<String> sorted = new ArrayList<>(tests);
+        Collections.sort(sorted);
+
+        for (String t : sorted) {
+            System.out.println("  - " + t);
+        }
+    }
+}

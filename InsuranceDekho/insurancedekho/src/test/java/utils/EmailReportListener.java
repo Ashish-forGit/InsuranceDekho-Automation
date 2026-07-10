@@ -1,0 +1,92 @@
+package utils;
+
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+/**
+ * Class Name: EmailReportListener
+ *
+ * Description:
+ * TestNG listener responsible for sending execution summary email with the generated
+ * Extent report attachment once the suite execution finishes.
+ *
+ * @author Ashish Kumar
+ */
+public class EmailReportListener implements ITestListener {
+
+    @Override
+    public void onFinish(ITestContext context) {
+
+        try {
+            
+            Base.loadProperties();
+            if (!Boolean.parseBoolean(Base.prop.getProperty("email.enabled"))) {
+                LoggerHandler.info("Email sending is disabled.");
+                return;
+            }
+
+           
+            String reportFilePath = Reporter.getReportFilePath();
+
+            if (reportFilePath == null) {
+                LoggerHandler.error("Report file path is NULL. Report may not be generated.");
+                return;
+            }
+
+            File reportFile = new File(reportFilePath);
+
+            if (!reportFile.exists()) {
+                LoggerHandler.error("Report file not found: " + reportFilePath);
+                return;
+            }
+
+            
+            List<File> attachments = new ArrayList<>();
+            attachments.add(reportFile);
+
+           
+            EmailSender.sendEmailWithAttachments(
+                    Base.prop.getProperty("smtp.host"),
+                    Base.prop.getProperty("smtp.port"),
+                    Base.prop.getProperty("smtp.username"),
+                    Base.prop.getProperty("smtp.password"),
+                    Boolean.parseBoolean(Base.prop.getProperty("smtp.auth")),
+                    Boolean.parseBoolean(Base.prop.getProperty("smtp.starttls")),
+                    Base.prop.getProperty("smtp.username"),   // FROM
+                    Base.prop.getProperty("email.to"),        // TO
+                    "Automation Execution Report",
+                    buildMailBody(context),
+                    attachments
+            );
+
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to send execution email: " + e.getMessage());
+        }
+    }
+
+    private String buildMailBody(ITestContext context) {
+
+        return String.format(
+            "Automation Execution Summary\n\n" +
+            "Suite Name : %s\n" +
+            "Total Tests: %d\n" +
+            "Passed     : %d\n" +
+            "Failed     : %d\n" +
+            "Skipped    : %d\n\n" +
+            "Please find the attached Extent report with detailed results.\n\n" +
+            "Regards,\n" +
+            "Ashish",
+            context.getSuite().getName(),
+            context.getAllTestMethods().length,
+            context.getPassedTests().size(),
+            context.getFailedTests().size(),
+            context.getSkippedTests().size()
+        );
+    }
+}

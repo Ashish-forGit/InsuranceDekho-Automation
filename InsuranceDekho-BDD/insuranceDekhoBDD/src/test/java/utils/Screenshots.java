@@ -1,0 +1,46 @@
+package utils;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.io.FileHandler;
+
+public class Screenshots extends Base {
+	static Properties prop;
+
+	public static String captureScreenshot(String filename) {
+//  loadProperties();
+		try {
+			TakesScreenshot ts = (TakesScreenshot) driver;
+			File scr = ts.getScreenshotAs(OutputType.FILE);
+			File folder = new File("./screenshots");
+			if (!folder.exists()) {
+				folder.mkdirs();
+			}
+			File dest = new File("./screenshots/" + "/" + filename + ".png");
+			FileHandler.copy(scr, dest);
+
+			return dest.getAbsolutePath();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return "";
+
+	}
+	
+
+    /**
+     * Captures screenshot and returns it as byte array
+     * Used for Allure attachments
+     *
+     * @return byte[] screenshot
+     */
+    public static byte[] captureScreenshotAsBytes() {
+        return ((TakesScreenshot) driver)
+                .getScreenshotAs(OutputType.BYTES);
+    }
+
+}

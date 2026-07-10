@@ -1,0 +1,2 @@
+appURL=https://www.insurancedekho.com/
+allure.bat serve ../../allure-results

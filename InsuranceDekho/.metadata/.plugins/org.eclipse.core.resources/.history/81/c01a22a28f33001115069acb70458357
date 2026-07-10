@@ -1,0 +1,41 @@
+2026-04-08 18:11:58 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-08 18:12:00 INFO  utils.LoggerHandler - Step Passed: Insurance Advisors Page Actions initialized successfully.
+2026-04-08 18:12:00 INFO  utils.LoggerHandler - Step: Hovering over 'Book Home Visit' button.
+2026-04-08 18:12:01 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Book Home Visit' button.
+2026-04-08 18:12:01 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Book Home Visit' button.
+2026-04-08 18:12:04 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-08 18:12:04 INFO  utils.LoggerHandler - Step: Clicking 'Book Home Visit' button.
+2026-04-08 18:12:04 INFO  utils.LoggerHandler - Step Passed: 'Book Home Visit' button clicked successfully.
+2026-04-08 18:12:04 INFO  utils.LoggerHandler - Step: Hovering over 'Schedule Home Visit' button.
+2026-04-08 18:12:04 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Schedule Home Visit' button.
+2026-04-08 18:12:04 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Schedule Home Visit'.
+2026-04-08 18:12:07 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-08 18:12:07 INFO  utils.LoggerHandler - Step: Clicking 'Schedule Home Visit' button.
+2026-04-08 18:12:07 INFO  utils.LoggerHandler - Step Passed: 'Schedule Home Visit' clicked successfully.
+2026-04-08 18:12:07 INFO  utils.LoggerHandler - Step: Entering Name in booking form: John
+2026-04-08 18:12:08 INFO  utils.LoggerHandler - Step Passed: Name entered successfully.
+2026-04-08 18:12:08 INFO  utils.LoggerHandler - Step: Entering Mobile Number in booking form: 9876543210
+2026-04-08 18:12:08 INFO  utils.LoggerHandler - Step Passed: Mobile number entered successfully.
+2026-04-08 18:12:08 INFO  utils.LoggerHandler - Step: Hovering over 'Schedule Home Visit' button.
+2026-04-08 18:12:08 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Schedule Home Visit' button.
+2026-04-08 18:12:08 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Schedule Home Visit'.
+2026-04-08 18:12:11 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-08 18:12:11 INFO  utils.LoggerHandler - Step: Clicking 'Schedule Home Visit' button.
+2026-04-08 18:12:11 INFO  utils.LoggerHandler - Step Passed: 'Schedule Home Visit' clicked successfully.
+2026-04-08 18:12:11 INFO  utils.LoggerHandler - Step: Hovering over 'Schedule Visit' button.
+2026-04-08 18:12:12 INFO  utils.LoggerHandler - Step Passed: Hovered over 'Schedule Visit' button.
+2026-04-08 18:12:12 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Schedule Visit'.
+2026-04-08 18:12:15 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-08 18:12:15 INFO  utils.LoggerHandler - Step: Clicking 'Schedule Visit' button.
+2026-04-08 18:12:15 INFO  utils.LoggerHandler - Step Passed: 'Schedule Visit' clicked successfully.
+2026-04-08 18:12:15 INFO  utils.LoggerHandler - Step: Clicking on 'Enter location manually' option.
+2026-04-08 18:12:16 INFO  utils.LoggerHandler - Step Passed: 'Enter location manually' option selected successfully.
+2026-04-08 18:12:16 INFO  utils.LoggerHandler - Step: Fetching 'Your location details' section header.
+2026-04-08 18:12:16 INFO  utils.LoggerHandler - Step: Verifying 'Your location details' section header.
+2026-04-08 18:12:16 INFO  utils.LoggerHandler - Step Passed: Location details section verified successfully. Expected: 'Your location details' | Actual: 'Your location details'
+2026-04-08 18:12:16 INFO  utils.LoggerHandler - Step: Entering pincode: 110055
+2026-04-08 18:12:16 INFO  utils.LoggerHandler - Step Passed: Pincode entered successfully.
+2026-04-08 18:12:16 INFO  utils.LoggerHandler - Step: Entering house number/address: House1
+2026-04-08 18:12:17 INFO  utils.LoggerHandler - Step Passed: House number/address entered successfully.
+2026-04-08 18:12:17 INFO  utils.LoggerHandler - Step: Entering area/road/sector: Road1
+2026-04-08 18:12:17 INFO  utils.LoggerHandler - Step Passed: Area/road/sector entered successfully.

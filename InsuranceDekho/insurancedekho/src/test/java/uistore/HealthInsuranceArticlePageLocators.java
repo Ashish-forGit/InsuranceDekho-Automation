@@ -1,0 +1,30 @@
+package uistore;
+
+import org.openqa.selenium.By;
+
+
+/**
+ * Description: Stores all locators used on the Health Insurance Article page.
+ * Includes article validation, calculator section inputs,
+ * popup form details, and plans result verification.
+ *
+ * @class_name HealthInsuranceArticlePageLocators
+ * @author Ashish Kumar
+ */
+
+public class HealthInsuranceArticlePageLocators {
+	public static final By healthInsuranceArticleHeading = By.xpath("//h1[@class='newsh1']");
+	public static final By firstNewsPresent = By.xpath("(//div[@class='card card_news shadowWPadding']//h2)[1]");
+	public static final By writtenByAuthorText = By.xpath("(//p[@class='authorName'])[1]");
+	public static final By healthInsuranceCalculatorSection = By.xpath("//section[@class='healthPwraper shadow24 marginBottom20 landingNewCalc topPosCalc marginTop20 newsCalc']/h2");
+	public static final By ageInput = By.id("you");
+	public static final By pincodeInput = By.id("city");
+	public static final By calculatePriceButton = By.xpath("(//button[@name='submitBtn'])[1]");
+	public static final By nameInputField = By.xpath("//div[@id='modal-popup']//input[@name='name']");
+	public static final By mobileInputField = By.xpath("//div[@id='modal-popup']//input[@name='mobile']");
+	public static final By viewPlansButton = By.xpath("//div[@id='modal-popup']//button[@name='submitBtn']");
+	public static final By plansFoundHeader = By.xpath("//div[@class='topTile']//h4");
+	
+	
+
+}

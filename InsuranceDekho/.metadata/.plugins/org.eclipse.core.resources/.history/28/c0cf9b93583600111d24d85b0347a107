@@ -1,0 +1,542 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.InsuranceAdvisorsLocators;
+import utils.Base;
+import utils.WebDriverHelper;
+
+/**
+ * Class Name: InsuranceAdvisorsActions
+ *
+ * Description: Page Action class responsible for handling all user
+ * interactions, validations, and workflows related to the Insurance Advisors
+ * module.
+ *
+ * This includes advisor listing validation, booking home visits, form
+ * submission, error handling, location-based filtering, and scheduling visit
+ * flows.
+ *
+ * The class follows the Page Action Model (PAM) pattern and provides
+ * business-readable, reusable methods with step-level logging integrated via
+ * Extent Reports.
+ *
+ * @Author: Ashish Kumar
+ */
+public class InsuranceAdvisorsActions {
+
+    WebDriver driver;
+    WebDriverHelper helper;
+    ExtentTest test;
+
+    /**
+     * Description: Initializes Insurance Advisors page actions using WebDriver and
+     * ExtentTest instances for browser interaction and execution reporting.
+     *
+     * @Test_Case NV_US02_TC01, NV_US02_TC02, NV_US02_TC03, NV_US02_TC04, NV_US02_TC05
+     * @param driver WebDriver instance for browser interaction
+     * @param test   ExtentTest instance for logging and reporting
+     * @author Ashish Kumar
+     */
+    public InsuranceAdvisorsActions(WebDriver driver, ExtentTest test) {
+        try {
+            this.driver = driver;
+            this.test = test;
+
+            helper = new WebDriverHelper(driver);
+            helper.addLogAndReportPass("Step Passed: Insurance Advisors Page Actions initialized successfully.", test);
+        } catch (Exception e) {
+            if (test != null) {
+                helper.addLogAndReportFail(
+                    "Step Failed: Unable to initialize InsuranceAdvisorsActions. Error: " + e.getMessage(), test
+                );
+            }
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Verifies that the 'Insurance Advisors Found' text is displayed
+     * correctly on the page.
+     *
+     * @Test_Case NV_US02_TC01, NV_US02_TC02
+     * @author Ashish Kumar
+     */
+    public void verifyInsuranceAdvisorsFoundText() {
+        try {
+            String expectedValue = "6 Insurance Advisors found";
+
+            helper.addLogAndReportInfo("Step: Hovering on 'Insurance Advisors Found' text.", test);
+            helper.hoverElement(InsuranceAdvisorsLocators.insuranceAdvisorsFoundText);
+            helper.addLogAndReportPass("Step Passed: Hover action performed successfully.", test);
+
+            helper.addLogAndReportInfo("Step: Fetching 'Insurance Advisors Found' text.", test);
+            String actualText = helper.getText(InsuranceAdvisorsLocators.insuranceAdvisorsFoundText);
+
+            helper.addLogAndReportInfo("Step: Verifying 'Insurance Advisors Found' text.", test);
+            helper.verify(actualText, expectedValue);
+
+            helper.addLogAndReportPass(
+                "Step Passed: Insurance Advisors found text verified successfully. Expected: '"
+                + expectedValue + "' | Actual: '" + actualText + "'", test
+            );
+        } catch (Exception e) {
+            helper.addLogAndReportFail(
+                "Step Failed: Unable to verify Insurance Advisors found text. Error: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Clicks on the 'Book Home Visit' button for the first available
+     * insurance advisor.
+     *
+     * @Test_Case NV_US02_TC01, NV_US02_TC02
+     * @author Ashish Kumar
+     */
+    public void clickBookHomeVisitForFirstAdvisor() throws InterruptedException {
+        try {
+            helper.addLogAndReportInfo("Step: Hovering over 'Book Home Visit' for first advisor.", test);
+            helper.hoverElement(InsuranceAdvisorsLocators.firstAdvisorBookHomeVisitBtn);
+            helper.addLogAndReportPass("Step Passed: Hovered over first advisor 'Book Home Visit' button.", test);
+
+            helper.addLogAndReportInfo("Step: Waiting before clicking 'Book Home Visit'.", test);
+            helper.waits();
+            helper.addLogAndReportPass("Step Passed: Wait completed successfully.", test);
+
+            helper.addLogAndReportInfo("Step: Clicking 'Book Home Visit' for first advisor.", test);
+            helper.clickElement(InsuranceAdvisorsLocators.firstAdvisorBookHomeVisitBtn);
+            helper.addLogAndReportPass("Step Passed: Clicked 'Book Home Visit' for first advisor successfully.", test);
+
+        } catch (Exception e) {
+            helper.addLogAndReportFail(
+                "Step Failed: Unable to click 'Book Home Visit' for first advisor. Error: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Enters valid customer name and mobile number in the insurance
+     * advisor booking form.
+     *
+     * @Test_Case NV_US02_TC01, NV_US02_TC03, NV_US02_TC04
+     * @author Ashish Kumar
+     */
+    public void enterNameAndMobile() {
+        try {
+        	Base base = new Base();
+			base.loadProperties();
+			String name = Base.prop.getProperty("name");
+			String mobile = Base.prop.getProperty("mobile");
+
+            helper.addLogAndReportInfo("Step: Entering Name in booking form: " + name, test);
+            helper.sendText(InsuranceAdvisorsLocators.nameInput, name);
+            helper.addLogAndReportPass("Step Passed: Name entered successfully.", test);
+
+            helper.addLogAndReportInfo("Step: Entering Mobile Number in booking form: " + mobile, test);
+            helper.sendText(InsuranceAdvisorsLocators.mobileInput, mobile);
+            helper.addLogAndReportPass("Step Passed: Mobile number entered successfully.", test);
+
+        } catch (Exception e) {
+            helper.addLogAndReportFail(
+                "Step Failed: Unable to enter name/mobile in booking form. Error: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Enters customer name and invalid mobile number in the insurance
+     * advisor booking form to trigger validation.
+     *
+     * @Test_Case NV_US02_TC02
+     * @author Ashish Kumar
+     */
+    public void enterErrorNameAndMobile() {
+        try {
+            String name = "John";
+            String mobile = "98765";
+
+            helper.addLogAndReportInfo("Step: Entering Name in booking form: " + name, test);
+            helper.sendText(InsuranceAdvisorsLocators.nameInput, name);
+            helper.addLogAndReportPass("Step Passed: Name entered successfully.", test);
+
+            helper.addLogAndReportInfo("Step: Entering invalid Mobile Number in booking form: " + mobile, test);
+            helper.sendText(InsuranceAdvisorsLocators.mobileInput, mobile);
+            helper.addLogAndReportPass("Step Passed: Invalid mobile number entered successfully.", test);
+
+        } catch (Exception e) {
+            helper.addLogAndReportFail(
+                "Step Failed: Unable to enter invalid name/mobile in booking form. Error: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Submits the advisor booking request using the Submit button.
+     *
+     * @Test_Case NV_US02_TC01, NV_US02_TC02
+     * @author Ashish Kumar
+     */
+    public void submitRequest() throws InterruptedException {
+        try {
+            helper.addLogAndReportInfo("Step: Waiting before clicking Submit.", test);
+            helper.waits();
+            helper.addLogAndReportPass("Step Passed: Wait completed successfully.", test);
+
+            helper.addLogAndReportInfo("Step: Clicking Submit button to submit request.", test);
+            helper.clickElement(InsuranceAdvisorsLocators.submitBtn);
+            helper.addLogAndReportPass("Step Passed: Submit button clicked successfully.", test);
+
+        } catch (Exception e) {
+            helper.addLogAndReportFail(
+                "Step Failed: Unable to submit booking request. Error: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Verifies that the Thank You confirmation message is displayed
+     * after successful request submission.
+     * 
+     * @Test_Case NV_US02_TC01
+     * @author Ashish Kumar
+     */
+    public void verifyThankYouText() {
+        try {
+            String expectedValue = "Thank you!";
+
+            helper.addLogAndReportInfo("Step: Waiting for Thank You message to appear.", test);
+            helper.waits();
+            helper.addLogAndReportPass("Step Passed: Wait completed successfully.", test);
+
+            helper.addLogAndReportInfo("Step: Fetching Thank You message text.", test);
+            String actualText = helper.getText(InsuranceAdvisorsLocators.thankYouText);
+
+            helper.addLogAndReportInfo("Step: Verifying Thank You message text.", test);
+            helper.verify(actualText, expectedValue);
+
+            helper.addLogAndReportPass(
+                "Step Passed: Thank You message verified successfully. Expected: '"
+                + expectedValue + "' | Actual: '" + actualText + "'", test
+            );
+        } catch (Exception e) {
+            helper.addLogAndReportFail(
+                "Step Failed: Unable to verify Thank You message. Error: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Verifies error message displayed for invalid form input.
+     *
+     * @Test_Case NV_US02_TC02
+     * @author Ashish Kumar
+     */
+    public void verifyErrorInput() {
+        try {
+            String expectedValue = "The mobile must be at least 10 characters.";
+
+            helper.addLogAndReportInfo("Step: Fetching validation error message text.", test);
+            String actualText = helper.getText(InsuranceAdvisorsLocators.errorText);
+
+            helper.addLogAndReportInfo("Step: Verifying validation error message text.", test);
+            helper.verify(actualText, expectedValue);
+
+            helper.addLogAndReportPass(
+                "Step Passed: Error message verified successfully. Expected: '"
+                + expectedValue + "' | Actual: '" + actualText + "'", test
+            );
+        } catch (Exception e) {
+            helper.addLogAndReportFail(
+                "Step Failed: Unable to verify error message. Error: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Clicks the Book Home Visit button for the generic booking flow
+     * used in scheduling visit use-cases.
+     *
+     * @Test_Case NV_US02_TC03, NV_US02_TC04
+     * @author Ashish Kumar
+     */
+    public void clickBookHomeVisit() throws InterruptedException {
+        try {
+            helper.addLogAndReportInfo("Step: Hovering over 'Book Home Visit' button.", test);
+            helper.hoverElement(InsuranceAdvisorsLocators.bookhomeVisitButton);
+            helper.addLogAndReportPass("Step Passed: Hovered over 'Book Home Visit' button.", test);
+
+            helper.addLogAndReportInfo("Step: Waiting before clicking 'Book Home Visit' button.", test);
+            helper.waits();
+            helper.addLogAndReportPass("Step Passed: Wait completed successfully.", test);
+
+            helper.addLogAndReportInfo("Step: Clicking 'Book Home Visit' button.", test);
+            helper.clickElement(InsuranceAdvisorsLocators.bookhomeVisitButton);
+            helper.addLogAndReportPass("Step Passed: 'Book Home Visit' button clicked successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportFail(
+                "Step Failed: Unable to click 'Book Home Visit' button. Error: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Clicks the Schedule Home Visit button to proceed with scheduling flow.
+     *
+     * @Test_Case NV_US02_TC03, NV_US02_TC04
+     * @author Ashish Kumar
+     */
+    public void clickScheduleHomeVisit() throws InterruptedException {
+        try {
+            helper.addLogAndReportInfo("Step: Hovering over 'Schedule Home Visit' button.", test);
+            helper.hoverElement(InsuranceAdvisorsLocators.scheduleHomeVisitButton);
+            helper.addLogAndReportPass("Step Passed: Hovered over 'Schedule Home Visit' button.", test);
+
+            helper.addLogAndReportInfo("Step: Waiting before clicking 'Schedule Home Visit'.", test);
+            helper.waits();
+            helper.addLogAndReportPass("Step Passed: Wait completed successfully.", test);
+
+            helper.addLogAndReportInfo("Step: Clicking 'Schedule Home Visit' button.", test);
+            helper.clickElement(InsuranceAdvisorsLocators.scheduleHomeVisitButton);
+            helper.addLogAndReportPass("Step Passed: 'Schedule Home Visit' clicked successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportFail(
+                "Step Failed: Unable to click 'Schedule Home Visit'. Error: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Clicks the Schedule Visit button to confirm the schedule action.
+     *
+     * @Test_Case NV_US02_TC03, NV_US02_TC04
+     * @author Ashish Kumar
+     */
+    public void clickScheduleVisit() throws InterruptedException {
+        try {
+            helper.addLogAndReportInfo("Step: Hovering over 'Schedule Visit' button.", test);
+            helper.hoverElement(InsuranceAdvisorsLocators.scheduleVisitButton);
+            helper.addLogAndReportPass("Step Passed: Hovered over 'Schedule Visit' button.", test);
+
+            helper.addLogAndReportInfo("Step: Waiting before clicking 'Schedule Visit'.", test);
+            helper.waits();
+            helper.addLogAndReportPass("Step Passed: Wait completed successfully.", test);
+
+            helper.addLogAndReportInfo("Step: Clicking 'Schedule Visit' button.", test);
+            helper.clickElement(InsuranceAdvisorsLocators.scheduleVisitButton);
+            helper.addLogAndReportPass("Step Passed: 'Schedule Visit' clicked successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportFail(
+                "Step Failed: Unable to click 'Schedule Visit'. Error: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Selects the option to enter location details manually.
+     *
+     * @Test_Case NV_US02_TC03, NV_US02_TC04
+     * @author Ashish Kumar
+     */
+    public void clickEnterLoactionManually() {
+        try {
+            helper.addLogAndReportInfo("Step: Clicking on 'Enter location manually' option.", test);
+            helper.clickElement(InsuranceAdvisorsLocators.selectLocationManually);
+            helper.addLogAndReportPass("Step Passed: 'Enter location manually' option selected successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportFail(
+                "Step Failed: Unable to click 'Enter location manually'. Error: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Enters pincode in the manual location form.
+     *
+     * @Test_Case NV_US02_TC03, NV_US02_TC04
+     * @author Ashish Kumar
+     */
+    public void typePincode() {
+        try {
+            String pincode = "110055";
+            helper.addLogAndReportInfo("Step: Entering pincode: " + pincode, test);
+            helper.sendText(InsuranceAdvisorsLocators.pincodeInput, pincode);
+            helper.addLogAndReportPass("Step Passed: Pincode entered successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportFail("Step Failed: Unable to enter pincode. Error: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Enters house number/address in the manual location form.
+     *
+     * @Test_Case NV_US02_TC03, NV_US02_TC04
+     * @author Ashish Kumar
+     */
+    public void typeHouseNo() {
+        try {
+            String houseNo = "House1";
+            helper.addLogAndReportInfo("Step: Entering house number/address: " + houseNo, test);
+            helper.sendText(InsuranceAdvisorsLocators.addressInput, houseNo);
+            helper.addLogAndReportPass("Step Passed: House number/address entered successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportFail("Step Failed: Unable to enter house number/address. Error: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Enters area/road/sector information in the manual location form.
+     *
+     * @Test_Case NV_US02_TC03
+     * @author Ashish Kumar
+     */
+    public void typeArea() {
+        try {
+            String area = "Road1";
+            helper.addLogAndReportInfo("Step: Entering area/road/sector: " + area, test);
+            helper.sendText(InsuranceAdvisorsLocators.areaInput, area);
+            helper.addLogAndReportPass("Step Passed: Area/road/sector entered successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportFail("Step Failed: Unable to enter area/road/sector. Error: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Verifies that the "Your location details" section is displayed
+     * after entering manual location information.
+     *
+     * @Test_Case NV_US02_TC03
+     * @author Ashish Kumar
+     */
+    public void verifyYourLoactionDetails() {
+        try {
+            String expectedValue = "Your location details";
+
+            helper.addLogAndReportInfo("Step: Fetching 'Your location details' section header.", test);
+            String actualText = helper.getText(InsuranceAdvisorsLocators.yourLocationDetailsText);
+
+            helper.addLogAndReportInfo("Step: Verifying 'Your location details' section header.", test);
+            helper.verify(actualText, expectedValue);
+
+            helper.addLogAndReportPass(
+                "Step Passed: Location details section verified successfully. Expected: '"
+                + expectedValue + "' | Actual: '" + actualText + "'", test
+            );
+        } catch (Exception e) {
+            helper.addLogAndReportFail("Step Failed: Unable to verify location details section. Error: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Clicks Schedule Visit CTA from location details section.
+     *
+     * @Test_Case NV_US02_TC04
+     * @author Ashish Kumar
+     */
+    public void clickLocationScheduleVisit() {
+        try {
+            helper.addLogAndReportInfo("Step: Clicking 'Schedule Visit' CTA from location details section.", test);
+            helper.clickElement(InsuranceAdvisorsLocators.locationScheduleVist);
+            helper.addLogAndReportPass("Step Passed: 'Schedule Visit' CTA clicked successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportFail("Step Failed: Unable to click 'Schedule Visit' CTA. Error: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Verifies the validation message for Area/Road/Sector field when it is left empty.
+     *
+     * @Test_Case NV_US02_TC04
+     * @author Ashish Kumar
+     */
+    public void verifyAreaInputError() {
+        try {
+            String expectedValue = "The road/area/sector field is required.";
+
+            helper.addLogAndReportInfo("Step: Fetching area field validation error message.", test);
+            String actualText = helper.getText(InsuranceAdvisorsLocators.areaInputError);
+
+            helper.addLogAndReportInfo("Step: Verifying area field validation error message.", test);
+            helper.verify(actualText, expectedValue);
+
+            helper.addLogAndReportPass(
+                "Step Passed: Area validation message verified successfully. Expected: '"
+                + expectedValue + "' | Actual: '" + actualText + "'", test
+            );
+        } catch (Exception e) {
+            helper.addLogAndReportFail("Step Failed: Unable to verify area input error message. Error: " + e.getMessage(), test);
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Applies city filter on Insurance Advisors listing.
+     *
+     * @Test_Case NV_US02_TC05
+     * @author Ashish Kumar
+     */
+    public void selectCityFilter() {
+        try {
+            helper.addLogAndReportInfo("Step: Scrolling to filter section.", test);
+            helper.scrollIntoView(InsuranceAdvisorsLocators.tempHover);
+            helper.addLogAndReportPass("Step Passed: Scrolled to filter section successfully.", test);
+
+            helper.addLogAndReportInfo("Step: Clicking location/city filter option.", test);
+            helper.clickElement(InsuranceAdvisorsLocators.filterLocation);
+            helper.addLogAndReportPass("Step Passed: Location/city filter selected successfully.", test);
+        } catch (Exception e) {
+            helper.addLogAndReportFail("Step Failed: Unable to apply city filter", test);
+            throw e;
+        }
+    }
+
+    /**
+     * Description: Verifies the location header and "No Advisors Found" message after applying filters.
+     *
+     * @Test_Case NV_US02_TC05
+     * @author Ashish Kumar
+     */
+    public void verifyLocationHeaderAndNotFoundAdvaisor() {
+        try {
+            String expected1 = "Insurance Advisors in Bangalore";
+            String expected2 = "No Advisors Found for selected filters, Please try with other filter options!";
+
+            helper.addLogAndReportInfo("Step: Waiting for location header to be visible.", test);
+            helper.explicitWait(InsuranceAdvisorsLocators.advaisorInLocationHeading);
+            helper.addLogAndReportPass("Step Passed: Location header is visible.", test);
+
+            helper.addLogAndReportInfo("Step: Verifying advisor location header.", test);
+            String actualHeader = helper.getText(InsuranceAdvisorsLocators.advaisorInLocationHeading);
+            helper.verify(actualHeader, expected1);
+            helper.addLogAndReportPass("Step Passed: Location header verified successfully.", test);
+
+            helper.addLogAndReportInfo("Step: Verifying 'No Advisors Found' message.", test);
+            String actualNoAdvisorText = helper.getText(InsuranceAdvisorsLocators.noAdvaisorFoundHeading);
+            helper.verify(actualNoAdvisorText, expected2);
+            helper.addLogAndReportPass("Step Passed: No advisor message verified successfully.", test);
+
+        } catch (Exception e) {
+            helper.addLogAndReportFail(
+                "Step Failed: Unable to verify location header / no advisor message. Error: " + e.getMessage(), test
+            );
+            throw e;
+        }
+    }
+}

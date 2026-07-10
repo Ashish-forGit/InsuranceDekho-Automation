@@ -1,0 +1,9 @@
+2026-04-07 03:29:10 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-07 03:29:10 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-07 03:29:11 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-07 03:29:11 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-07 03:29:11 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-07 03:29:11 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-07 03:29:11 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar
+2026-04-07 03:29:11 INFO  utils.LoggerHandler - Verifying element is displayed: navigationBar
+2026-04-07 03:29:11 INFO  utils.LoggerHandler - PASSED: Element displayed successfully -> navigationBar

@@ -1,0 +1,7 @@
+2026-04-09 23:38:04 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 23:38:04 INFO  utils.LoggerHandler - Investment Insurance News Page Actions initialized successfully.
+2026-04-09 23:38:04 INFO  utils.LoggerHandler - Step: Hovering over 'News' menu in the navigation bar.
+2026-04-09 23:38:05 INFO  utils.LoggerHandler - Step Passed: Hovered over 'News' menu successfully.
+2026-04-09 23:38:26 INFO  utils.LoggerHandler - Exception in clickOnInvestmentPlans
+2026-04-09 23:38:26 INFO  utils.LoggerHandler - Verifying Investment Insurance News page header.
+2026-04-09 23:38:46 ERROR utils.LoggerHandler - Failed to verify 'Investment Insurance News'

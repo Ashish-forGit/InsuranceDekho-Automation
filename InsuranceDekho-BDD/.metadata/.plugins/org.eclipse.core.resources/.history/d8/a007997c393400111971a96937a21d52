@@ -1,0 +1,19 @@
+@NV_US04_TC02 
+Feature: NV_US04_TC02 Verify Health Insurance articles navigation and insurance plan search results
+
+  Scenario: Navigate health article and verify plans found in calculator flow
+    Given I launch the browser and open InsuranceDekho application
+    When I will hover over News menu
+    And I hover over Health Insurance News
+    And I click on Health Insurance Article
+    Then I verify Health Insurance Article header is displayed
+    When I open first health insurance article
+    Then I verify news is written by author
+    When I navigate to Health Insurance Calculator
+    And I enter Age
+    And I enter Pincode
+    And I click Calculate Price
+    And I enter Name
+    And I enter Mobile Number
+    And I click View Plans
+    Then I verify number of plans found is displayed

@@ -1,0 +1,24 @@
+2026-04-09 19:00:33 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 19:00:33 INFO  utils.LoggerHandler - Step Passed: Insurance Advisors Page Actions initialized successfully.
+2026-04-09 19:00:35 INFO  utils.LoggerHandler - Step: Hovering on 'Insurance Advisors Found' text.
+2026-04-09 19:00:35 INFO  utils.LoggerHandler - Step Passed: Hover action performed successfully.
+2026-04-09 19:00:35 INFO  utils.LoggerHandler - Step: Fetching 'Insurance Advisors Found' text.
+2026-04-09 19:00:35 INFO  utils.LoggerHandler - Step: Verifying 'Insurance Advisors Found' text.
+2026-04-09 19:00:35 INFO  utils.LoggerHandler - Step Passed: Insurance Advisors found text verified successfully. Expected: '6 Insurance Advisors found' | Actual: '6 Insurance Advisors found'
+2026-04-09 19:00:35 INFO  utils.LoggerHandler - Step: Hovering over 'Book Home Visit' for first advisor.
+2026-04-09 19:00:36 INFO  utils.LoggerHandler - Step Passed: Hovered over first advisor 'Book Home Visit' button.
+2026-04-09 19:00:36 INFO  utils.LoggerHandler - Step: Waiting before clicking 'Book Home Visit'.
+2026-04-09 19:00:39 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-09 19:00:39 INFO  utils.LoggerHandler - Step: Clicking 'Book Home Visit' for first advisor.
+2026-04-09 19:00:39 INFO  utils.LoggerHandler - Step Passed: Clicked 'Book Home Visit' for first advisor successfully.
+2026-04-09 19:00:39 INFO  utils.LoggerHandler - Step: Entering Name in booking form: John
+2026-04-09 19:00:39 INFO  utils.LoggerHandler - Step Passed: Name entered successfully.
+2026-04-09 19:00:39 INFO  utils.LoggerHandler - Step: Entering invalid Mobile Number in booking form: 98765
+2026-04-09 19:00:39 INFO  utils.LoggerHandler - Step Passed: Invalid mobile number entered successfully.
+2026-04-09 19:00:39 INFO  utils.LoggerHandler - Step: Waiting before clicking Submit.
+2026-04-09 19:00:42 INFO  utils.LoggerHandler - Step Passed: Wait completed successfully.
+2026-04-09 19:00:42 INFO  utils.LoggerHandler - Step: Clicking Submit button to submit request.
+2026-04-09 19:00:42 INFO  utils.LoggerHandler - Step Passed: Submit button clicked successfully.
+2026-04-09 19:00:42 INFO  utils.LoggerHandler - Step: Fetching validation error message text.
+2026-04-09 19:00:42 INFO  utils.LoggerHandler - Step: Verifying validation error message text.
+2026-04-09 19:00:42 INFO  utils.LoggerHandler - Step Passed: Error message verified successfully. Expected: 'The mobile must be at least 10 characters.' | Actual: 'The mobile must be at least 10 characters.'

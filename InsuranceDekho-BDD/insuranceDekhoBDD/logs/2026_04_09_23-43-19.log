@@ -1,0 +1,14 @@
+2026-04-09 23:43:19 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 23:43:19 INFO  utils.LoggerHandler - Investment Insurance News Page Actions initialized successfully.
+2026-04-09 23:43:19 INFO  utils.LoggerHandler - Step: Hovering over 'News' menu in the navigation bar.
+2026-04-09 23:43:20 INFO  utils.LoggerHandler - Step Passed: Hovered over 'News' menu successfully.
+2026-04-09 23:43:20 INFO  utils.LoggerHandler - Step: Clicking on 'Investment News' under News menu.
+2026-04-09 23:43:21 INFO  utils.LoggerHandler - Step Passed: Clicked on 'Investment News' successfully.
+2026-04-09 23:43:21 INFO  utils.LoggerHandler - Verifying Investment Insurance News page header.
+2026-04-09 23:43:21 INFO  utils.LoggerHandler - Investment Insurance News header verified successfully. Expected: 'Investment Insurance News' | Actual: 'Investment Insurance News'
+2026-04-09 23:43:21 INFO  utils.LoggerHandler - Scrolling to 'Best Investment Advisors in Your City' section.
+2026-04-09 23:43:21 INFO  utils.LoggerHandler - Investment Advisors section is visible now.
+2026-04-09 23:43:21 INFO  utils.LoggerHandler - Clicking on Investment Advisors in Gurgaon.
+2026-04-09 23:43:23 INFO  utils.LoggerHandler - Gurgaon Investment Advisors clicked successfully.
+2026-04-09 23:43:23 INFO  utils.LoggerHandler - Verifying Gurgaon Investment Advisors page header.
+2026-04-09 23:43:24 INFO  utils.LoggerHandler - Gurgaon Investment Advisors header verified successfully. Expected: '3 Investment Advisors in Gurgaon' | Actual: '3 Investment Advisors in Gurgaon'

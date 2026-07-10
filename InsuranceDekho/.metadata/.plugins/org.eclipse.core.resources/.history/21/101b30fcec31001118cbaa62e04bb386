@@ -1,0 +1,62 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+
+import com.aventstack.extentreports.ExtentTest;
+
+
+import uistore.HealthInsuranceArticlePageLocators;
+import utils.WebDriverHelper;
+
+public class HealthInsuranceArticlePageActions {
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	public HealthInsuranceArticlePageActions(WebDriver driver, ExtentTest test) {
+		this.test = test;
+		helper = new WebDriverHelper(driver);
+		helper.addLogAndReportInfo("Home Page Actions initialized successfully.", test);
+	}
+	
+	public void verifyHealthInsuranceArticleHeader(String expectedValue) {
+		helper.verify(helper.getText(HealthInsuranceArticlePageLocators.healthInsuranceArticleHeading), expectedValue);
+	}
+	
+	public void clickFirstArticlePresent() {
+		helper.clickElement(HealthInsuranceArticlePageLocators.firstNewsPresent);
+	}
+	
+	public void verifyNewsWrittenByAuthor(String expectedValue) {
+		helper.verify(helper.getText(HealthInsuranceArticlePageLocators.writtenByAuthorText), expectedValue);
+		
+	}
+	
+	public void goToHealthInsuranceCalculator() {
+		helper.scrollIntoView(HealthInsuranceArticlePageLocators.healthInsuranceCalculatorSection);
+	}
+	
+	public void typeAge(String age) {
+		helper.sendText(HealthInsuranceArticlePageLocators.ageInput, age);
+	}
+	
+	public void typePincode(String pincode) {
+		helper.sendText(HealthInsuranceArticlePageLocators.pincodeInput, pincode);
+	}
+	
+	public void clickCalculatePrice() {
+		helper.clickElement(HealthInsuranceArticlePageLocators.calculatePriceButton);
+	}
+	
+	public void typeName(String value) {
+		helper.sendText(HealthInsuranceArticlePageLocators.nameInputField, value);
+	}
+	
+	public void typeMobileNumber(String mobile) {
+		helper.sendText(HealthInsuranceArticlePageLocators.mobileInputField, mobile);
+	}
+	
+	public void clickViewPlans() {
+		helper.clickElement(HealthInsuranceArticlePageLocators.viewPlansButton);
+	}
+
+}

@@ -1,0 +1,10 @@
+2026-04-09 22:26:46 INFO  utils.LoggerHandler - Home Page Actions initialized successfully.
+2026-04-09 22:26:46 INFO  utils.LoggerHandler - Health Insurance Article Page Actions initialized successfully.
+2026-04-09 22:26:55 INFO  utils.LoggerHandler - Step: Hovering over 'News' menu in the navigation bar.
+2026-04-09 22:26:55 ERROR utils.LoggerHandler - Step Failed: Unable to hover over 'News' menu.
+2026-04-09 22:26:56 INFO  utils.LoggerHandler - Step: Hovering over 'Health Insurance News' option under News menu.
+2026-04-09 22:26:56 ERROR utils.LoggerHandler - Step Failed: Unable to hover over 'Health Insurance News'.
+2026-04-09 22:26:56 INFO  utils.LoggerHandler - Step: Clicking on the Health Insurance article under News section.
+2026-04-09 22:26:56 ERROR utils.LoggerHandler - Step Failed: Unable to click Health Insurance article.
+2026-04-09 22:26:57 INFO  utils.LoggerHandler - Verifying Health Insurance article header.
+2026-04-09 22:26:57 ERROR utils.LoggerHandler - Failed to verify Health InsuranceA rticle Header

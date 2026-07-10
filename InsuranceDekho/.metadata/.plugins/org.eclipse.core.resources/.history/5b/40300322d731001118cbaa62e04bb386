@@ -1,0 +1,139 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.InsuranceAdvisorsLocators;
+import utils.WebDriverHelper;
+
+public class InsuranceAdvisorsActions {
+	WebDriver driver;
+	WebDriverHelper helper;
+	ExtentTest test;
+
+	public InsuranceAdvisorsActions(WebDriver driver, ExtentTest test) {
+		this.driver = driver;
+		this.test = test;
+		helper = new WebDriverHelper(driver);
+		helper.addLogAndReportInfo("Human Life Value Page Actions initialized successfully.", test);
+	}
+
+	public void verifyInsuranceAdvisorsFoundText(String expectedValue) {
+		
+//		helper.scrollIntoView(InsuranceAdvisorsLocators.insuranceAdvisorsFoundText);
+		helper.hoverElement(InsuranceAdvisorsLocators.insuranceAdvisorsFoundText);
+		
+		helper.verify(helper.getText(InsuranceAdvisorsLocators.insuranceAdvisorsFoundText), expectedValue);
+
+	}
+
+	public void clickBookHomeVisitForFirstAdvisor() throws InterruptedException {
+		helper.hoverElement(InsuranceAdvisorsLocators.firstAdvisorBookHomeVisitBtn);
+		helper.waits();
+		helper.clickElement(InsuranceAdvisorsLocators.firstAdvisorBookHomeVisitBtn);
+	}
+
+	public void enterNameAndMobile(String name, String mobile) {
+		helper.sendText(InsuranceAdvisorsLocators.nameInput, name);
+		helper.sendText(InsuranceAdvisorsLocators.mobileInput, mobile);
+		
+
+	}
+
+	public void submitRequest() throws InterruptedException {
+		helper.waits();
+		helper.clickElement(InsuranceAdvisorsLocators.submitBtn);
+	}
+	
+
+    public void verifyThankYouText(String expectedValue) throws InterruptedException {
+    	helper.waits();
+    	helper.verify(helper.getText(InsuranceAdvisorsLocators.thankYouText), expectedValue);
+        
+    }
+    
+     //tectcase8 
+    public void verifyErrorInput(String expectedValue) {
+    	helper.verify(helper.getText(InsuranceAdvisorsLocators.errorText), expectedValue);
+    }
+    
+    //testcase9
+    
+    public void clickBookHomeVisit() throws InterruptedException {
+    	helper.hoverElement(InsuranceAdvisorsLocators.bookhomeVisitButton);
+		helper.waits();
+    	helper.clickElement(InsuranceAdvisorsLocators.bookhomeVisitButton);
+    }
+    
+    public void clickScheduleHomeVisit() throws InterruptedException {
+    	helper.hoverElement(InsuranceAdvisorsLocators.scheduleHomeVisitButton);
+		helper.waits();
+    	helper.clickElement(InsuranceAdvisorsLocators.scheduleHomeVisitButton);
+    	
+    }
+    public void clickScheduleVisit() throws InterruptedException {
+    	helper.hoverElement(InsuranceAdvisorsLocators.scheduleVisitButton);
+		helper.waits();
+    	helper.clickElement(InsuranceAdvisorsLocators.scheduleVisitButton);
+    }
+    public void clickEnterLoactionManually() {
+    	helper.clickElement(InsuranceAdvisorsLocators.selectLocationManually);
+    }
+    
+    public void typePincode(String pincode) {
+    	helper.sendText(InsuranceAdvisorsLocators.pincodeInput, pincode);
+    	
+    }
+    public void typeHouseNo(String houseNo) {
+    	helper.sendText(InsuranceAdvisorsLocators.addressInput, houseNo);
+    	
+    }
+    public void typeArea(String area) {
+    	helper.sendText(InsuranceAdvisorsLocators.areaInput, area);
+    	
+    }
+//    public void clickScheduleVisitTwo() throws InterruptedException {
+//    	helper.hoverElement(InsuranceAdvisorsLocators.scheduleVisitButtonTwo);
+//		helper.waits();
+//    	helper.clickElement(InsuranceAdvisorsLocators.scheduleVisitButtonTwo);
+//    }
+    
+    public void verifyYourLoactionDetails(String expevtedValue){
+    	
+    	
+    	helper.verify(helper.getText(InsuranceAdvisorsLocators.yourLocationDetailsText), expevtedValue);
+    }
+    
+    //testcase10
+    
+    public void clickLocationScheduleVisit() {
+    	helper.clickElement(InsuranceAdvisorsLocators.locationScheduleVist);
+    }
+    
+   public void verifyAreaInputErroe(String expevtedValue){
+    	
+    	
+    	helper.verify(helper.getText(InsuranceAdvisorsLocators.areaInputError), expevtedValue);
+    }
+   
+   //testcase11
+   
+   public void selectCityFilter() {
+//	   helper.scrollIntoView(InsuranceAdvisorsLocators.filterLocation);
+	   helper.explicitWait(InsuranceAdvisorsLocators.filterLocation);
+	   
+	   helper.clickElement(InsuranceAdvisorsLocators.filterLocation);
+   }
+   
+   public void verifyLocationHeaderAndNotFoundAdvaisor(String expected1, String expected2) {
+	   helper.verify(helper.getText(InsuranceAdvisorsLocators.advaisorInLocationHeading), expected1);
+	   helper.verify(helper.getText(InsuranceAdvisorsLocators.noAdvaisorFoundHeading), expected2);
+	   
+   }
+    
+    
+    
+
+
+}

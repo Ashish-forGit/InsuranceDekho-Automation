@@ -1,0 +1,15 @@
+@NV_US01 @TC02 @regression
+Feature: NV_US01_TC02 Calculate Car IDV via Add-on Cover and verify amount
+
+  Scenario: Calculate Car IDV and validate amount is displayed
+    Given I launch the browser and open InsuranceDekho application
+    When I hover on Insurance menu
+    And I hover on Car Insurance menu
+    And I click on Add On Cover
+    And I scroll to Calculate your Car IDV section
+    And I select first brand
+    And I select first model
+    And I select first year
+    And I click Calculate Amount
+    Then I verify IDV amount is displayed
+``
