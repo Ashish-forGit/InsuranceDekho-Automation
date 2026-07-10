@@ -1,16 +1,20 @@
+
 <div align="center">
 
 # 🚗 InsuranceDekho Automation Framework
 
 ### A Robust Test Automation Framework for InsuranceDekho
 
-[![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk)](https://www.java.com/)
-[![Selenium](https://img.shields.io/bium-Automation-green?style=for-the-badge&logo=selenium)](https://www.selenium.dev/)
-[![TestNG](https://imgdge/TestNG-Testing-red?style=for-the-badge)](https://testng.org/)
-[![Maven](https://img.shields.io-Build-blue?style=for-the-badge&logo=apachemaven)](https://maven.apache.org/)
-](https://img.shields.io/badge/Cucumber-BDD-brightgreen?style=for-the-badge&logo=cucumber)](https/)
+![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-Automation-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+![TestNG](https://img.shields.io/badge/TestNG-Testing-E53935?style=for-the-badge)
+![Maven](https://img.shields.io/badge/Maven-Build-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
+![Cucumber](https://img.shields.io/badge/Cucumber-BDD-23D96C?style=for-the-badge&logo=cucumber&logoColor=white)
+![Git](https://img.shields.io/badge/Git-VersionControl-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)
 
 </div>
+
 
 ---
 
